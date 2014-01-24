@@ -41,11 +41,11 @@ public class RecycleController {
             e.printStackTrace();
         }*/
         StringBuilder sb = new StringBuilder();
-        sb.append("date\t"+"close\n");
+        sb.append("date\t"+"close\t");
         for(RecycleMonth month:recycleList){
             double monthTotal = month.getWetTrash()+month.getRecyclingData()+month.getOpenTop()+month.getMetal()+month.getFlourescent()+
                     month.getBallasts()+month.getIncandescent()+month.getElectronics()+month.getCompostTons()+month.getBatteries();
-            sb.append(month.getDate()+"\t"+monthTotal+"\n");
+            sb.append(month.getDate()+"\t"+monthTotal+"\t");
         }
         model.addAttribute("logoUrl", "Logo goes Here");
         model.addAttribute("data",sb.toString());

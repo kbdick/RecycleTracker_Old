@@ -21,7 +21,7 @@
     <mvc:resources mapping="/res/**" location="/res/"/>
 
     <!-- Factory bean that creates the Mongo instance -->
-    <mongo:mongo host="#{@dbUrl.getHost()}" port="#{@dbUrl.getPort()}">
+    <mongo:mongo host="troup.mongohq.com" port="10063">
         <mongo:options connections-per-host="8"
                        threads-allowed-to-block-for-connection-multiplier="4"
                        connect-timeout="1000"
@@ -36,19 +36,16 @@
     </mongo:mongo>
 
     <mongo:db-factory id="mongoFactory"
-                      host="#{@dbUrl.getHost()}"
-                      port="#{@dbUrl.getPort()}"
-                      dbname="#{dbUrl.getPath()}"
-                      username="#{ @dbUrl.getUserInfo().split(':')[0] }"
-                      password="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
+                      host="troup.mongohq.com"
+                      port="10063"
+                      dbname="app21517416"
+                      username="alexthornburg1"
+                      password="CHASINsteeps2014"/>
 
     <bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
         <constructor-arg name="mongoDbFactory" ref="mongoFactory"/>
     </bean>
 
-    <bean class="java.net.URI" id="dbUrl">
-        <constructor-arg value="${MONGOHQ_URL}"/>
-    </bean>
 
     <!--<bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean">
         <property name="host" value="localhost" />

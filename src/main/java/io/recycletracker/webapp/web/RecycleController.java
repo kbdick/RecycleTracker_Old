@@ -1,6 +1,8 @@
 package io.recycletracker.webapp.web;
 
+import com.google.gson.Gson;
 import io.recycletracker.webapp.model.RecycleMonth;
+import io.recycletracker.webapp.model.RecycleWeight;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -8,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -29,14 +32,18 @@ public class RecycleController {
             }
         });
         StringBuilder sb = new StringBuilder();
+        ArrayList<RecycleWeight> weightsList = new ArrayList<RecycleWeight>();
         for(RecycleMonth month:recycleList){
-            double monthTotal = month.getWetTrash()+month.getRecyclingData()+month.getOpenTop()+month.getMetal()+month.getFlourescent()+
-                    month.getBallasts()+month.getIncandescent()+month.getElectronics()+month.getCompostTons()+month.getBatteries();
+            RecycleWeight weight = new RecycleWeight();
+            weight.setClose(month.getWetTrash()+month.getRecyclingData()+month.getOpenTop()+month.getMetal()+month.getFlourescent()+
+                    month.getBallasts()+month.getIncandescent()+month.getElectronics()+month.getCompostTons()+month.getBatteries());
 
-            sb.append("{date:'"+month.getDate()+"',close:'"+monthTotal+"'},");
+            weight.setDate(month.getDate());
+            weightsList.add(weight);
         }
+        Gson gson = new Gson();
         model.addAttribute("logoUrl", "Logo goes Here");
-        model.addAttribute("data",sb.toString());
+        model.addAttribute("data",gson.toJson(weightsList));
 		return "welcome";
 	}
 

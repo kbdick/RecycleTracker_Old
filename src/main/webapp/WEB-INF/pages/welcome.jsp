@@ -28,7 +28,7 @@
 
     var parseDate = d3.time.format("%d-%b-%y").parse;
 
-    var recData = [${data}];
+    var recData = ${data};
 
     var x = d3.time.scale()
             .range([0, width]);

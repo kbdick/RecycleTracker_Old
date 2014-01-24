@@ -24,6 +24,7 @@
           <element id="library" level="project" name="Maven: javax.servlet:servlet-api:2.5" />
           <element id="library" level="project" name="Maven: org.mongodb:mongo-java-driver:2.7.2" />
           <element id="library" level="project" name="Maven: org.json:json:20131018" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.2.4" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-mongodb:1.2.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.5.0.RELEASE" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.1" />

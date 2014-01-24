@@ -132,7 +132,7 @@
       <file leaf-file-name="welcome.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="57" selection-start="1541" selection-end="1570" vertical-scroll-proportion="0.45180723">
+            <state line="43" column="4" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.3313253">
               <folding />
             </state>
           </provider>
@@ -958,7 +958,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="57" selection-start="1541" selection-end="1570" vertical-scroll-proportion="0.45180723">
+        <state line="43" column="4" selection-start="1571" selection-end="1571" vertical-scroll-proportion="0.3313253">
           <folding />
         </state>
       </provider>

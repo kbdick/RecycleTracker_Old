@@ -41,7 +41,8 @@
     var yAxis = d3.svg.axis()
             .scale(y)
             .orient("left");
-    var ourData = ${data};
+
+    var ourData = "${data}";
 
     var line = d3.svg.line()
             .x(function(d) { return x(d.date); })

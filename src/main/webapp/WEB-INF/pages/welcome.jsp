@@ -23,8 +23,8 @@
     <div class="span6" id = "leftcontent" >
 <script>
     var margin = {top: 20, right: 50, bottom: 30, left: 50},
-            width = 960 - margin.left - margin.right,
-            height = 500 - margin.top - margin.bottom;
+            width = 750 - margin.left - margin.right,
+            height = 390.625 - margin.top - margin.bottom;
 
     var parseDate = d3.time.format("%d-%b-%y").parse,
             bisectDate = d3.bisector(function(d) { return d.date; }).left,

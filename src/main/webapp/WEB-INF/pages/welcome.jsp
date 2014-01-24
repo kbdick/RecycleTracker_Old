@@ -28,6 +28,8 @@
 
     var parseDate = d3.time.format("%d-%b-%y").parse;
 
+    var recData = [${data}];
+
     var x = d3.time.scale()
             .range([0, width]);
 
@@ -42,8 +44,6 @@
             .scale(y)
             .orient("left");
 
-    var ourData = "${data}";
-
     var line = d3.svg.line()
             .x(function(d) { return x(d.date); })
             .y(function(d) { return y(d.close); });
@@ -54,7 +54,7 @@
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.tsv(ourData, function(error, data) {
+    d3.json(recData, function(error, data) {
         data.forEach(function(d) {
             d.date = parseDate(d.date);
             d.close = +d.close;

@@ -22,8 +22,8 @@
     <file path="/RecycleDay_Roo_JavaBean.aj" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390266051374" ignored="false" />
     <file path="/mvc-dispatcher-servlet.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390541890822" ignored="false" />
     <file path="/RecycleService.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390276196621" ignored="false" />
-    <file path="/RecycleController.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390543060482" ignored="false" />
-    <file path="/welcome.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390543487602" ignored="false" />
+    <file path="/RecycleController.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390544493753" ignored="false" />
+    <file path="/welcome.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390544603992" ignored="false" />
     <file path="/RecycleMonth.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390285826489" ignored="false" />
     <file path="/recycletracker.css" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390331958434" ignored="false" />
     <file path="/mongo.properties" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390453055316" ignored="false" />
@@ -91,10 +91,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RecycleController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RecycleController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="57" selection-start="2206" selection-end="2206" vertical-scroll-proportion="0.6617647">
+            <state line="34" column="12" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -129,10 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="welcome.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="4" selection-start="1055" selection-end="3003" vertical-scroll-proportion="-0.625">
+            <state line="44" column="28" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.3318584">
               <folding />
             </state>
           </provider>
@@ -215,8 +215,8 @@
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/config/MongoConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleWeight.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp" />
       </list>
     </option>
   </component>
@@ -309,6 +309,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecycleTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecycleTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -977,13 +1007,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="4" selection-start="1055" selection-end="3003" vertical-scroll-proportion="-0.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/css/recycletracker.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="41" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
@@ -993,10 +1016,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="57" selection-start="2206" selection-end="2206" vertical-scroll-proportion="0.6617647">
+        <state line="34" column="12" selection-start="1408" selection-end="1408" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="28" selection-start="1600" selection-end="1600" vertical-scroll-proportion="0.3318584">
+          <folding />
         </state>
       </provider>
     </entry>

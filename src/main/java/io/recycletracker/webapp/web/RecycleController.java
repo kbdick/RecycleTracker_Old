@@ -28,24 +28,12 @@ public class RecycleController {
                 return c2.getId().compareTo(c1.getId());
             }
         });
-        /*try {
-            FileWriter writer = new FileWriter(request.getSession().getServletContext().getRealPath("/")+"res/"+"data.tsv");
-            writer.write("date\t"+"close\n");
-            for(RecycleMonth month:recycleList){
-                double monthTotal = month.getWetTrash()+month.getRecyclingData()+month.getOpenTop()+month.getMetal()+month.getFlourescent()+
-                        month.getBallasts()+month.getIncandescent()+month.getElectronics()+month.getCompostTons()+month.getBatteries();
-                writer.write(month.getDate()+"\t"+monthTotal+"\n");
-            }
-            writer.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }*/
         StringBuilder sb = new StringBuilder();
-        sb.append("date\t"+"close\t");
         for(RecycleMonth month:recycleList){
             double monthTotal = month.getWetTrash()+month.getRecyclingData()+month.getOpenTop()+month.getMetal()+month.getFlourescent()+
                     month.getBallasts()+month.getIncandescent()+month.getElectronics()+month.getCompostTons()+month.getBatteries();
-            sb.append(month.getDate()+"\t"+monthTotal+"\t");
+
+            sb.append("{date:'"+month.getDate()+"',close:'"+monthTotal+"'},");
         }
         model.addAttribute("logoUrl", "Logo goes Here");
         model.addAttribute("data",sb.toString());

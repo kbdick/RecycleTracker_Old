@@ -23,7 +23,7 @@
     <file path="/mvc-dispatcher-servlet.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390541890822" ignored="false" />
     <file path="/RecycleService.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390276196621" ignored="false" />
     <file path="/RecycleController.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390543060482" ignored="false" />
-    <file path="/welcome.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390543087435" ignored="false" />
+    <file path="/welcome.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390543487602" ignored="false" />
     <file path="/RecycleMonth.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390285826489" ignored="false" />
     <file path="/recycletracker.css" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390331958434" ignored="false" />
     <file path="/mongo.properties" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390453055316" ignored="false" />
@@ -132,7 +132,7 @@
       <file leaf-file-name="welcome.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="59" column="80" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.8433735">
+            <state line="42" column="57" selection-start="1541" selection-end="1570" vertical-scroll-proportion="0.45180723">
               <folding />
             </state>
           </provider>
@@ -958,7 +958,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="80" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.8433735">
+        <state line="42" column="57" selection-start="1541" selection-end="1570" vertical-scroll-proportion="0.45180723">
           <folding />
         </state>
       </provider>

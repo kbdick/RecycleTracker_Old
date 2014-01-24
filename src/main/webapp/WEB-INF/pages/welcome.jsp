@@ -41,6 +41,7 @@
     var yAxis = d3.svg.axis()
             .scale(y)
             .orient("left");
+    var ourData = ${data};
 
     var line = d3.svg.line()
             .x(function(d) { return x(d.date); })
@@ -52,7 +53,7 @@
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    d3.tsv("${data}", function(error, data) {
+    d3.tsv(ourData, function(error, data) {
         data.forEach(function(d) {
             d.date = parseDate(d.date);
             d.close = +d.close;

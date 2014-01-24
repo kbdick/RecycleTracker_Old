@@ -38,7 +38,7 @@
     <mongo:db-factory id="mongoFactory"
                       host="#{@dbUrl.getHost()}"
                       port="#{@dbUrl.getPort()}"
-                      dbname="app21517416"
+                      dbname="#{dbUrl.getPath()}"
                       username="#{ @dbUrl.getUserInfo().split(':')[0] }"
                       password="#{ @dbUrl.getUserInfo().split(':')[1] }"/>
 
@@ -47,7 +47,7 @@
     </bean>
 
     <bean class="java.net.URI" id="dbUrl">
-        <constructor-arg value="mongodb://alexthornburg1:CHASINsteeps2014@troup.mongohq.com:10022/app21517416"/>
+        <constructor-arg value="${MONGOHQ_URL}"/>
     </bean>
 
     <!--<bean id="mongo" class="org.springframework.data.mongodb.core.MongoFactoryBean">

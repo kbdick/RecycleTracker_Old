@@ -18,7 +18,7 @@
     <file path="/pom.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390524164590" ignored="false" />
     <file path="/RecycleDay.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390265964999" ignored="false" />
     <file path="/RecycleDay_Roo_JavaBean.aj" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390266051374" ignored="false" />
-    <file path="/mvc-dispatcher-servlet.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390527239495" ignored="false" />
+    <file path="/mvc-dispatcher-servlet.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390529077814" ignored="false" />
     <file path="/RecycleService.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390276196621" ignored="false" />
     <file path="/RecycleController.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390326468076" ignored="false" />
     <file path="/welcome.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390332560132" ignored="false" />
@@ -97,7 +97,7 @@
       <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="41" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.29411766">
+            <state line="50" column="61" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.7647059">
               <folding />
             </state>
           </provider>
@@ -970,7 +970,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="41" selection-start="2009" selection-end="2009" vertical-scroll-proportion="0.29411766">
+        <state line="50" column="61" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.7647059">
           <folding />
         </state>
       </provider>

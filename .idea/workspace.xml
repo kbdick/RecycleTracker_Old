@@ -4,10 +4,12 @@
     <list default="true" id="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mongodb_mongo_java_driver_2_10_1.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java" afterPath="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RecycleTracker.iml" afterPath="$PROJECT_DIR$/RecycleTracker.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/RecycleTracker_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/RecycleTracker_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RecycleTracker.iws" />
@@ -20,13 +22,15 @@
     <file path="/RecycleDay_Roo_JavaBean.aj" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390266051374" ignored="false" />
     <file path="/mvc-dispatcher-servlet.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390541890822" ignored="false" />
     <file path="/RecycleService.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390276196621" ignored="false" />
-    <file path="/RecycleController.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390540853869" ignored="false" />
-    <file path="/welcome.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390332560132" ignored="false" />
+    <file path="/RecycleController.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390543060482" ignored="false" />
+    <file path="/welcome.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390543087435" ignored="false" />
     <file path="/RecycleMonth.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390285826489" ignored="false" />
     <file path="/recycletracker.css" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390331958434" ignored="false" />
     <file path="/mongo.properties" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390453055316" ignored="false" />
     <file path="/system.properties" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390540336185" ignored="false" />
     <file path="/MongoConfig.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390540711426" ignored="false" />
+    <file path="/RecycleWeight.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390542944710" ignored="false" />
+    <file path="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleWeight.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390542952779" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +94,7 @@
       <file leaf-file-name="RecycleController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="12" selection-start="648" selection-end="662" vertical-scroll-proportion="0.0">
+            <state line="48" column="66" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,10 +102,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="46" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.68199235">
+            <state line="41" column="46" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,10 +129,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="welcome.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="49" selection-start="1650" selection-end="1650" vertical-scroll-proportion="0.0">
+            <state line="59" column="80" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.8433735">
               <folding />
             </state>
           </provider>
@@ -188,7 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/META-INF/spring/database.properties" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleDay_Roo_JavaBean.aj" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleDay.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
@@ -196,14 +199,15 @@
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleMonth.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/recycletracker.css" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/spring/SpringConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/config/mongo.properties" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/system.properties" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/config/MongoConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleWeight.java" />
+        <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp" />
       </list>
     </option>
   </component>
@@ -755,7 +759,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="706" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -776,7 +780,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32809773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Amazon EC2" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31523502" sideWeight="0.58965516" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31523502" sideWeight="0.58965516" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41034484" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -894,13 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="49" selection-start="1650" selection-end="1650" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RecycleTracker.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -936,15 +933,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="12" selection-start="648" selection-end="662" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="52" selection-start="432" selection-end="432" vertical-scroll-proportion="0.0">
@@ -954,7 +942,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="46" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.68199235">
+        <state line="41" column="46" selection-start="2025" selection-end="2025" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="66" selection-start="2219" selection-end="2219" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="80" selection-start="2211" selection-end="2211" vertical-scroll-proportion="0.8433735">
           <folding />
         </state>
       </provider>

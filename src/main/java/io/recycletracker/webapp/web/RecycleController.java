@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -30,7 +28,7 @@ public class RecycleController {
                 return c2.getId().compareTo(c1.getId());
             }
         });
-        try {
+        /*try {
             FileWriter writer = new FileWriter(request.getSession().getServletContext().getRealPath("/")+"res/"+"data.tsv");
             writer.write("date\t"+"close\n");
             for(RecycleMonth month:recycleList){
@@ -41,8 +39,16 @@ public class RecycleController {
             writer.close();
         } catch (IOException e) {
             e.printStackTrace();
+        }*/
+        StringBuilder sb = new StringBuilder();
+        sb.append("date\t"+"close\n");
+        for(RecycleMonth month:recycleList){
+            double monthTotal = month.getWetTrash()+month.getRecyclingData()+month.getOpenTop()+month.getMetal()+month.getFlourescent()+
+                    month.getBallasts()+month.getIncandescent()+month.getElectronics()+month.getCompostTons()+month.getBatteries();
+            sb.append(month.getDate()+"\t"+monthTotal+"\n");
         }
         model.addAttribute("logoUrl", "Logo goes Here");
+        model.addAttribute("data",sb.toString());
 		return "welcome";
 	}
 

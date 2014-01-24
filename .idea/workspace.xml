@@ -9,6 +9,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/RecycleTracker_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/RecycleTracker_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/recycletracker.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/recycletracker.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -23,7 +24,7 @@
     <file path="/mvc-dispatcher-servlet.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390541890822" ignored="false" />
     <file path="/RecycleService.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390276196621" ignored="false" />
     <file path="/RecycleController.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390547133315" ignored="false" />
-    <file path="/welcome.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390544603992" ignored="false" />
+    <file path="/welcome.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390548108814" ignored="false" />
     <file path="/RecycleMonth.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390285826489" ignored="false" />
     <file path="/recycletracker.css" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390331958434" ignored="false" />
     <file path="/mongo.properties" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390453055316" ignored="false" />
@@ -123,7 +124,7 @@
       <file leaf-file-name="welcome.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="49" selection-start="1598" selection-end="1598" vertical-scroll-proportion="0.19911504">
+            <state line="61" column="45" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.46460176">
               <folding />
             </state>
           </provider>
@@ -150,7 +151,7 @@
       <file leaf-file-name="recycletracker.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/recycletracker.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="41" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
+            <state line="56" column="0" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -206,7 +207,6 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleMonth.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/recycletracker.css" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/spring/SpringConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/config/mongo.properties" />
         <option value="$PROJECT_DIR$/Procfile" />
@@ -216,6 +216,7 @@
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleWeight.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/recycletracker.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp" />
       </list>
     </option>
@@ -993,13 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/recycletracker.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="41" selection-start="279" selection-end="279" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleMonth.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="17" selection-start="219" selection-end="231" vertical-scroll-proportion="0.0">
@@ -1031,9 +1025,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/recycletracker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="0" selection-start="677" selection-end="677" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/welcome.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="49" selection-start="1598" selection-end="1598" vertical-scroll-proportion="0.19911504">
+        <state line="61" column="45" selection-start="2307" selection-end="2307" vertical-scroll-proportion="0.46460176">
           <folding />
         </state>
       </provider>

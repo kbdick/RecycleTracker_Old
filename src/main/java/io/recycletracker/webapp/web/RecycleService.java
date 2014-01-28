@@ -5,7 +5,7 @@ package io.recycletracker.webapp.web;
  * Date: 1/20/14
  * Time: 7:37 PM
  */
-import io.recycletracker.webapp.model.RecycleMonth;
+import io.recycletracker.webapp.model.RecycleDay;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
@@ -17,26 +17,26 @@ public class RecycleService {
     @Autowired
     private MongoTemplate mongoTemplate;
 
-    public static final String COLLECTION_NAME = "recycleMonth";
+    public static final String COLLECTION_NAME = "recycleDays";
 
-    public void addMonth(RecycleMonth month) {
-        if (!mongoTemplate.collectionExists(RecycleMonth.class)) {
-            mongoTemplate.createCollection(RecycleMonth.class);
+    public void addMonth(RecycleDay day) {
+        if (!mongoTemplate.collectionExists(RecycleDay.class)) {
+            mongoTemplate.createCollection(RecycleDay.class);
         }
-        month.setId(UUID.randomUUID().toString());
-        mongoTemplate.insert(month, COLLECTION_NAME);
+        day.setId(UUID.randomUUID().toString());
+        mongoTemplate.insert(day, COLLECTION_NAME);
     }
 
-    public List<RecycleMonth> listMonth() {
-        return mongoTemplate.findAll(RecycleMonth.class, COLLECTION_NAME);
+    public List<RecycleDay> listDays() {
+        return mongoTemplate.findAll(RecycleDay.class, COLLECTION_NAME);
     }
 
-    public void deleteMonth(RecycleMonth person) {
-        mongoTemplate.remove(person, COLLECTION_NAME);
+    public void deleteDays(RecycleDay day) {
+        mongoTemplate.remove(day, COLLECTION_NAME);
     }
 
-    public void updateMonth(RecycleMonth month) {
-        mongoTemplate.insert(month, COLLECTION_NAME);
+    public void updateDays(RecycleDay day) {
+        mongoTemplate.insert(day, COLLECTION_NAME);
     }
 
 

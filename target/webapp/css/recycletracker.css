@@ -6,21 +6,6 @@ body {
     font: 10px sans-serif;
 }
 
-#header {
-margin: 2%;
-padding: 2%;
-}
-
-#leftcontent {
-    float: left;
-    overflow: hidden;
-    height: 90%;
-    width: 60%;
-    margin: 2%;
-    padding: 2%;
-    border: 1px solid gray;
-}
-
 .axis path,
 .axis line {
     fill: none;
@@ -38,6 +23,39 @@ padding: 2%;
     stroke-width: 1.5px;
 }
 
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.focus circle {
+    fill: none;
+    stroke: steelblue;
+}
+
+.range {
+    fill: #eee;
+    opacity: .4;
+    pointer-events: all;
+    shape-rendering: crispEdges;
+}
+
+#header {
+margin: 2%;
+padding: 2%;
+}
+
+#leftcontent {
+    float: left;
+    overflow: hidden;
+    height: 90%;
+    width: 60%;
+    margin: 2%;
+    padding: 2%;
+    border: 1px solid gray;
+}
+
+
 #rightcontent {
 float: right;
 overflow: hidden;
@@ -53,3 +71,5 @@ float: right;
 margin: 2%;
 padding: 2%;
 }
+
+

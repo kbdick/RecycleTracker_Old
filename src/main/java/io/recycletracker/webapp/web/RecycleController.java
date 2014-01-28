@@ -1,7 +1,7 @@
 package io.recycletracker.webapp.web;
 
 import com.google.gson.Gson;
-import io.recycletracker.webapp.model.RecycleMonth;
+import io.recycletracker.webapp.model.RecycleDay;
 import io.recycletracker.webapp.model.RecycleWeight;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -24,27 +24,55 @@ public class RecycleController {
 
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String printWelcome(final ModelMap model, final HttpServletRequest request) {
-        List<RecycleMonth> recycleList = recycleService.listMonth();
-        Collections.sort(recycleList,new Comparator<RecycleMonth>() {
-            public int compare(RecycleMonth c1, RecycleMonth c2) {
+	public String printBuilding(final ModelMap model, final HttpServletRequest request) {
+        List<RecycleDay> recycleList = recycleService.listDays();
+        Collections.sort(recycleList,new Comparator<RecycleDay>() {
+            public int compare(RecycleDay c1, RecycleDay c2) {
                 return c2.getId().compareTo(c1.getId());
             }
         });
         StringBuilder sb = new StringBuilder();
         ArrayList<RecycleWeight> weightsList = new ArrayList<RecycleWeight>();
-        for(RecycleMonth month:recycleList){
+        for(RecycleDay day:recycleList){
             RecycleWeight weight = new RecycleWeight();
-            weight.setClose(month.getWetTrash()+month.getRecyclingData()+month.getOpenTop()+month.getMetal()+month.getFlourescent()+
-                    month.getBallasts()+month.getIncandescent()+month.getElectronics()+month.getCompostTons()+month.getBatteries());
+            weight.setWeight(day.getWetTrash()*day.getDiversion1() + day.getRecyclingData() + day.getOpenTop()*day.getDiversion2() + day.getMetal() + day.getFlourescent() +
+                    day.getBallasts() + day.getIncandescent() + day.getElectronics() + day.getCompostTons() + day.getBatteries());
 
-            weight.setDate(month.getDate());
+            weight.setDate(day.getDate());
             weightsList.add(weight);
         }
+        RecycleDay today = recycleList.get(0);
+        double totalToday = today.getWetTrash() + today.getRecyclingData() + today.getOpenTop() +
+                today.getMetal() + today.getFlourescent() +
+                today.getBallasts() + today.getIncandescent()
+                + today.getElectronics() + today.getCompostTons() + today.getBatteries();
+        double recyclingToday = today.getRecyclingData()* today.getDiversion1()
+                + today.getOpenTop()*today.getDiversion2() +
+                today.getMetal() + today.getFlourescent() +
+                today.getBallasts() + today.getIncandescent()
+                + today.getElectronics() + today.getCompostTons() + today.getBatteries();
+        RecycleDay yesterday = recycleList.get(1);
+        double totalYesterday = yesterday.getWetTrash() + yesterday.getRecyclingData() + yesterday.getOpenTop() +
+                yesterday.getMetal() + yesterday.getFlourescent() +
+                yesterday.getBallasts() + yesterday.getIncandescent()
+                + yesterday.getElectronics() + yesterday.getCompostTons() + yesterday.getBatteries();
+        double recyclingYesterday = yesterday.getRecyclingData()* yesterday.getDiversion1() +
+                + yesterday.getOpenTop()*yesterday.getDiversion2() +
+                yesterday.getMetal() + yesterday.getFlourescent() +
+                yesterday.getBallasts() + yesterday.getIncandescent()
+                + yesterday.getElectronics() + yesterday.getCompostTons() + yesterday.getBatteries();
+        double yesterdayPercentage = recyclingYesterday/totalYesterday;
+        double todayPercentage = recyclingToday/totalToday;
         Gson gson = new Gson();
         model.addAttribute("logoUrl", "Logo goes Here");
         model.addAttribute("data",gson.toJson(weightsList));
-		return "welcome";
+        if((todayPercentage - yesterdayPercentage)<0){
+            model.addAttribute("trend","down_arrow");
+        }else{
+            model.addAttribute("trend","up_arrow");
+        }
+        model.addAttribute("percentage",Math.abs(todayPercentage-yesterdayPercentage*100));
+		return "building";
 	}
 
 }

@@ -20,94 +20,133 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <div id="header"><h4>${logoUrl}</h4></div>
 <div class="row">
-    <div class="span6" id = "leftcontent" >
+    <div class="span6" id = "chartContainer" >
         <img src="<c:url value="/images/${trend}.png" />" alt="logo"> % ${percentage}
 <script>
-    var margin = {top: 20, right: 50, bottom: 30, left: 50},
-            width = 750 - margin.left - margin.right,
-            height = 390.625 - margin.top - margin.bottom;
+    var padding = {top: 20, right: 70, bottom: 80, left: 50};
+    var parseDate = d3.time.format("%d-%b-%y").parse;
+    var sourceData, xScale, yScale, line;
+    var prevChartWidth = 0, prevChartHeight = 0;
+    var updateTransistionMS = 750;
 
-    var parseDate = d3.time.format("%d-%b-%y").parse,
-            bisectDate = d3.bisector(function(d) { return d.date; }).left,
-            formatValue = d3.format(",.2f"),
-            formatCurrency = function(d) { return formatValue(d) + " lbs"; };
-
-    var x = d3.time.scale()
-            .range([0, width]);
-
-    var y = d3.scale.linear()
-            .range([height, 0]);
-
-    var xAxis = d3.svg.axis()
-            .scale(x)
-            .orient("bottom");
-
-    var yAxis = d3.svg.axis()
-            .scale(y)
-            .orient("left");
-
-    var line = d3.svg.line()
-            .x(function(d) { return x(d.date); })
-            .y(function(d) { return y(d.weight); });
-
-    var svg = d3.select("#leftcontent").append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
+    var chartSvg = d3.select("#chartContainer").append("svg")
             .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-    var data = ${data};
-
-    data.forEach(function(d) {
-        d.date = parseDate(d.date);
-        d.weight = +d.weight;
-    });
-
-    data.sort(function(a, b) {
-        return a.date - b.date;
-    });
-
-    x.domain([data[0].date, data[data.length - 1].date]);
-    y.domain(d3.extent(data, function(d) { return d.weight; }));
-
-    svg.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);
-
-    svg.append("g")
-            .attr("class", "y axis")
-            .call(yAxis)
-            .append("text")
-            .attr("transform", "rotate(-90)")
-            .attr("y", 6)
-            .attr("dy", ".71em")
-            .style("text-anchor", "end")
-            .text("Weight (tons)");
-
-    svg.append("path")
-            .datum(data)
-            .attr("class", "line")
-            .attr("d", line);
-
-    var focus = svg.append("g")
-            .attr("class", "focus")
-            .style("display", "none");
-
-    focus.append("circle")
-            .attr("r", 4.5);
-
-    focus.append("text")
-            .attr("x", 9)
-            .attr("dy", ".35em");
-
-    svg.append("rect")
-            .attr("class", "overlay")
-            .attr("width", width)
-            .attr("height", height)
+            .attr("class", "chartContainer")
+            .attr("transform", "translate(" + padding.left + "," + padding.top + ")")
             .on("mouseover", function() { focus.style("display", null); })
             .on("mouseout", function() { focus.style("display", "none"); })
             .on("mousemove", mousemove);
+
+    chartSvg.append("g")
+            .attr("class", "x axis");
+
+    chartSvg.append("g")
+            .attr("class", "y axis");
+
+    var data = ${data}
+
+        data.forEach(function(d) {
+            d.date = parseDate(d.date);
+            d.weight = +d.weight;
+        });
+
+        sourceData = data;
+
+        xScale = d3.time.scale()
+                .domain(d3.extent(sourceData, function(d) { return d.date; }));
+
+        yScale = d3.scale.linear()
+                .domain([0, d3.max(sourceData, function(d) { return d.weight; })]);
+
+        xAxis = d3.svg.axis()
+                .scale(xScale)
+                .orient("bottom");
+
+        yAxis = d3.svg.axis()
+                .scale(yScale)
+                .orient("left");
+
+        // declare a new line
+        line = d3.svg.line()
+                .x(function(d) { return xScale(d.date); })
+                .y(function(d) { return yScale(d.weight); })
+                .interpolate("linear");
+
+        updateChart(true);
+    function updateChart(init)
+    {
+        var chartWidth = document.getElementById('chartContainer').getBoundingClientRect().width - padding.left - padding.right;
+        var chartHeight = document.getElementById('chartContainer').getBoundingClientRect().height - padding.top - padding.bottom;
+
+        if ((prevChartWidth != chartWidth) ||
+                (prevChartHeight != chartHeight))
+        {
+            prevChartWidth = chartWidth;
+            prevChartHeight = chartHeight;
+
+            chartSvg.attr("width", chartWidth + padding.left + padding.right)
+                    .attr("height", chartHeight + padding.top + padding.bottom);
+
+            xScale.range([0, chartWidth]);
+            yScale.range([chartHeight, 0]);
+
+            if (init)
+            {
+
+                chartSvg.select(".x")
+                        .attr("transform", "translate(0," + chartHeight + ")")
+                        .call(xAxis);
+
+                chartSvg.select(".y")
+                        .call(yAxis);
+            }
+            else
+            {
+                var t = chartSvg.transition().duration(updateTransistionMS);
+
+                t.select(".x")
+                        .attr("transform", "translate(0," + chartHeight + ")")
+                        .call(xAxis);
+
+                t.select(".y")
+                        .call(yAxis);
+            }
+
+            var circle = chartSvg.selectAll("circle")
+                    .data(sourceData);
+
+            circle.transition()
+                    .duration(updateTransistionMS)
+                    .attr("cx", function(d) { return xScale(d.date); })
+                    .attr("cy", function(d) { return yScale(d.weight); });
+
+            circle.enter().append("circle")
+                    .attr("cx", function(d) { return xScale(d.date); })
+                    .attr("cy", function(d) { return yScale(d.weight); })
+                    .attr("r", 3)
+                    .attr("class", "circle");
+
+            var lines = chartSvg.selectAll(".line")
+                    .data([sourceData]);
+
+            lines.transition()
+                    .duration(updateTransistionMS)
+                    .attr("d", line);
+
+            lines.enter().append("path")
+                    .attr("class", "line")
+                    .attr("d", line);
+        }
+    }
+
+    var resizeTimer;
+    window.onresize = function(event) {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function()
+        {
+            updateChart(false);
+        }, 100);
+    }
 
     function mousemove() {
         var x0 = x.invert(d3.mouse(this)[0]),
@@ -118,10 +157,11 @@
         focus.attr("transform", "translate(" + x(d.date) + "," + y(d.weight) + ")");
         focus.select("text").text(formatCurrency(d.weight));
     }
+
 </script>
 </div>
     <div id= "rightcontent" class="span6">
-
+         Ads go here.
     </div>
 </div>
 <footer>

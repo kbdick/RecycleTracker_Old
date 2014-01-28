@@ -13,39 +13,18 @@ body {
     shape-rendering: crispEdges;
 }
 
-.x.axis path {
-    display: none;
+.circle {
+    fill: #48ff31;
 }
 
-.line {
+.line
+{
+    stroke: blue;
     fill: none;
-    stroke: steelblue;
-    stroke-width: 1.5px;
 }
 
-.overlay {
-    fill: none;
-    pointer-events: all;
-}
-
-.focus circle {
-    fill: none;
-    stroke: steelblue;
-}
-
-.range {
-    fill: #eee;
-    opacity: .4;
-    pointer-events: all;
-    shape-rendering: crispEdges;
-}
-
-#header {
-margin: 2%;
-padding: 2%;
-}
-
-#leftcontent {
+#chartContainer
+{
     float: left;
     overflow: hidden;
     height: 90%;
@@ -54,6 +33,12 @@ padding: 2%;
     padding: 2%;
     border: 1px solid gray;
 }
+
+#header {
+margin: 2%;
+padding: 2%;
+}
+
 
 
 #rightcontent {

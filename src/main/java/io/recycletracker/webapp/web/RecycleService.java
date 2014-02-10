@@ -9,7 +9,7 @@ import io.recycletracker.webapp.model.RecycleDay;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Repository;
-
+import org.springframework.data.mongodb.core.query.BasicQuery;
 import java.util.List;
 import java.util.UUID;
 @Repository
@@ -19,7 +19,7 @@ public class RecycleService {
 
     public static final String COLLECTION_NAME = "recycleDays";
 
-    public void addMonth(RecycleDay day) {
+    public void addDay(RecycleDay day) {
         if (!mongoTemplate.collectionExists(RecycleDay.class)) {
             mongoTemplate.createCollection(RecycleDay.class);
         }
@@ -30,6 +30,12 @@ public class RecycleService {
     public List<RecycleDay> listDays() {
         return mongoTemplate.findAll(RecycleDay.class, COLLECTION_NAME);
     }
+
+    public List<RecycleDay> listByBuilding(String building) {
+        BasicQuery query = new BasicQuery("{ building : "+building+"}");
+        return mongoTemplate.find(query,RecycleDay.class);
+    }
+
 
     public void deleteDays(RecycleDay day) {
         mongoTemplate.remove(day, COLLECTION_NAME);

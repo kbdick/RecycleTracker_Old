@@ -22,6 +22,7 @@ public class RecycleDay {
     double ballasts;
     double compostTons;
     double openTop;
+    String building;
 
     public String getId(){
         return id;
@@ -134,5 +135,30 @@ public class RecycleDay {
     public void setOpenTop(double openTop){
         this.openTop = openTop;
     }
+
+    public void setBuilding(String building){
+        this.building = building;
+    }
+
+    public String getBuilding(){
+        return building;
+    }
+
+    public double addTotal(){
+        return getWetTrash() + getRecyclingData() + getOpenTop() +
+               getMetal() + getFlourescent() + getBallasts() +
+               getIncandescent()+ getElectronics() + getCompostTons() +
+               getBatteries();
+    }
+
+    public double addRecycling(){
+        return  getRecyclingData()* getDiversion1() +
+                getOpenTop()*getDiversion2() +
+                getMetal() + getFlourescent() +
+                getBallasts() + getIncandescent() +
+                getElectronics() + getCompostTons() +
+                getBatteries();
+    }
+
 
 }

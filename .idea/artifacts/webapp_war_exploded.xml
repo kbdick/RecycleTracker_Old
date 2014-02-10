@@ -2,10 +2,10 @@
   <artifact type="exploded-war" name="webapp:war exploded">
     <output-path>$PROJECT_DIR$/target/webapp-0.1.0.BUILD-SNAPSHOT</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="RecycleTracker/web/Web" />
+      <element id="javaee-facet-resources" facet="RecycleTrackerV2Webapp/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="RecycleTracker" />
+          <element id="module-output" name="RecycleTrackerV2Webapp" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.17" />

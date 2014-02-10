@@ -4,6 +4,8 @@ padding: 5%;
 
 body {
     font: 10px sans-serif;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .axis path,
@@ -39,6 +41,16 @@ margin: 2%;
 padding: 2%;
 }
 
+.navbar {
+    margin-bottom: 20px;
+}
+
+.pagination-centered {
+    text-align: center;
+    float:none;
+    display:inline-block;
+    vertical-align:middle;
+}
 
 
 #rightcontent {

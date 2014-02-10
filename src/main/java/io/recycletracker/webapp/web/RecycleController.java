@@ -6,6 +6,7 @@ import io.recycletracker.webapp.model.RecycleWeight;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -23,9 +24,15 @@ public class RecycleController {
     private RecycleService recycleService;
 
 
-	@RequestMapping(method = RequestMethod.GET)
-	public String printBuilding(final ModelMap model, final HttpServletRequest request) {
-        List<RecycleDay> recycleList = recycleService.listDays();
+	@RequestMapping(value = "/{building}/",method = RequestMethod.GET)
+	public String printBuilding(final ModelMap model,@PathVariable String building, final HttpServletRequest request) {
+        List<RecycleDay> allList = recycleService.listDays();
+        List<RecycleDay> recycleList = new ArrayList<RecycleDay>();
+        for(RecycleDay day:allList){
+           if(day.getBuilding().equals(building)){
+               recycleList.add(day);
+           }
+        }
         Collections.sort(recycleList,new Comparator<RecycleDay>() {
             public int compare(RecycleDay c1, RecycleDay c2) {
                 return c2.getId().compareTo(c1.getId());
@@ -42,25 +49,11 @@ public class RecycleController {
             weightsList.add(weight);
         }
         RecycleDay today = recycleList.get(0);
-        double totalToday = today.getWetTrash() + today.getRecyclingData() + today.getOpenTop() +
-                today.getMetal() + today.getFlourescent() +
-                today.getBallasts() + today.getIncandescent()
-                + today.getElectronics() + today.getCompostTons() + today.getBatteries();
-        double recyclingToday = today.getRecyclingData()* today.getDiversion1()
-                + today.getOpenTop()*today.getDiversion2() +
-                today.getMetal() + today.getFlourescent() +
-                today.getBallasts() + today.getIncandescent()
-                + today.getElectronics() + today.getCompostTons() + today.getBatteries();
+        double totalToday = today.addTotal();
+        double recyclingToday = today.addRecycling();
         RecycleDay yesterday = recycleList.get(1);
-        double totalYesterday = yesterday.getWetTrash() + yesterday.getRecyclingData() + yesterday.getOpenTop() +
-                yesterday.getMetal() + yesterday.getFlourescent() +
-                yesterday.getBallasts() + yesterday.getIncandescent()
-                + yesterday.getElectronics() + yesterday.getCompostTons() + yesterday.getBatteries();
-        double recyclingYesterday = yesterday.getRecyclingData()* yesterday.getDiversion1() +
-                + yesterday.getOpenTop()*yesterday.getDiversion2() +
-                yesterday.getMetal() + yesterday.getFlourescent() +
-                yesterday.getBallasts() + yesterday.getIncandescent()
-                + yesterday.getElectronics() + yesterday.getCompostTons() + yesterday.getBatteries();
+        double totalYesterday = today.addTotal();
+        double recyclingYesterday = today.addRecycling();
         double yesterdayPercentage = recyclingYesterday/totalYesterday;
         double todayPercentage = recyclingToday/totalToday;
         Gson gson = new Gson();
@@ -74,5 +67,18 @@ public class RecycleController {
         model.addAttribute("percentage",Math.abs(todayPercentage-yesterdayPercentage*100));
 		return "building";
 	}
+
+    @RequestMapping(method = RequestMethod.GET)
+    public String returnHome(final ModelMap model, final HttpServletRequest request) {
+        List<RecycleDay> buildingList = recycleService.listDays();
+        List<String> recycleList = new ArrayList<String>();
+        for(RecycleDay day:buildingList){
+            if(!recycleList.contains(day.getBuilding())){
+                recycleList.add(day.getBuilding());
+            }
+        }
+        model.addAttribute("buildings",recycleList);
+        return "home";
+    }
 
 }

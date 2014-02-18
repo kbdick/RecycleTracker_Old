@@ -76,9 +76,9 @@
     <file path="/pom.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390524164590" ignored="false" />
     <file path="/RecycleDay.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1391036902625" ignored="false" />
     <file path="/RecycleDay_Roo_JavaBean.aj" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390266051374" ignored="false" />
-    <file path="/mvc-dispatcher-servlet.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390931645759" ignored="false" />
+    <file path="/mvc-dispatcher-servlet.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1392691624738" ignored="false" />
     <file path="/RecycleService.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390963833768" ignored="false" />
-    <file path="/RecycleController.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1392689788307" ignored="false" />
+    <file path="/RecycleController.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1392693270650" ignored="false" />
     <file path="/welcome.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390548108814" ignored="false" />
     <file path="/RecycleMonth.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390285826489" ignored="false" />
     <file path="/recycletracker.css" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390960435899" ignored="false" />
@@ -86,9 +86,10 @@
     <file path="/system.properties" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390540336185" ignored="false" />
     <file path="/MongoConfig.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390540711426" ignored="false" />
     <file path="/RecycleWeight.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390878998468" ignored="false" />
-    <file path="/building.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1392688842013" ignored="false" />
+    <file path="/building.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1392694352536" ignored="false" />
     <file path="/bootstrap.css" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390933998916" ignored="false" />
     <file path="/home.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390963647276" ignored="false" />
+    <file path="/add-data.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1392693820961" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,8 +153,10 @@
       <file leaf-file-name="RecycleController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="52" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="67" column="66" selection-start="3050" selection-end="3050" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -161,7 +164,7 @@
       <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="53" selection-start="1100" selection-end="1100" vertical-scroll-proportion="-2.08">
+            <state line="18" column="34" selection-start="1022" selection-end="1022" vertical-scroll-proportion="-4.48">
               <folding />
             </state>
           </provider>
@@ -185,28 +188,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="building.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="building.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="42" selection-start="3273" selection-end="3273" vertical-scroll-proportion="-54.375">
+            <state line="62" column="55" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.20152092">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="81" selection-start="2208" selection-end="2208" vertical-scroll-proportion="-28.75">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/bootstrap.js">
+      <file leaf-file-name="font-awesome.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/css/font-awesome.css">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-data.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add-data.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="48" selection-start="1111" selection-end="1111" vertical-scroll-proportion="-1.7959183">
               <folding />
             </state>
           </provider>
@@ -224,7 +227,7 @@
       <file leaf-file-name="RecycleDay.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleDay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="20" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
+            <state line="10" column="23" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -241,10 +244,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recycletracker.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="recycletracker.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/recycletracker.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.6">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -268,7 +271,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/spring/SpringConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/config/mongo.properties" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/system.properties" />
@@ -280,10 +282,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleDay.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/recycletracker.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add-data.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp" />
       </list>
     </option>
   </component>
@@ -455,32 +458,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecycleTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -562,6 +539,40 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RecycleTracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="recycle-tracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -584,15 +595,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/css" />
       <recent name="$PROJECT_DIR$/src/main/webapp/js" />
       <recent name="$PROJECT_DIR$/src/main/webapp/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/fonts" />
       <recent name="$PROJECT_DIR$/src/main/webapp/images" />
       <recent name="$PROJECT_DIR$/src/main/webapp/css" />
       <recent name="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/config" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
   <component name="RunManager" selected="JBoss Server.RecycleTracker">
@@ -756,6 +768,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Remote" singleton="true">
+      <JSRemoteDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -996,11 +1015,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="86" selection-start="86" selection-end="86" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/system.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" />
@@ -1046,43 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="0" selection-start="1207" selection-end="1207" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleDay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="20" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="81" selection-start="2208" selection-end="2208" vertical-scroll-proportion="-28.75">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="42" selection-start="3273" selection-end="3273" vertical-scroll-proportion="-54.375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="52" selection-start="692" selection-end="692" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
         <state />
@@ -1099,16 +1076,62 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/recycletracker.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="53" selection-start="1100" selection-end="1100" vertical-scroll-proportion="-2.08">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/recycletracker.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/font-awesome.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.6">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="34" selection-start="1022" selection-end="1022" vertical-scroll-proportion="-4.48">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="1207" selection-end="1207" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleDay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="23" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="66" selection-start="3050" selection-end="3050" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add-data.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="48" selection-start="1111" selection-end="1111" vertical-scroll-proportion="-1.7959183">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="55" selection-start="2429" selection-end="2429" vertical-scroll-proportion="0.20152092">
           <folding />
         </state>
       </provider>

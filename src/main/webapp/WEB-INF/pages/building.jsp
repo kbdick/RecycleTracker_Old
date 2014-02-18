@@ -89,7 +89,7 @@
 
                 <script>
                     var padding = {top: 30, right: 40, bottom: 40, left: 40};
-                    var parseDate = d3.time.format("%d-%b-%y").parse;
+                    var parseDate = d3.time.format("%b %e, %Y %I:%M:%S %p").parse;
                     var sourceData, xScale, yScale, line;
                     var prevChartWidth = 0, prevChartHeight = 0;
                     var updateTransistionMS = 750;

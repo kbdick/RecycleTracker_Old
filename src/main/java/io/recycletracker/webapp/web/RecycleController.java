@@ -27,7 +27,7 @@ public class RecycleController {
         List<RecycleDay> recycleList = recycleService.listDays();
         Collections.sort(recycleList,new Comparator<RecycleDay>() {
             public int compare(RecycleDay c1, RecycleDay c2) {
-                return c2.getId().compareTo(c1.getId());
+                return c2.getDate().compareTo(c1.getDate());
             }
         });
         ArrayList<RecycleWeight> weightsList = new ArrayList<RecycleWeight>();

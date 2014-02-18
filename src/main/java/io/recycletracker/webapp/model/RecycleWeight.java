@@ -5,15 +5,17 @@ package io.recycletracker.webapp.model;
  * Date: 1/27/14
  * Time: 9:12 PM
  */
+import java.util.Date;
+
 public class RecycleWeight {
-    String date;
+    Date date;
     double weight;
 
     public RecycleWeight(){}
 
-    public String geDate(){return date;}
+    public Date getDate(){return date;}
 
-    public void setDate(String date){this.date = date;}
+    public void setDate(Date date){this.date = date;}
 
     public double getWeight(){return weight;}
 

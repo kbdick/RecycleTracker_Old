@@ -3,13 +3,15 @@ package io.recycletracker.webapp.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.Date;
+
 
 @Document
 public class RecycleDay {
 
     @Id
     String id;
-    String date;
+    Date date;
     double wetTrash;
     double recyclingData;
     double diversion1;
@@ -32,11 +34,11 @@ public class RecycleDay {
         this.id = id;
     }
 
-    public String getDate(){
+    public Date getDate(){
         return date;
     }
 
-    public void setDate(String date){
+    public void setDate(Date date){
         this.date = date;
     }
 

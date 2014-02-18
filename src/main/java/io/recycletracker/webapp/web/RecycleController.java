@@ -6,15 +6,10 @@ import io.recycletracker.webapp.model.RecycleWeight;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 @Controller
 @RequestMapping("/")
@@ -24,21 +19,14 @@ public class RecycleController {
     private RecycleService recycleService;
 
 
-	@RequestMapping(value = "/{building}/",method = RequestMethod.GET)
-	public String printBuilding(final ModelMap model,@PathVariable String building, final HttpServletRequest request) {
-        List<RecycleDay> allList = recycleService.listDays();
-        List<RecycleDay> recycleList = new ArrayList<RecycleDay>();
-        for(RecycleDay day:allList){
-           if(day.getBuilding().equals(building)){
-               recycleList.add(day);
-           }
-        }
+	@RequestMapping(method = RequestMethod.GET)
+	public String printBuilding(final ModelMap model) {
+        List<RecycleDay> recycleList = recycleService.listDays();
         Collections.sort(recycleList,new Comparator<RecycleDay>() {
             public int compare(RecycleDay c1, RecycleDay c2) {
                 return c2.getId().compareTo(c1.getId());
             }
         });
-        StringBuilder sb = new StringBuilder();
         ArrayList<RecycleWeight> weightsList = new ArrayList<RecycleWeight>();
         for(RecycleDay day:recycleList){
             RecycleWeight weight = new RecycleWeight();
@@ -57,28 +45,11 @@ public class RecycleController {
         double yesterdayPercentage = recyclingYesterday/totalYesterday;
         double todayPercentage = recyclingToday/totalToday;
         Gson gson = new Gson();
-        model.addAttribute("logoUrl", "Logo goes Here");
         model.addAttribute("data",gson.toJson(weightsList));
-        if((todayPercentage - yesterdayPercentage)<0){
-            model.addAttribute("trend","down_arrow");
-        }else{
-            model.addAttribute("trend","up_arrow");
-        }
+        model.addAttribute("date", Calendar.getInstance().getTime());
         model.addAttribute("percentage",Math.abs(todayPercentage-yesterdayPercentage*100));
+        model.addAttribute("todayPercentage",todayPercentage);
 		return "building";
 	}
-
-    @RequestMapping(method = RequestMethod.GET)
-    public String returnHome(final ModelMap model, final HttpServletRequest request) {
-        List<RecycleDay> buildingList = recycleService.listDays();
-        List<String> recycleList = new ArrayList<String>();
-        for(RecycleDay day:buildingList){
-            if(!recycleList.contains(day.getBuilding())){
-                recycleList.add(day.getBuilding());
-            }
-        }
-        model.addAttribute("buildings",recycleList);
-        return "home";
-    }
 
 }

@@ -1,4 +1,4 @@
-#container {
+/*#container {
 padding: 5%;
 }
 
@@ -67,6 +67,91 @@ border: 1px solid gray;
 float: right;
 margin: 2%;
 padding: 2%;
+}*/
+
+.date {
+    color: #aaa;
+    vertical-align: bottom;
+    float: none;
+    padding: 1%;
+}
+
+.recyclepercent {
+    color: #aaa;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+}
+
+.recyclechange {
+    color: #5cb85c;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+}
+
+.directiondown, .directionup {
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+}
+
+.directionup {
+    color: #5cb85c;
+}
+
+.directiondown {
+    color: #d9534f;
+}
+
+.directionneutral {
+    color: #428bca;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+}
+
+.minibar, .miniline {
+    color: #aaa;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+}
+
+.marquee {
+    color: #aaa;
+    padding-top: 4%;
+    display: inline;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.circle {
+    fill: #666;
+}
+
+.line
+{
+    stroke: #aaa;
+    fill: none;
+}
+
+#chartContainer
+{
+    overflow: hidden;
+    margin: 0;
+    padding: 1%;
+    border: solid 2px #ccc;
+    max-height: 350px;
 }
 
 

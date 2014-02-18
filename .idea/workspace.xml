@@ -158,10 +158,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="53" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.19847329">
+            <state line="19" column="53" selection-start="1100" selection-end="1100" vertical-scroll-proportion="-2.08">
               <folding />
             </state>
           </provider>
@@ -241,10 +241,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recycletracker.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="recycletracker.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/recycletracker.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="4" selection-start="1927" selection-end="1927" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.6">
               <folding />
             </state>
           </provider>
@@ -280,10 +280,10 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleService.java" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/RecycleDay.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/recycletracker.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/recycletracker.css" />
       </list>
     </option>
   </component>
@@ -1062,13 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/recycletracker.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="4" selection-start="1927" selection-end="1927" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="47" column="81" selection-start="2208" selection-end="2208" vertical-scroll-proportion="-28.75">
@@ -1108,7 +1101,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="53" selection-start="1100" selection-end="1100" vertical-scroll-proportion="0.19847329">
+        <state line="19" column="53" selection-start="1100" selection-end="1100" vertical-scroll-proportion="-2.08">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/recycletracker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.6">
           <folding />
         </state>
       </provider>

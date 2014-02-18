@@ -50,8 +50,8 @@ public class RecycleController {
         Gson gson = new Gson();
         model.addAttribute("data",gson.toJson(weightsList));
         model.addAttribute("date", Calendar.getInstance().getTime());
-        model.addAttribute("percentage",Math.abs(todayPercentage-yesterdayPercentage*100));
-        model.addAttribute("todayPercentage",todayPercentage);
+        model.addAttribute("percentage",Math.round(Math.abs(todayPercentage-yesterdayPercentage*100)));
+        model.addAttribute("todayPercentage",Math.round(todayPercentage*100));
 		return "building";
 	}
     @RequestMapping(value = "/day", method = RequestMethod.GET)

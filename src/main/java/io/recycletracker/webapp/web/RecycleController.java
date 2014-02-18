@@ -67,13 +67,13 @@ public class RecycleController {
         } else {
             recycleService.addDay(day);
         }
-        return new RedirectView("/webapp/day");
+        return new RedirectView("/day");
     }
 
     @RequestMapping(value = "/day/delete", method = RequestMethod.GET)
     public View deletePerson(@ModelAttribute RecycleDay day, ModelMap model) {
         recycleService.deleteDays(day);
-        return new RedirectView("/webapp/day");
+        return new RedirectView("/day");
     }
 
 }

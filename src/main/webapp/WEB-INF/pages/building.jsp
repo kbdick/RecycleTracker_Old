@@ -1,10 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html>
 <head>
 <title>RecycleTracker</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
+<script src="https://code.jquery.com/jquery.js"></script>
 <!-- Bootstrap CSS -->
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
@@ -29,7 +30,6 @@
 <![endif]-->
 
 <!-- jquery d3js datejs-->
-<script src="https://code.jquery.com/jquery.js"></script>
 <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
@@ -76,7 +76,9 @@
             <h1 class="minibar">&#x1f4ca;</h1>
         </div>
         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-            <a href="day"><button type="button" class="btn btn-default">Add data</button></a>
+            <a href="day"> <button class="btn btn-danger btn-mini">
+                Login
+            </button></a>
         </div>
     </div>
 
@@ -240,5 +242,19 @@
 </div>
 
 </div>
+<script>
+    $('#myFormSubmit').click(function(e){
+        e.preventDefault();
+        alert($('#myField').val());
+        /*
+         $.post('http://path/to/post',
+         $('#myForm').serialize(),
+         function(data, status, xhr){
+         // do something here with response;
+         });
+         */
+    });
+
+</script>
 </body>
 </html>

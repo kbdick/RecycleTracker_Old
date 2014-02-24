@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html>
 <head>
     <title>RecycleTracker</title>
@@ -27,7 +28,7 @@
     <form action="day/add" method="post">
         <input type="hidden" name="id">
         <label for="date">Date</label>
-        <input type="text" id="date" name="date"/>
+        <input type="datetime" id="date" name="date"/>
         <label for="wetTrash">Wet Trash</label>
         <input type="text" id="wetTrash" name="wetTrash"/>
         <label for="recycling">Recycling</label>
@@ -65,7 +66,5 @@
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="<c:url value="/js/bootstrap.min.js" />"></script>
         <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
-
-
 </body>
 </html>

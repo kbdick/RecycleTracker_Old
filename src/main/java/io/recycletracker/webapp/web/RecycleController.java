@@ -3,16 +3,19 @@ package io.recycletracker.webapp.web;
 import com.google.gson.Gson;
 import io.recycletracker.webapp.model.RecycleDay;
 import io.recycletracker.webapp.model.RecycleWeight;
+import io.recycletracker.webapp.repo.RecycleService;
 import org.springframework.beans.factory.annotation.Autowired;
+import io.recycletracker.webapp.model.UserUI;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.View;
-import org.springframework.web.servlet.view.RedirectView;
+import io.recycletracker.webapp.services.UserService;
+
 import java.util.*;
+
 
 @Controller
 @RequestMapping("/")
@@ -20,6 +23,9 @@ public class RecycleController {
 
     @Autowired
     private RecycleService recycleService;
+
+    @Autowired
+    private UserService userService;
 
 
 	@RequestMapping(method = RequestMethod.GET)
@@ -50,7 +56,7 @@ public class RecycleController {
         Gson gson = new Gson();
         model.addAttribute("data",gson.toJson(weightsList));
         model.addAttribute("date", Calendar.getInstance().getTime());
-        model.addAttribute("percentage",Math.round(Math.abs(todayPercentage-yesterdayPercentage*100)));
+        model.addAttribute("percentage",Math.round(Math.abs(todayPercentage - yesterdayPercentage * 100)));
         model.addAttribute("todayPercentage",Math.round(todayPercentage*100));
 		return "building";
 	}
@@ -61,19 +67,63 @@ public class RecycleController {
     }
 
     @RequestMapping(value = "/day/add", method = RequestMethod.POST)
-    public View createPerson(@ModelAttribute RecycleDay day, ModelMap model) {
+    public String createDAy(@ModelAttribute RecycleDay day, ModelMap model) {
         if(StringUtils.hasText(day.getId())) {
-            recycleService.updateDays(day);
+            recycleService.updateDay(day);
         } else {
             recycleService.addDay(day);
         }
-        return new RedirectView("/day");
+        return "redirect:/day";
     }
 
     @RequestMapping(value = "/day/delete", method = RequestMethod.GET)
-    public View deletePerson(@ModelAttribute RecycleDay day, ModelMap model) {
-        recycleService.deleteDays(day);
-        return new RedirectView("/day");
+    public String deleteDay(@ModelAttribute RecycleDay day, ModelMap model) {
+        recycleService.deleteDay(day);
+        return "redirect:/day";
     }
+
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String login(ModelMap model) {
+        return "login";
+    }
+
+    @RequestMapping(value = "/login/failure", method = RequestMethod.GET)
+    public String loginFailed(ModelMap model) {
+        return "login";
+    }
+
+    @RequestMapping(value="/logout", method = RequestMethod.GET)
+    public String logout(ModelMap model) {
+
+        return "login";
+
+    }
+
+    @RequestMapping(value="/user/add", method = RequestMethod.GET)
+    public String addUser(ModelMap model) {
+
+        return "add-user";
+
+    }
+
+    @RequestMapping(value = "/user/add", method = RequestMethod.POST)
+    public String addUserPost(@ModelAttribute UserUI user, ModelMap model) {
+        System.out.println("In add post method");
+        String resultPage = "login";
+
+        if (userService.findByUsername(user.getUserName()) != null) {
+            resultPage = "redirect:/user/add";
+        }
+
+        UserUI savedUser = userService.create(user);
+        if (savedUser != null) {
+            resultPage = "redirect:/login";
+        } else {
+            resultPage = "redirect:/user/add";
+        }
+
+        return resultPage;
+    }
+
 
 }

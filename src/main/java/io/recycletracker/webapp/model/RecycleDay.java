@@ -12,6 +12,7 @@ public class RecycleDay {
     @Id
     String id;
     Date date;
+    int unitId;
     double wetTrash;
     double recyclingData;
     double diversion1;
@@ -146,12 +147,21 @@ public class RecycleDay {
         return building;
     }
 
+    public int getUnitId(){
+        return unitId;
+    }
+
+    public void setUnitId(int unitId){
+        this.unitId = unitId;
+    }
+
     public double addTotal(){
         return getWetTrash() + getRecyclingData() + getOpenTop() +
                getMetal() + getFlourescent() + getBallasts() +
                getIncandescent()+ getElectronics() + getCompostTons() +
                getBatteries();
     }
+
 
     public double addRecycling(){
         return  getRecyclingData()* getDiversion1() +

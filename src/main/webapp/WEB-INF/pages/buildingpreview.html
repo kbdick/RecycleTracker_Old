@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>RecycleTracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- Bootstrap CSS -->
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="../../css/font-awesome.css">
+
+<!-- RecycleTracker CSS -->
+<link rel="stylesheet" href="../../css/recycletracker.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+<![endif]-->
+
+<!-- jquery d3js datejs-->
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+
+<!-- basic royalslider stylesheet -->
+<link rel="stylesheet" href="../../js/royalslider/royalslider.css">
+
+<!-- skin stylesheet (change it if you use another) -->
+<link rel="stylesheet" href="../../js/royalslider/skins/minimal-white/rs-minimal-white.css"> 
+
+<!-- Main slider JS script file --> 
+<!-- Create it with slider online build tool for better performance. -->
+<script src="../../js/royalslider/jquery.royalslider.min.js"></script>
+
+<!-- full screen mode for android devices with site launched from home screen -->
+<meta name="mobile-web-app-capable" content="yes">
+
+</head>
+<body>
+
+
+<div class="container">
+<!-- Start Header -->
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <img id="img-responsive" class="logo" src="../../images/recycletrackerlogo_large.png" height="50" width="auto" alt="RT Logo">
+            <!-- switch image out for optimized size later -->
+        </div>
+    </div>
+<!-- End Header -->
+<!-- Start Date and Trend -->
+    <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <h4 class="date">July 4th, 1776</h4></h4>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <h1 class="recyclepercent">35%</h1>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <h1 class="recyclechange">5%</h1>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <h1 class="directionup">&#9650;</h1>
+        </div>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        </div>
+    </div>
+<!-- End Date and Trend -->
+    <div class="row">
+<!-- Begin Left Content -->
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+        <!-- Begin Chart -->
+          <img class="img-responsive" src="../../images/martrecycling.png" height="350" width="auto" alt="Mart Recycling Chart">
+        <!-- End Chart -->
+        </div>
+<!-- End Left Content -->
+<!-- Begin Right Content -->
+    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+        <div class="royalSlider RSminimal-white">
+            <img class="img-responsive" src="../../images/carouseltest_a.jpg" height="350" width="auto" alt="Starbucks Cup A">
+            <img class="img-responsive" src="../../images/carouseltest_b.jpg" height="350" width="auto" alt="Starbucks Cup B">
+        </div>
+    </div>
+<!-- End Right Content -->
+    </div>
+    <div class="row">
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+            <marquee class="marquee h3" behavior="scroll" direction="left">Optional, configurable message for the building for alerts and other info.</marquee>
+        </div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        </div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <img class="img-responive" src="../../images/mmpilogo.png" height="50" width="auto" alt="Building Logo">
+        </div>
+    </div>
+</div>
+<script>
+jQuery(document).ready(function($) {
+    $(".royalSlider").royalSlider({
+    	autoScaleSlider: true,
+    	autoPlay: {
+    		enabled: true,
+    		pauseOnHover: true
+    	}
+    });  
+});
+</script>
+</body>
+</html>

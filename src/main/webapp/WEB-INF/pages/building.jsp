@@ -264,6 +264,19 @@
          });
          */
     });
+    
+    jQuery(document).ready(function($) {
+    $(".royalSlider").royalSlider({
+    	// general options go here
+    	autoScaleSlider: true,
+    	autoPlay: {
+    		// autoplay options go gere
+    		enabled: true,
+    		pauseOnHover: true,
+    		delay: 10000
+    	}
+    });  
+});
 </script>
 <!-- End Royal Slider -->
 </body>

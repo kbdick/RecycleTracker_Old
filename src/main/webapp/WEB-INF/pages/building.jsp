@@ -30,50 +30,51 @@
 <![endif]-->
 
 <!-- jquery d3js datejs-->
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+
+<!-- basic royalslider stylesheet -->
+<link rel="stylesheet" href="../../js/royalslider/royalslider.css">
+
+<!-- skin stylesheet (change it if you use another) -->
+<link rel="stylesheet" href="../../js/royalslider/skins/minimal-white/rs-minimal-white.css"> 
+
+<!-- Main slider JS script file --> 
+<!-- Create it with slider online build tool for better performance. -->
+<script src="../../js/royalslider/jquery.royalslider.min.js"></script>
 
 <!-- full screen mode for android devices with site launched from home screen -->
 <meta name="mobile-web-app-capable" content="yes">
 
-<!-- jquery cycle -->
-<script type="text/javascript">
-    $(function() {
-        $('#slideshowmain').cycle();
-        function onBefore() {
-            $('#title').html(this.alt);
-        }
-    });
-</script>
-
 </head>
 <body>
 
-<!-- start header includes logo -->
 <div class="container">
+<!-- Start Header -->
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <img id="img-responsive" class="logo" src="<c:url value="/images/recycletrackerlogo_large.png" />" height="50" width="auto" alt="RT Logo">
+            <img id="img-responsive" class="logo" src="../../images/recycletrackerlogo_large.png" height="50" width="auto" alt="RT Logo">
             <!-- switch image out for optimized size later -->
         </div>
     </div>
-    <!-- start date and trend row -->
+<!-- End Header -->
+<!-- Start Date and Trend -->
     <div class="row">
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <h4 class="date">${date}</h4>
+            <h4 class="date fa" >${date}</h4>
         </div>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <h1 class="recyclepercent">${percentage}</h1>
+            <h1 class="recyclepercent fa">${percentage}</h1>
         </div>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <h1 class="recyclechange">${todayPercentage}</h1>
+            <h1 class="recyclechange fa">${todayPercentage}</h1>
         </div>
         <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <h1 class="directionup">&#9650;</h1>
+            <h1 class="directionup fa">&#9650;</h1>
         </div>
-        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-            <h1 class="minibar">&#x1f4ca;</h1>
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
         </div>
         <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             <a href="day"> <button class="btn btn-danger btn-mini">
@@ -81,11 +82,10 @@
             </button></a>
         </div>
     </div>
-
+<!-- End Date and Trend -->
+<!-- Begin Left Content -->
     <div class="row">
-
-        <!-- Begin Chart -->
-
+<!-- Begin Chart -->
         <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
             <div class="span6" id = "chartContainer">
 
@@ -107,36 +107,36 @@
                     chartSvg.append("g")
                             .attr("class", "y axis");
 
-    var data = ${data}
+                    var data = ${data}
 
-            data.forEach(function(d) {
-                d.date = parseDate(d.date);
-                d.weight = +d.weight;
-            });
+                    data.forEach(function(d) {
+                    d.date = parseDate(d.date);
+                    d.weight = +d.weight;
+                    });
 
-    sourceData = data;
+                    sourceData = data;
 
-    xScale = d3.time.scale()
-            .domain(d3.extent(sourceData, function(d) { return d.date; }));
+                    xScale = d3.time.scale()
+                    .domain(d3.extent(sourceData, function(d) { return d.date; }));
 
-    yScale = d3.scale.linear()
-            .domain([0, d3.max(sourceData, function(d) { return d.weight; })]);
+                    yScale = d3.scale.linear()
+                    .domain([0, d3.max(sourceData, function(d) { return d.weight; })]);
 
-    xAxis = d3.svg.axis()
-            .scale(xScale)
-            .orient("bottom");
+                    xAxis = d3.svg.axis()
+                    .scale(xScale)
+                    .orient("bottom");
 
-    yAxis = d3.svg.axis()
-            .scale(yScale)
-            .orient("left");
+                    yAxis = d3.svg.axis()
+                    .scale(yScale)
+                    .orient("left");
 
-    // declare a new line
-    line = d3.svg.line()
-            .x(function(d) { return xScale(d.date); })
-            .y(function(d) { return yScale(d.weight); })
-            .interpolate("linear");
+                    // declare a new line
+                    line = d3.svg.line()
+                    .x(function(d) { return xScale(d.date); })
+                    .y(function(d) { return yScale(d.weight); })
+                    .interpolate("linear");
 
-    updateChart(true);
+                    updateChart(true);
     function updateChart(init)
     {
         var chartWidth = document.getElementById('chartContainer').getBoundingClientRect().width - padding.left - padding.right;
@@ -222,26 +222,36 @@
         focus.select("text").text(formatCurrency(d.weight));
     }
 
-</script>
-        <!-- End Chart -->
-    </div>
-</div>
-
-<!-- Right Content -->
-<div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-    <img class="img-responsive" src="<c:url value="/images/coffeecup.jpg" />" height="350" width="auto" alt="Starbucks Cup">
-</div>
-</div>
-
-<div class="row">
-    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><marquee class="marquee h3"  behavior="scroll" direction="left">Optional, configurable message for the building for alerts and other info.</marquee></div>
-    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+    </script>
+            </div>
+        </div>
+<!-- End Chart -->
+<!-- End Left Content -->
+<!-- Begin Right Content -->
+        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
+            <div class="royalSlider RSminimal-white">
+                <img class="img-responsive" src="../../images/rt1.png" height="350" width="auto" alt="Soda">
+            <img class="img-responsive" src="../../images/rt2.png" height="350" width="auto" alt="Coffee Cup">
+            <img class="img-responsive" src="../../images/rt3.png" height="350" width="auto" alt="Coffee Sleeve">
+            <img class="img-responsive" src="../../images/rt4.png" height="350" width="auto" alt="Tip">
+            <img class="img-responsive" src="../../images/rt5.png" height="350" width="auto" alt="Cup Holder">
+            <img class="img-responsive" src="../../images/rt6.png" height="350" width="auto" alt="Napkin">
+            <img class="img-responsive" src="../../images/rt7.png" height="350" width="auto" alt="Styrofoam">
+            </div>
+        </div>
+<!-- End Right Content -->
+        </div>
+<!-- Begin Footer -->
+    <div class="row">
+        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><marquee class="marquee h3"  behavior="scroll" direction="left">Optional, configurable message for the building for alerts and other info.</marquee></div>
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
         <img class="img-responive" src="<c:url value="/images/mmpilogo.png" />" height="50" width="auto" alt="Building Logo">
+        </div>
     </div>
+<!-- End Footer -->
 </div>
-
-</div>
+<!-- Begin Royal Slider -->
 <script>
     $('#myFormSubmit').click(function(e){
         e.preventDefault();
@@ -254,7 +264,7 @@
          });
          */
     });
-
 </script>
+<!-- End Royal Slider -->
 </body>
 </html>

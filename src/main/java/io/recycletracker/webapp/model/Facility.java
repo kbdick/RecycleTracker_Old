@@ -1,14 +1,17 @@
 package io.recycletracker.webapp.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * User: alexthornburg
  * Date: 2/20/14
  * Time: 11:42 AM
  */
-import java.util.List;
 
 @Document
 public class Facility {
@@ -16,9 +19,12 @@ public class Facility {
     @Id
     String id;
     String name;
-    String location;
+    String address;
     int barcodeId;
-    List<Floor> floors;
+    String scrollbar;
+
+    @DBRef
+    List<Floor> floors = new ArrayList<Floor>();
 
     public String getId(){
         return id;
@@ -36,12 +42,12 @@ public class Facility {
         this.name = name;
     }
 
-    public String getLocation(){
-        return location;
+    public String getAddress(){
+        return address;
     }
 
-    public void setLocation(String location){
-        this.location = location;
+    public void setAddress(String address){
+        this.address = address;
     }
 
     public int getBarcodeId(){
@@ -58,6 +64,30 @@ public class Facility {
 
     public void setFloors(List<Floor> floors){
         this.floors = floors;
+    }
+
+    public void addFloor(Floor floor){
+        this.floors.add(floor);
+    }
+
+    public String getScrollbar(){
+        return scrollbar;
+    }
+
+    public void setScrollbar(String scrollbar){
+        this.scrollbar = scrollbar;
+    }
+
+    public List<Bin> getAllBins(){
+        List<Bin> list = new ArrayList<Bin>();
+        for(Floor floor:floors){
+            for(Unit unit:floor.getUnits()){
+                for(Bin bin:unit.getBins()){
+                    list.add(bin);
+                }
+            }
+        }
+        return list;
     }
 
 

@@ -15,7 +15,6 @@
 </head>
 
 <body>
-<jsp:include page="../pages/topMenu.jsp" />
 <h1 id="banner">Unauthorized</h1>
 <hr/>
 

@@ -1,283 +1,106 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: alexthornburg
+  Date: 1/28/14
+  Time: 7:15 PM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html>
 <head>
-<title>RecycleTracker</title>
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<script src="https://code.jquery.com/jquery.js"></script>
-<!-- Bootstrap CSS -->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <title>RecycleTracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap CSS -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
-<!-- FontAwesome CSS -->
-<link href="<c:url value="/css/font-awesome.css" />" rel="stylesheet">
+    <!-- FontAwesome CSS -->
+    <link href="<c:url value="/css/font-awesome.css" />" rel="stylesheet">
 
-<!-- RecycleTracker CSS -->
-<link rel="stylesheet" href="<c:url value="/css/recycletracker.css" />">
+    <!-- RecycleTracker CSS -->
+    <link rel="stylesheet" href="<c:url value="/css/recycletracker.css" />">
 
-<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-<![endif]-->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
 
-<!-- jquery d3js datejs-->
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+    <link href="<c:url value="/css/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />" rel="stylesheet">
+    <script src="<c:url value="/css/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" />"></script>
 
-<!-- basic royalslider stylesheet -->
-<link rel="stylesheet" href="../../js/royalslider/royalslider.css">
+    <!-- jquery d3js datejs-->
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
 
-<!-- skin stylesheet (change it if you use another) -->
-<link rel="stylesheet" href="../../js/royalslider/skins/minimal-white/rs-minimal-white.css"> 
-
-<!-- Main slider JS script file --> 
-<!-- Create it with slider online build tool for better performance. -->
-<script src="../../js/royalslider/jquery.royalslider.min.js"></script>
-
-<!-- full screen mode for android devices with site launched from home screen -->
-<meta name="mobile-web-app-capable" content="yes">
-
+    <!-- full screen mode for android devices with site launched from home screen -->
+    <meta name="mobile-web-app-capable" content="yes">
 </head>
 <body>
-
 <div class="container">
-<!-- Start Header -->
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <img id="img-responsive" class="logo" src="../../images/recycletrackerlogo_large.png" height="50" width="auto" alt="RT Logo">
-            <!-- switch image out for optimized size later -->
-        </div>
-    </div>
-<!-- End Header -->
-<!-- Start Date and Trend -->
-    <div class="row">
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <h4 class="date fa" >${date}</h4>
-        </div>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <h1 class="recyclepercent fa">${percentage}</h1>
-        </div>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <h1 class="recyclechange fa">${todayPercentage}</h1>
-        </div>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <h1 class="directionup fa">&#9650;</h1>
-        </div>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-        </div>
-        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-            <a href="day"> <button class="btn btn-danger btn-mini">
-                Login
-            </button></a>
-        </div>
-    </div>
-<!-- End Date and Trend -->
-<!-- Begin Left Content -->
-    <div class="row">
-<!-- Begin Chart -->
-        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-            <div class="span6" id = "chartContainer">
-
-                <script>
-                    var padding = {top: 30, right: 40, bottom: 40, left: 40};
-                    var parseDate = d3.time.format("%b %e, %Y %I:%M:%S %p").parse;
-                    var sourceData, xScale, yScale, line;
-                    var prevChartWidth = 0, prevChartHeight = 0;
-                    var updateTransistionMS = 750;
-
-                    var chartSvg = d3.select("#chartContainer").append("svg")
-                            .append("g")
-                            .attr("class", "chartContainer")
-                            .attr("transform", "translate(" + padding.left + "," + padding.top + ")");
-
-                    chartSvg.append("g")
-                            .attr("class", "x axis");
-
-                    chartSvg.append("g")
-                            .attr("class", "y axis");
-
-                    var data = ${data}
-
-                    data.forEach(function(d) {
-                    d.date = parseDate(d.date);
-                    d.weight = +d.weight;
-                    });
-
-                    sourceData = data;
-
-                    xScale = d3.time.scale()
-                    .domain(d3.extent(sourceData, function(d) { return d.date; }));
-
-                    yScale = d3.scale.linear()
-                    .domain([0, d3.max(sourceData, function(d) { return d.weight; })]);
-
-                    xAxis = d3.svg.axis()
-                    .scale(xScale)
-                    .orient("bottom");
-
-                    yAxis = d3.svg.axis()
-                    .scale(yScale)
-                    .orient("left");
-
-                    // declare a new line
-                    line = d3.svg.line()
-                    .x(function(d) { return xScale(d.date); })
-                    .y(function(d) { return yScale(d.weight); })
-                    .interpolate("linear");
-
-                    updateChart(true);
-    function updateChart(init)
-    {
-        var chartWidth = document.getElementById('chartContainer').getBoundingClientRect().width - padding.left - padding.right;
-        var chartHeight = document.getElementById('chartContainer').getBoundingClientRect().height - padding.top - padding.bottom;
-
-        if ((prevChartWidth != chartWidth) ||
-                (prevChartHeight != chartHeight))
-        {
-            prevChartWidth = chartWidth;
-            prevChartHeight = chartHeight;
-
-            chartSvg.attr("width", chartWidth + padding.left + padding.right)
-                    .attr("height", chartHeight + padding.top + padding.bottom);
-
-            xScale.range([0, chartWidth]);
-            yScale.range([chartHeight, 0]);
-
-            if (init)
-            {
-
-                chartSvg.select(".x")
-                        .attr("transform", "translate(0," + chartHeight + ")")
-                        .call(xAxis);
-
-                chartSvg.select(".y")
-                        .call(yAxis);
-            }
-            else
-            {
-                var t = chartSvg.transition().duration(updateTransistionMS);
-
-                t.select(".x")
-                        .attr("transform", "translate(0," + chartHeight + ")")
-                        .call(xAxis);
-
-                t.select(".y")
-                        .call(yAxis);
-            }
-
-            var circle = chartSvg.selectAll("circle")
-                    .data(sourceData);
-
-            circle.transition()
-                    .duration(updateTransistionMS)
-                    .attr("cx", function(d) { return xScale(d.date); })
-                    .attr("cy", function(d) { return yScale(d.weight); });
-
-            circle.enter().append("circle")
-                    .attr("cx", function(d) { return xScale(d.date); })
-                    .attr("cy", function(d) { return yScale(d.weight); })
-                    .attr("r", 3)
-                    .attr("class", "circle");
-
-            var lines = chartSvg.selectAll(".line")
-                    .data([sourceData]);
-
-            lines.transition()
-                    .duration(updateTransistionMS)
-                    .attr("d", line);
-
-            lines.enter().append("path")
-                    .attr("class", "line")
-                    .attr("d", line);
-        }
-    }
-
-    var resizeTimer;
-    window.onresize = function(event) {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function()
-        {
-            updateChart(false);
-        }, 100);
-    }
-
-    function mousemove() {
-        var x0 = x.invert(d3.mouse(this)[0]),
-                i = bisectDate(data, x0, 1),
-                d0 = data[i - 1],
-                d1 = data[i],
-                d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-        focus.attr("transform", "translate(" + x(d.date) + "," + y(d.weight) + ")");
-        focus.select("text").text(formatCurrency(d.weight));
-    }
-
-    </script>
+    <form accept-charset="UTF-8" action="day/add" class="form-horizontal"
+          id="addBin" method="post" prependId = "false">
+        <legend>Add a Bin</legend>
+        <div class="control-group string required">
+            <label class="string required control-label" for="facility"><abbr title="required">*</abbr> Facility</label>
+            <div class="controls">
+                <input class="string required span6" id="facility" name="facility" size="50" type="text">
             </div>
         </div>
-<!-- End Chart -->
-<!-- End Left Content -->
-<!-- Begin Right Content -->
-        <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-            <div class="royalSlider RSminimal-white">
-                <img class="img-responsive" src="../../images/rt1.png" height="350" width="auto" alt="Soda">
-            <img class="img-responsive" src="../../images/rt2.png" height="350" width="auto" alt="Coffee Cup">
-            <img class="img-responsive" src="../../images/rt3.png" height="350" width="auto" alt="Coffee Sleeve">
-            <img class="img-responsive" src="../../images/rt4.png" height="350" width="auto" alt="Tip">
-            <img class="img-responsive" src="../../images/rt5.png" height="350" width="auto" alt="Cup Holder">
-            <img class="img-responsive" src="../../images/rt6.png" height="350" width="auto" alt="Napkin">
-            <img class="img-responsive" src="../../images/rt7.png" height="350" width="auto" alt="Styrofoam">
+        <div class="control-group integer required">
+            <label class="integer required control-label" for="suiteNumber"><abbr title="required">*</abbr> Suite Number</label>
+            <div class="controls">
+                <input class="integer required span6" id="suiteNumber" name="suiteNumber" size="50" type="integer">
             </div>
         </div>
-<!-- End Right Content -->
+        <div class="control-group date required">
+            <label class="date required control-label" for="date"><abbr title="required">*</abbr>Date</label>
+            <div class="controls">
+                <input class="date required span6" id="date" name="date" size="50" type="date">
+            </div>
         </div>
-<!-- Begin Footer -->
-    <div class="row">
-        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7"><marquee class="marquee h3"  behavior="scroll" direction="left">Optional, configurable message for the building for alerts and other info.</marquee></div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-        <img class="img-responive" src="<c:url value="/images/mmpilogo.png" />" height="50" width="auto" alt="Building Logo">
+        <div class="control-group string required">
+            <label class="string required control-label" for="weight"><abbr title="required">*</abbr> Weight</label>
+            <div class="controls">
+                <input class="string required span6" id="weight" name="weight" size="50" type="string">
+            </div>
         </div>
-    </div>
-<!-- End Footer -->
+        <div class="control-group string required">
+            <label class="string required control-label" for="wasteType"><abbr title="required">*</abbr>Waste Type</label>
+            <div class="controls">
+                <input class="string required span6" id="wasteType" name="wasteType" size="50" type="string">
+            </div>
+        </div>
+        <div class="form-actions">
+            <input class="btn btn-primary" name="commit" type="submit" value="Add Bin">
+            <a class="btn btn-danger" href="<c:url value="/"/>">Cancel</a>
+        </div>
+    </form>
 </div>
-<!-- Begin Royal Slider -->
-<script>
-    $('#myFormSubmit').click(function(e){
-        e.preventDefault();
-        alert($('#myField').val());
-        /*
-         $.post('http://path/to/post',
-         $('#myForm').serialize(),
-         function(data, status, xhr){
-         // do something here with response;
-         });
-         */
-    });
-    
-    jQuery(document).ready(function($) {
-    $(".royalSlider").royalSlider({
-    	// general options go here
-    	autoScaleSlider: true,
-    	autoPlay: {
-    		// autoplay options go gere
-    		enabled: true,
-    		pauseOnHover: true,
-    		delay: 10000
-    	}
-    });  
-});
-</script>
-<!-- End Royal Slider -->
+
+<table class = "table">
+    <c:forEach var="bin" items="${recycleList}">
+        <tr>
+            <td>${bin.date}</td>
+            <td>${bin.suiteNumber}</td>
+            <td>${bin.weight}</td>
+            <td><input type="button" value="delete" class = "btn btn-danger" onclick="window.location='day/delete?id=${recycleDays.id}'"/></td>
+        </tr>
+    </c:forEach>
+</table>
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="<c:url value="/js/bootstrap.min.js" />"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
 </body>
 </html>

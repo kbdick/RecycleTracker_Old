@@ -6,81 +6,80 @@ package io.recycletracker.webapp.services;
  * Time: 12:19 PM
  */
 
-import io.recycletracker.webapp.repo.UserRepository;
+import io.recycletracker.webapp.model.UserAccountStatus;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.BadCredentialsException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider;
+import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-import org.springframework.stereotype.Service;
-import java.util.Collection;
-import java.util.ArrayList;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
+
 import java.util.List;
 
-@Service
-public class CustomUserDetailsService implements UserDetailsService{
+@Component
+public class CustomUserDetailsService extends AbstractUserDetailsAuthenticationProvider {
 
-    @Autowired
-    private UserRepository userRepository;
+    private final Logger logger = LoggerFactory.getLogger(getClass());
 
-    public UserDetails loadUserByUsername(String username)
-            throws UsernameNotFoundException {
-        try {
-            User authenticatedUser;
-            io.recycletracker.webapp.model.User domainUser = userRepository
-                    .findByUserName(username);
+    @Autowired UserService userService;
 
-            boolean enabled = true;
-            boolean accountNonExpired = true;
-            boolean credentialsNonExpired = true;
-            boolean accountNonLocked = true;
+    @Autowired private PasswordEncoder encoder;
 
-            if (domainUser != null) {
-                authenticatedUser = new User(domainUser.getUserName(),
-                        domainUser.getPassword().toLowerCase(), enabled,
-                        accountNonExpired, credentialsNonExpired,
-                        accountNonLocked, getAuthorities(0));
-            } else {
-                authenticatedUser = new User("admin",
-                        "21232f297a57a5a743894a0e4a801fc3", true, true, true,
-                        true, this.getAuthorities(0));
-            }
-
-            return authenticatedUser;
-
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
+    @Override
+    protected void additionalAuthenticationChecks(UserDetails userDetails, UsernamePasswordAuthenticationToken authentication)
+            throws AuthenticationException {
     }
 
-    public Collection<? extends GrantedAuthority> getAuthorities(Integer role) {
-        List<GrantedAuthority> authList = getGrantedAuthorities(getRoles(role));
-        return authList;
-    }
-
-    public List<String> getRoles(Integer role) {
-        List<String> roles = new ArrayList<String>();
-
-        if (role.intValue() == 1) {
-            roles.add("ROLE_USER");
-            roles.add("ROLE_ADMIN");
-
-        } else if (role.intValue() == 2) {
-            roles.add("ROLE_USER");
+    @Override
+    public UserDetails retrieveUser(String username, UsernamePasswordAuthenticationToken authentication)
+            throws AuthenticationException {
+        String password = (String) authentication.getCredentials();
+        if (!StringUtils.hasText(password)) {
+            logger.warn("Username {}: no password provided", username);
+            throw new BadCredentialsException("Please enter password");
         }
 
-        return roles;
-    }
-
-    public static List<GrantedAuthority> getGrantedAuthorities(
-            List<String> roles) {
-        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
-        for (String role : roles) {
-            authorities.add(new SimpleGrantedAuthority(role));
+        io.recycletracker.webapp.model.User user = userService.getByUsername(username);
+        if (user == null) {
+            logger.warn("Username {} password {}: user not found", username, password);
+            throw new UsernameNotFoundException("Invalid Login");
         }
-        return authorities;
+
+        if (!encoder.matches(password, user.getPassword())) {
+            logger.warn("Username {} password {}: invalid password", username, password);
+            throw new BadCredentialsException("Invalid Login");
+        }
+
+        if (!(UserAccountStatus.STATUS_APPROVED.name().equals(user.getStatus()))) {
+            logger.warn("Username {}: not approved", username);
+            throw new BadCredentialsException("User has not been approved");
+        }
+        if (!user.getEnabled()) {
+            logger.warn("Username {}: disabled", username);
+            throw new BadCredentialsException("User disabled");
+        }
+
+        final List<GrantedAuthority> authorities;
+        if (!user.getRoles().isEmpty()) {
+            authorities = AuthorityUtils.commaSeparatedStringToAuthorityList(user.getRolesCSV());
+        } else {
+            authorities = AuthorityUtils.NO_AUTHORITIES;
+        }
+
+        return new User(username, password, user.getEnabled(), // enabled
+                true, // account not expired
+                true, // credentials not expired
+                true, // account not locked
+                authorities);
     }
 }
 

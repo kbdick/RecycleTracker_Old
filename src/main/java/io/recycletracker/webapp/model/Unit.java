@@ -5,14 +5,26 @@ package io.recycletracker.webapp.model;
  * Date: 2/20/14
  * Time: 11:49 AM
  */
+
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.ArrayList;
 import java.util.List;
+@Document
 public class Unit {
 
     @Id
     String id;
-    int floorBarcodeId;
-    List<RecycleDay> recycleDays;
+    String facilityName;
+    String name;
+    int floorNumber;
+    int suiteNumber;
+    int barcodeId;
+
+    @DBRef
+    List<Bin> bins = new ArrayList<Bin>();
 
     public String getId(){
         return id;
@@ -22,20 +34,56 @@ public class Unit {
         this.id = id;
     }
 
-    public int getFloorBarcodeId(){
-        return floorBarcodeId;
+    public String getFacilityName(){
+        return facilityName;
     }
 
-    public void setFloorBarcodeId(int floorBarcodeId){
-        this.floorBarcodeId = floorBarcodeId;
+    public void setFacilityName(String name){
+        this.facilityName = name;
     }
 
-    public List<RecycleDay> getRecycleDays(){
-        return recycleDays;
+    public String getName(){
+        return name;
     }
 
-    public void setRecycleDays(List<RecycleDay> recycleDays){
-        this.recycleDays = recycleDays;
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public int getFloorNumber(){
+        return floorNumber;
+    }
+
+    public void setFloorNumber(int floorNumber){
+        this.floorNumber = floorNumber;
+    }
+
+    public int getSuiteNumber(){
+        return suiteNumber;
+    }
+
+    public void setSuiteNumber(int suiteNumber){
+        this.suiteNumber = suiteNumber;
+    }
+
+    public List<Bin> getBins(){
+        return bins;
+    }
+
+    public void setBins(List<Bin> bins){
+        this.bins = bins;
+    }
+
+    public void addBin(Bin bin){
+        this.bins.add(bin);
+    }
+
+    public int getBarcodeId(){
+        return barcodeId;
+    }
+
+    public void setBarcodeId(int facilityBarcodeId){
+        this.barcodeId = barcodeId;
     }
 
 }

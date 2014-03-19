@@ -1,6 +1,15 @@
 package io.recycletracker.webapp.model;
+
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.IndexDirection;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * User: alexthornburg
  * Date: 2/20/14
@@ -12,16 +21,17 @@ public class User {
     @Id
     private String id;
 
-    private String firstName;
-    private String lastName;
-    private String userName;
+    @Indexed(unique=true, direction= IndexDirection.DESCENDING, dropDups=true)
+    private String username;
     private String password;
-    private String country;
-    private String countryState;
-    private String comments;
+    private String firstname;
+    private String lastname;
+    private String status;
+    private Boolean enabled;
 
-    public User() {
-    }
+
+    @DBRef
+    private List<Role> roles = new ArrayList<Role>();
 
     public String getId() {
         return id;
@@ -31,28 +41,12 @@ public class User {
         this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPassword() {
@@ -63,13 +57,65 @@ public class User {
         this.password = password;
     }
 
-
-
-    @Override
-    public String toString() {
-        return "User [id=" + id + ", firstName=" + firstName + ", lastName="
-                + lastName + ", userName=" + userName + ", password="
-                + password  + "]";
+    public String getFirstname() {
+        return firstname;
     }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public Boolean getEnabled() {
+        return enabled;
+    }
+
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public void addRole(Role role) {
+        this.roles.add(role);
+    }
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void removeRole(Role role) {
+        //use iterator to avoid java.util.ConcurrentModificationException with foreach
+        for (Iterator<Role> iter = this.roles.iterator(); iter.hasNext(); )
+        {
+            if (iter.next().equals(role))
+                iter.remove();
+        }
+    }
+
+    public String getRolesCSV() {
+        StringBuilder sb = new StringBuilder();
+        for (Iterator<Role> iter = this.roles.iterator(); iter.hasNext(); )
+        {
+            sb.append(iter.next().getId());
+            if (iter.hasNext()) {
+                sb.append(',');
+            }
+        }
+        return sb.toString();
+    }
+
 }
 

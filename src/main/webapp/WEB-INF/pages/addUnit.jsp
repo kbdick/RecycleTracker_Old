@@ -61,7 +61,7 @@ ${result}
 <div class="container">
     <form accept-charset="UTF-8" action="unit" class="form-horizontal"
           id="addFloor" method="post" prependId = "false">
-        <legend>Add Floor</legend>
+        <legend>Add Unit</legend>
         <div class="control-group string required">
             <label class="string required control-label" for="facilityName"><abbr title="required">*</abbr>Facility</label>
             <div class="controls">

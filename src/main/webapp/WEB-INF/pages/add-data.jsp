@@ -36,9 +36,6 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
-    <link href="<c:url value="/css/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />" rel="stylesheet">
-    <script src="<c:url value="/css/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" />"></script>
-
     <!-- jquery d3js datejs-->
     <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>

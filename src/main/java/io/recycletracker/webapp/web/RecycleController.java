@@ -164,7 +164,7 @@ public class RecycleController {
         return "redirect:/day";
     }
 
-    @RequestMapping(value = "/day/delete", method = RequestMethod.GET)
+    @RequestMapping(value = "/bin/delete", method = RequestMethod.GET)
     public String deleteBin(@ModelAttribute Bin bin, ModelMap model) {
         return "redirect:/day";
     }
@@ -355,6 +355,11 @@ public class RecycleController {
     @RequestMapping(value = "/admin/add/waste", method = RequestMethod.POST)
     public String addWastePost(@ModelAttribute WasteType wasteType, ModelMap model) {
         facilityService.addWasteType(wasteType);
+        return "redirect:/admin";
+    }
+
+    @RequestMapping(value = "/admin/unit/delete", method = RequestMethod.GET)
+    public String deletUnit(@ModelAttribute Unit unit, ModelMap model) {
         return "redirect:/admin";
     }
 

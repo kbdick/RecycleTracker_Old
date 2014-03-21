@@ -61,7 +61,7 @@ ${result}
 <div class="container">
     <form accept-charset="UTF-8" action="waste" class="form-horizontal"
           id="addFloor" method="post" prependId = "false">
-        <legend>Add Floor</legend>
+        <legend>Add Waste Type</legend>
         <div class="control-group string required">
             <label class="string required control-label" for="name"><abbr title="required">*</abbr>Name</label>
             <div class="controls">

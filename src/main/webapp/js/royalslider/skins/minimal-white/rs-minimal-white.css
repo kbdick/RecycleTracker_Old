@@ -24,7 +24,7 @@
 .rsMinW .rsSlide,
 .rsMinW .rsVideoFrameHolder,
 .rsMinW .rsThumbs {
-	background: #000;
+	background: #FFF;
 	color: #FFF;
 }
 
@@ -226,9 +226,6 @@
 		width: 59px;
 	}
 }
-
-
-
 
 /***************
 *

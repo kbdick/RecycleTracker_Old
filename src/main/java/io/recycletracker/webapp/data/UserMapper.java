@@ -1,7 +1,7 @@
 package io.recycletracker.webapp.data;
 
 import io.recycletracker.webapp.model.User;
-import io.recycletracker.webapp.model.UserUI;
+import io.recycletracker.webapp.UI.UserUI;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
@@ -19,11 +19,11 @@ public class UserMapper {
 
         if (user != null) {
             uiBean = new UserUI();
-            uiBean.setFirstName(user.getFirstName());
+            uiBean.setFirstname(user.getFirstname());
             uiBean.setId(user.getId());
-            uiBean.setLastName(user.getLastName());
+            uiBean.setLastname(user.getLastname());
             uiBean.setPassword(user.getPassword());
-            uiBean.setUserName(user.getUserName());
+            uiBean.setUsername(user.getUsername());
         }
 
         return uiBean;
@@ -51,11 +51,11 @@ public class UserMapper {
 
         if (uiBean != null) {
             user = new User();
-            user.setFirstName(uiBean.getFirstName());
+            user.setFirstname(uiBean.getFirstname());
             user.setId(uiBean.getId());
-            user.setLastName(uiBean.getLastName());
+            user.setLastname(uiBean.getLastname());
             user.setPassword(uiBean.getPassword());
-            user.setUserName(uiBean.getUserName());
+            user.setUsername(uiBean.getUsername());
         }
         return user;
     }

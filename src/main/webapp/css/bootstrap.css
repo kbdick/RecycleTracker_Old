@@ -8,44 +8,6 @@
 
 /*! normalize.css v2.1.3 | MIT License | git.io/normalize */
 
-/* begin recycletracker.net specific css */
-#container {
-padding: 5%;
-}
-
-#header {
-margin: 2%;
-padding: 2%;
-}
-
-#leftcontent {
-float: left;
-overflow: hidden;
-height: 90%;
-width: 60%;
-margin: 2%;
-padding: 2%;
-border: 1px solid gray;
-}
-
-#rightcontent {
-float: right;
-overflow: hidden;
-height: 90%;
-width: 30%;
-margin: 2%;
-padding: 2%;
-border: 1px solid gray;
-}
-
-#footer {
-float: right;
-margin: 2%;
-padding: 2%;
-}
-
-
-/* end recycletracker.net
 artic specifi*/c css le,
 aside,
 details,

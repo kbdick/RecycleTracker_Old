@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: alexthornburg
-  Date: 1/28/14
-  Time: 7:15 PM
+  Date: 3/12/14
+  Time: 10:59 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -10,6 +10,8 @@
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html>
 <head>
+<head>
+
     <title>RecycleTracker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="https://code.jquery.com/jquery.js"></script>
@@ -43,61 +45,57 @@
 
     <!-- full screen mode for android devices with site launched from home screen -->
     <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- jquery cycle -->
+    <script type="text/javascript">
+        $(function() {
+            $('#slideshowmain').cycle();
+            function onBefore() {
+                $('#title').html(this.alt);
+            }
+        });
+    </script>
+
 </head>
-<body>
+${result}
 <div class="container">
-    <form accept-charset="UTF-8" action="day/add" class="form-horizontal"
-          id="addBin" method="post" prependId = "false">
-        <legend>Add a Bin</legend>
+    <form accept-charset="UTF-8" action="facility" class="form-horizontal"
+          id="addFacility" method="post" prependId = "false">
+        <legend>Add Facility</legend>
         <div class="control-group string required">
-            <label class="string required control-label" for="facility"><abbr title="required">*</abbr> Facility</label>
+            <label class="string required control-label" for="name"><abbr title="required">*</abbr>Name</label>
             <div class="controls">
-                <input class="string required span6" id="facility" name="facility" size="50" type="text">
+                <input class="string required span6" id="name" name="name" size="50" type="text">
             </div>
         </div>
+        <div class="control-group string required">
+            <label class="string required control-label" for="address"><abbr title="required">*</abbr>Address</label>
+            <div class="controls">
+                <input class="string required span6" id="address" name="address" size="50" type="text">
+            </div>
+        </div>
+
         <div class="control-group integer required">
-            <label class="integer required control-label" for="suiteNumber"><abbr title="required">*</abbr> Suite Number</label>
+            <label class="integer required control-label" for="barcodeId"><abbr title="required">*</abbr>BarcodeId</label>
             <div class="controls">
-                <input class="integer required span6" id="suiteNumber" name="suiteNumber" size="50" type="integer">
+                <input class="integer span6" id="barcodeId" name="barcodeId" size="50" type="integer">
             </div>
-        </div>
-        <div class="control-group date required">
-            <label class="date required control-label" for="date"><abbr title="required">*</abbr>Date</label>
-            <div class="controls">
-                <input class="date required span6" id="date" name="date" size="50" type="date">
-            </div>
-        </div>
-        <div class="control-group string required">
-            <label class="string required control-label" for="weight"><abbr title="required">*</abbr> Weight</label>
-            <div class="controls">
-                <input class="string required span6" id="weight" name="weight" size="50" type="string">
-            </div>
-        </div>
-        <div class="control-group string required">
-            <label class="string required control-label" for="wasteType"><abbr title="required">*</abbr>Waste Type</label>
-            <div class="controls">
-                <input class="string required span6" id="wasteType" name="wasteType" size="50" type="string">
-            </div>
+        <div class="control-group string">
+         <label class="string control-label" for="scrollbar">Scrolling Text</label>
+                <div class="controls">
+                    <input class="string span6" id="scrollbar" name="scrollbar" size="50" type="text">
+                </div>
         </div>
         <div class="form-actions">
-            <input class="btn btn-primary" name="commit" type="submit" value="Add Bin">
+            <input class="btn btn-primary" name="commit" type="submit" value="Create Facility">
             <a class="btn btn-danger" href="<c:url value="/"/>">Cancel</a>
         </div>
     </form>
 </div>
-
-<table class = "table">
-    <c:forEach var="bin" items="${recycleList}">
-        <tr>
-            <td>${bin.date}</td>
-            <td>${bin.suiteNumber}</td>
-            <td>${bin.weight}</td>
-            <td><input type="button" value="delete" class = "btn btn-danger" onclick="window.location='day/delete?id=${recycleDays.id}'"/></td>
-        </tr>
-    </c:forEach>
-</table>
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="<c:url value="/js/bootstrap.min.js" />"></script>
-<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
+<hr>
+<footer>
+    <p>Recycle Tracker</p>
+</footer>
 </body>
+
 </html>

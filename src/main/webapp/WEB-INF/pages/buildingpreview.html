@@ -27,11 +27,10 @@
 <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 <![endif]-->
 
-<!-- jquery d3js datejs-->
+<!-- jquery d3js-->
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
 <script src="https://d3js.org/d3.v3.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
 
 <!-- basic royalslider stylesheet -->
 <link rel="stylesheet" href="../../js/royalslider/royalslider.css">
@@ -43,6 +42,9 @@
 <!-- Create it with slider online build tool for better performance. -->
 <script src="../../js/royalslider/jquery.royalslider.min.js"></script>
 
+<!-- Bullet Chart -->
+<script src="../../js/bullet.js"></script>
+
 <!-- full screen mode for android devices with site launched from home screen -->
 <meta name="mobile-web-app-capable" content="yes">
 
@@ -53,26 +55,26 @@
 <!-- Start Header -->
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <img id="img-responsive" class="logo" src="../../images/recycletrackerlogo_large.png" height="50" width="auto" alt="RT Logo">
+            <img id="img-responsive" class="logo" src="../../images/recycletrackerlogo_large.png" height="50" width="auto" alt="RT Logo" title="Visit us at recycletracker.net">
             <!-- switch image out for optimized size later -->
         </div>
     </div>
 <!-- End Header -->
 <!-- Start Date and Trend -->
     <div class="row">
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-            <h4 class="date fa" >July 4th, 1776</h4>
+        <div class="date col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <h4 class="datestyle fa" >July 4th, 1776</h4>
         </div>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <h1 class="recyclepercent fa">35%</h1>
+        <div class="rolling col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <h1 class="recyclepercent fa" title="This is the building's rolling average recycling rate for consumable goods.">35%</h1>
         </div>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <h1 class="recyclechange fa">5%</h1>
+        <div class="daily col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <h1 class="recyclechange fa" title="Nice. You increased your recycling rate from yesterday">5%</h1>
         </div>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-            <h1 class="directionup fa">&#9650;</h1>
+        <div class="mood col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <h1 class="directionmeh fa fa-meh-o" title="Meh. You could still recycle better."></h1>
         </div>
-        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         </div>
     </div>
 <!-- End Date and Trend -->
@@ -80,20 +82,59 @@
 <!-- Begin Left Content -->
         <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
         <!-- Begin Chart -->
-          <img class="img-responsive" src="../../images/martrecycling.png" height="350" width="auto" alt="Mart Recycling Chart">
-        <!-- End Chart -->
+          <div id ="chartContainer">
+<script>
+var margin = {top: 5, right: 40, bottom: 20, left: 120},
+    width = 960 - margin.left - margin.right,
+    height = 50 - margin.top - margin.bottom;
+
+var chart = d3.bullet()
+    .width(width)
+    .height(height);
+
+d3.json("bullets.json", function(error, data) {
+  var svg = d3.select("body").selectAll("svg")
+      .data(data)
+    .enter().append("svg")
+      .attr("class", "bullet")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+      .call(chart);
+
+  var title = svg.append("g")
+      .style("text-anchor", "end")
+      .attr("transform", "translate(-6," + height / 2 + ")");
+
+  title.append("text")
+      .attr("class", "title")
+      .text(function(d) { return d.title; });
+
+  title.append("text")
+      .attr("class", "subtitle")
+      .attr("dy", "1em")
+      .text(function(d) { return d.subtitle; });
+
+  d3.selectAll("button").on("click", function() {
+    svg.datum(randomize).call(chart.duration(1000)); // TODO automatic transition
+  });
+});
+</script>
+          </div>
+<!-- End Chart -->
         </div>
 <!-- End Left Content -->
 <!-- Begin Right Content -->
     <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-        <div class="royalSlider RSminimal-white">
-            <img class="img-responsive" src="../../images/rt1.png" height="350" width="auto" alt="Soda">
-            <img class="img-responsive" src="../../images/rt2.png" height="350" width="auto" alt="Coffee Cup">
-            <img class="img-responsive" src="../../images/rt3.png" height="350" width="auto" alt="Coffee Sleeve">
-            <img class="img-responsive" src="../../images/rt4.png" height="350" width="auto" alt="Tip">
-            <img class="img-responsive" src="../../images/rt5.png" height="350" width="auto" alt="Cup Holder">
-            <img class="img-responsive" src="../../images/rt6.png" height="350" width="auto" alt="Napkin">
-            <img class="img-responsive" src="../../images/rt7.png" height="350" width="auto" alt="Styrofoam">
+        <div class="royalSlider rsMinW">
+            <img class="rsImg img-responsive" src="../../images/rt1.png" height="350" width="auto" alt=""</ >
+            <img class="rsImg img-responsive" src="../../images/rt2.png" height="350" width="auto" alt=""</ >
+            <img class="rsImg img-responsive" src="../../images/rt3.png" height="350" width="auto" alt=""</ >
+            <img class="rsImg img-responsive" src="../../images/rt4.png" height="350" width="auto" alt=""</ >
+            <img class="rsImg img-responsive" src="../../images/rt5.png" height="350" width="auto" alt=""</ >
+            <img class="rsImg img-responsive" src="../../images/rt6.png" height="350" width="auto" alt=""</ >
+            <img class="rsImg img-responsive" src="../../images/rt7.png" height="350" width="auto" alt=""</ >
         </div>
     </div>
 <!-- End Right Content -->
@@ -101,7 +142,7 @@
 <!-- Begin Footer -->
     <div class="row">
         <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-            <marquee class="marquee h3 fa" behavior="scroll" direction="left">Optional, configurable message for the building for alerts and other info.</marquee>
+            <p class="marquee h3 fa">Optional scrolling text for the building.</p>
         </div>
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         </div>
@@ -110,10 +151,23 @@
         </div>
     </div>
 </div>
+
 <script>
+
+//Begin Carousel
 jQuery(document).ready(function($) {
     $(".royalSlider").royalSlider({
-    	autoScaleSlider: true,
+        autoScaleSliderHeight: 350,
+        controlNavigation: 'none',
+        imageHeight: 350,
+        imageScaleMode: 'fit',
+        imageScalePadding: 2,
+        arrowsNavAutoHide: true,
+    	autoScaleSlider: false,
+    	randomizeSlides: false,
+    	transitionType: 'fade',
+    	sliderDrag: true,
+    	sliderTouch: true,
     	autoPlay: {
     		enabled: true,
     		pauseOnHover: true,
@@ -121,6 +175,7 @@ jQuery(document).ready(function($) {
     	}
     });  
 });
+//End Carousel
 </script>
 </body>
 </html>

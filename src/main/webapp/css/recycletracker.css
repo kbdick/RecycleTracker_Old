@@ -1,48 +1,38 @@
-.date {
+.date, .rolling, .daily {
+    margin-right: 3%;
+}
+ 
+.datestyle, .recyclepercent, .recyclechange, .directiondown, .directionup {
     color: #aaa;
     vertical-align: bottom;
     float: none;
+    display: inline;
     padding: 1%;
 }
 
 .recyclepercent {
     color: #aaa;
-    vertical-align: bottom;
-    float: none;
-    display: inline;
-    padding: 1%;
 }
 
 .recyclechange {
     color: #5cb85c;
-    vertical-align: bottom;
-    float: none;
-    display: inline;
-    padding: 1%;
 }
 
-.directiondown, .directionup {
-    vertical-align: bottom;
-    float: none;
-    display: inline;
-    padding: 1%;
-}
-
-.directionup {
+.directionhappy {
     color: #5cb85c;
 }
 
-.directiondown {
+.directionsad {
     color: #d9534f;
 }
 
-.directionneutral {
-    color: #428bca;
+.directionmeh {
+    color: #aaa;
     vertical-align: bottom;
     float: none;
     display: inline;
     padding: 1%;
-}
+ }
 
 .minibar, .miniline {
     color: #aaa;
@@ -51,11 +41,85 @@
     display: inline;
 }
 
-.marquee {
+.marquee{
+    -webkit-animation-name: marquee;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration:10s;
+    -webkit-animation-iteration-count: infinite;
+    margin: 0;
+    padding: 5%;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
     color: #aaa;
-    padding-top: 4%;
-    display: inline;
 }
+ 
+ 
+@-webkit-keyframes marquee{
+    0%{
+        text-indent: 95%;
+}
+    100%{
+        text-indent: -20%;  
+    }
+}
+
+#chartContainer
+{
+    overflow: hidden;
+    margin: 0;
+    padding: 1%;
+    border: solid 2px #ccc;
+    max-height: 350px;
+}
+
+/* Bullet Chart Styles */
+.bullet { 
+    font: 10px sans-serif; 
+}
+.bullet .marker { 
+    stroke: #5cb85c; stroke-width: 2px; 
+}
+.bullet .tick line { 
+    stroke: #666; stroke-width: .5px; 
+}
+.bullet .range.s0 { 
+    fill: #eee; 
+}
+.bullet .range.s1 { 
+    fill: #ddd; 
+}
+.bullet .range.s2 { 
+    fill: #ccc; 
+}
+.bullet .measure.s0 { 
+    fill: lightsteelblue; 
+}
+.bullet .measure.s1 { 
+    fill: steelblue; 
+}
+.bullet .title { 
+    font-size: 14px; font-weight: bold; 
+}
+.bullet .subtitle { 
+    fill: #999; 
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  padding-top: 40px;
+  position: relative;
+  width: 960px;
+}
+
+button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+/* Line Chart Styles */
 
 .axis path,
 .axis line {
@@ -74,13 +138,6 @@
     fill: none;
 }
 
-#chartContainer
-{
-    overflow: hidden;
-    margin: 0;
-    padding: 1%;
-    border: solid 2px #ccc;
-    max-height: 350px;
-}
+
 
 

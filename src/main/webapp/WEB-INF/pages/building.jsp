@@ -117,14 +117,14 @@
             <!-- End Left Content -->
             <!-- Begin Right Content -->
             <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                <div class="royalSlider RSminimal-white">
-                    <img class="img-responsive" src="../../images/rt1.png" height="350" width="auto" alt="Soda">
-                    <img class="img-responsive" src="../../images/rt2.png" height="350" width="auto" alt="Coffee Cup">
-                    <img class="img-responsive" src="../../images/rt3.png" height="350" width="auto" alt="Coffee Sleeve">
-                    <img class="img-responsive" src="../../images/rt4.png" height="350" width="auto" alt="Tip">
-                    <img class="img-responsive" src="../../images/rt5.png" height="350" width="auto" alt="Cup Holder">
-                    <img class="img-responsive" src="../../images/rt6.png" height="350" width="auto" alt="Napkin">
-                    <img class="img-responsive" src="../../images/rt7.png" height="350" width="auto" alt="Styrofoam">
+                <div class="royalSlider rsMinW">
+                <img class="rsImg img-responsive" src="../../images/rt1.png" height="350" width="auto" alt="Soda"</ >
+                <img class="rsImg img-responsive" src="../../images/rt2.png" height="350" width="auto" alt="Coffee Cup"</ >
+                <img class="rsImg img-responsive" src="../../images/rt3.png" height="350" width="auto" alt="Coffee Sleeve"</ >
+                <img class="rsImg img-responsive" src="../../images/rt4.png" height="350" width="auto" alt="Tip"</ >
+                <img class="rsImg img-responsive" src="../../images/rt5.png" height="350" width="auto" alt="Cup Holder"</ >
+                <img class="rsImg img-responsive" src="../../images/rt6.png" height="350" width="auto" alt="Napkin"</ >
+                <img class="rsImg img-responsive" src="../../images/rt7.png" height="350" width="auto" alt="Styrofoam"</ >
                 </div>
             </div>
         </div>
@@ -141,9 +141,30 @@
     </div>
     <!-- End Footer -->
 </div>
-<!-- Begin Royal Slider -->
 </div>
 <script>
+//Begin Carousel
+jQuery(document).ready(function($) {
+    $(".royalSlider").royalSlider({
+        autoScaleSliderHeight: 350,
+        controlNavigation: 'none',
+        imageHeight: 350,
+        imageScaleMode: 'fit',
+        imageScalePadding: 2,
+        arrowsNavAutoHide: true,
+    	autoScaleSlider: false,
+    	randomizeSlides: false,
+    	transitionType: 'fade',
+    	sliderDrag: true,
+    	sliderTouch: true,
+    	autoPlay: {
+    		enabled: true,
+    		pauseOnHover: true,
+    		delay: 10000
+    	}
+    });  
+});
+//End Carousel
     $('#myFormSubmit').click(function(e){
         e.preventDefault();
         alert($('#myField').val());
@@ -156,18 +177,6 @@
          */
     });
 
-    jQuery(document).ready(function($) {
-        $(".royalSlider").royalSlider({
-            // general options go here
-            autoScaleSlider: true,
-            autoPlay: {
-                // autoplay options go gere
-                enabled: true,
-                pauseOnHover: true,
-                delay: 10000
-            }
-        });
-    });
     var data = ${data};
     if(data != 0){
 
@@ -310,6 +319,5 @@
         });
     }) (jQuery);
 </script>
-<!-- End Royal Slider -->
 </body>
 </html>

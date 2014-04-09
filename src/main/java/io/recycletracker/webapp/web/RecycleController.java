@@ -139,6 +139,18 @@ public class RecycleController {
 	}
     @RequestMapping(value = "/day", method = RequestMethod.GET)
     public String getPersonList(ModelMap model) {
+        List<Facility>facilities = facilityService.getAllFacilities();
+        ArrayList<String> suites= new ArrayList<String>();
+        for(Facility fac:facilities){
+            for(Floor floor:fac.getFloors()){
+                for(Unit unit:floor.getUnits()){
+                   suites.add(String.valueOf(unit.getSuiteNumber()));
+                }
+            }
+        }
+        model.addAttribute("facilities",facilities);
+        model.addAttribute("suites",suites);
+        model.addAttribute("wasteTypes",facilityService.listWasteTypes());
         model.addAttribute("recycleList", facilityService.getByName("Merchandise Mart").getAllBins());
         return "add-data";
     }

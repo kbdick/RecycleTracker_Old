@@ -91,13 +91,13 @@
         <!-- start date and trend row -->
         <div class="row">
             <div class="date col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <h4 class="datestyle fa" >July 4th, 1776</h4>
+                <h4 class="datestyle fa" >${date}</h4>
             </div>
             <div class="rolling col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                <h1 class="recyclepercent fa" title="This is the building's rolling average recycling rate for consumable goods.">35%</h1>
+                <h1 class="recyclepercent fa" title="This is the building's rolling average recycling rate for consumable goods.">${percentage}</h1>
             </div>
             <div class="daily col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                <h1 class="recyclechange fa" title="Nice. You increased your recycling rate from yesterday">5%</h1>
+                <h1 class="recyclechange fa" title="Nice. You increased your recycling rate from yesterday">${change}</h1>
             </div>
             <div class="mood col-xs-1 col-sm-1 col-md-1 col-lg-1">
                 <h1 class="directionmeh fa fa-meh-o" title="Meh. You could still recycle better."></h1>

@@ -2,75 +2,237 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/artifacts/RecycleTracker_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/artifacts/RecycleTracker_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/artifacts/webapp_war.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/artifacts/webapp_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/dictionaries/alexthornburg.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/gradle.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__junit_junit_4_8_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_json_json_20131018.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_mongodb_mongo_java_driver_2_10_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_data_spring_data_commons_1_5_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_data_spring_data_mongodb_1_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_spring_aop_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_spring_beans_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_spring_context_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_spring_core_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_spring_expression_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_spring_jdbc_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_spring_orm_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_spring_test_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_spring_tx_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_spring_web_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/libraries/Maven__org_springframework_spring_webmvc_3_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/Procfile" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/RecycleTracker.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/pom.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/java/io/recycletracker/webapp/config/mongo.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/java/io/recycletracker/webapp/model/RecycleMonth.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/java/io/recycletracker/webapp/web/RecycleController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/java/io/recycletracker/webapp/web/RecycleService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/resources/META-INF/spring/applicationContext-mongo.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/resources/META-INF/spring/applicationContext.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/resources/META-INF/spring/database.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/resources/log4j.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/WEB-INF/pages/welcome.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/css/bootstrap-theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/css/bootstrap-theme.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/css/recycletracker.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/js/bootstrap.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/js/bootstrap.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/src/main/webapp/res/data.tsv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../JacksonPull/FacilityManagementSystem-jjh" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/NadesGame.apk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes.dex" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/AddData.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/CreateAccount$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/CreateAccount.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/Friends$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/Friends.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/GCMIntentService$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/GCMIntentService.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/GameMenu$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/GameMenu$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/GameMenu$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/GameMenu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/JoinOrSignUp$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/JoinOrSignUp$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/JoinOrSignUp.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/Loading.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/Login$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/Login.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/Manifest$permission.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/Manifest.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/R$dimen.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/R$drawable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/R$layout.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/R$menu.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/R$style.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/Requests$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/game/nadesgame/Requests.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/google/android/gms/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/google/android/gms/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/google/android/gms/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/google/android/gms/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/google/android/gms/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/play/nadesgame/GameMap$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/play/nadesgame/GameMap$2.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/play/nadesgame/GameMap$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/play/nadesgame/GameMap$MyCurrentLoctionListener.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/play/nadesgame/GameMap.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/play/nadesgame/SetupGame$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/play/nadesgame/SetupGame.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/util/nadesgame/Friend.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/util/nadesgame/FriendsDataDistributer.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/util/nadesgame/FriendsDatabase.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/classes/com/util/nadesgame/UniversalHTTP.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/dexedLibs/android-support-v4-82ffe077c0cb319a56e0a5a03038e72b.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/dexedLibs/android-support-v4-dcaa2fe97985600599ca20e707e9c481.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/dexedLibs/android-support-v4-f6d05e8f0986530d68e0d1da353e87cf.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/dexedLibs/gcm-442dad81e3e8220c63d142687e615a5a.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/dexedLibs/gcm-8f9eeed558c8384654ca51d05ad79800.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/dexedLibs/gcm-server-90bf7d2953f5ccce8176a21711fd980f.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/dexedLibs/gcm-server-e68921a28f7a6a3563dd188a20b10da0.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/dexedLibs/google-play-services-7aaf2421f420e57d80c2beafd7a7ec70.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/dexedLibs/google-play-services-7fd2ac451e0d1ccf14bc791d594033df.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/dexedLibs/google-play-services_lib-1e32e81720f84bbd6221ad92a3a7322d.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/dexedLibs/google-play-services_lib-a88dd917affffe54582b27c540217e7f.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/jarlist.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/res/drawable-hdpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/res/drawable-ldpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/res/drawable-ldpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/res/drawable-mdpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/res/drawable-xhdpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/bin/resources.ap_" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/gen/com/game/nadesgame/BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/gen/com/game/nadesgame/Manifest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/gen/com/game/nadesgame/R.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/gen/com/google/android/gms/R.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/ic_launcher-web.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/android-support-v4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/gcm-server.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/gcm.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/.classpath" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/.project" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/.settings/org.eclipse.jdt.core.prefs" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/README.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/bin/AndroidManifest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/bin/R.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/bin/classes/android/UnusedStub.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/bin/classes/com/google/android/gms/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/bin/classes/com/google/android/gms/R$attr.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/bin/classes/com/google/android/gms/R$id.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/bin/classes/com/google/android/gms/R$string.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/bin/classes/com/google/android/gms/R$styleable.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/bin/classes/com/google/android/gms/R.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/bin/google-play-services_lib.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/bin/jarlist.cache" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/gen/com/google/android/gms/BuildConfig.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/gen/com/google/android/gms/R.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/libs/google-play-services.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/libs/google-play-services.jar.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/project.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-af/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-am/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-ar/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-be/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-bg/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-ca/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-cs/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-da/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-de/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-el/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-en-rGB/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-es-rUS/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-es/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-et/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-fa/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-fi/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-fr/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-hi/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-hr/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-hu/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-in/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-it/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-iw/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-ja/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-ko/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-lt/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-lv/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-ms/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-nb/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-nl/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-pl/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-pt-rPT/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-pt/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-ro/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-ru/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-sk/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-sl/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-sr/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-sv/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-sw/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-th/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-tl/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-tr/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-uk/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-vi/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-zh-rCN/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-zh-rTW/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values-zu/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values/maps_attrs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/libs/google-play-services_lib/src/android/UnusedStub.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/lint.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/proguard-project.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/project.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/drawable-hdpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/drawable-hdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/drawable-ldpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/drawable-ldpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/drawable-mdpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/drawable-mdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/drawable-xhdpi/background.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/layout/activity_friends.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/layout/activity_game_map.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/layout/activity_loading_screen.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/layout/activity_login.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/layout/activity_requests.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/layout/create_account.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/layout/create_game.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/layout/join_game.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/layout/login_screen.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/layout/map.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/layout/setup.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/activity_radar_graphic.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/activity_radar_renderer.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/create_account.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/friends.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/game_map.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/join_game.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/login.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/login_screen.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/open_gles20_complete.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/requests.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/setup_game.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/menu/update_ui.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/values-sw600dp/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/values-sw720dp-land/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/values-v11/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/values-v14/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/values/dimens.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/values/strings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/res/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/game/nadesgame/AddData.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/game/nadesgame/CreateAccount.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/game/nadesgame/Friends.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/game/nadesgame/GCMIntentService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/game/nadesgame/GameMenu.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/game/nadesgame/JoinOrSignUp.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/game/nadesgame/Loading.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/game/nadesgame/Login.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/game/nadesgame/Requests.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/play/nadesgame/GameMap.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/play/nadesgame/SetupGame.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/util/nadesgame/Friend.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/util/nadesgame/FriendsDataDistributer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/util/nadesgame/FriendsDatabase.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Client/NadesGame/src/com/util/nadesgame/UniversalHTTP.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/NadesGameProposal/NadesProjectProposal.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Server/NadesServer/Schema/android_app.sql" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Server/NadesServer/add_username_data.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Server/NadesServer/check_credentials.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Server/NadesServer/check_username.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Server/NadesServer/getID.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/Server/NadesServer/send_message.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades/nades-0.2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Nades_GitHub/Nades" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../Rec-Tracker-GitHub/RecycleTrackerV2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/RecycleTrackerV2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/../SchoolStuff/FacilityManagement/FacilityManagementSystem-jjh" afterPath="" />
     </list>
     <ignored path="RecycleTracker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1393263923726" ignored="false" />
+    <file path="/Dummy.txt" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1397001531275" ignored="false" />
     <file path="/web.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1393014872648" ignored="false" />
     <file path="/database.properties" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390178707207" ignored="false" />
     <file path="/pom.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1393010525524" ignored="false" />
@@ -120,7 +282,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -157,6 +318,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -166,10 +328,46 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RecycleController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RecycleController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="114" column="44" selection-start="4395" selection-end="4395" vertical-scroll-proportion="0.38636363">
+            <state line="116" column="44" selection-start="5697" selection-end="5697" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bullets.json" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bullets.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bullet.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bullet.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="47.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="buildingpreview_bkup.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/buildingpreview_bkup.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="highchart.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/highchart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="14.625">
               <folding />
             </state>
           </provider>
@@ -193,15 +391,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mvc-dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="4" selection-start="1821" selection-end="1821" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
@@ -214,7 +403,7 @@
       <file leaf-file-name="building.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="21" selection-start="3149" selection-end="3149" vertical-scroll-proportion="0.0">
+            <state line="87" column="21" selection-start="3314" selection-end="3314" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -223,34 +412,7 @@
       <file leaf-file-name="spring-security.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="43" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/services/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="13" selection-start="2397" selection-end="2397" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomUserDetailsService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/services/CustomUserDetailsService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="13" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RecycleService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/repo/RecycleService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="17" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
+            <state line="23" column="43" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -304,28 +466,15 @@
           <option name="myItemId" value="webapp" />
           <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
         </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="Dependencies" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$DependenciesNode" />
-        </PATH_ELEMENT>
-      </PATH>
-      <PATH>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
-        </PATH_ELEMENT>
-        <PATH_ELEMENT>
-          <option name="myItemId" value="webapp" />
-          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
-        </PATH_ELEMENT>
       </PATH>
     </treeState>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
+    <option name="x" value="47" />
     <option name="y" value="22" />
-    <option name="width" value="1280" />
-    <option name="height" value="711" />
+    <option name="width" value="1233" />
+    <option name="height" value="776" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -355,7 +504,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -370,7 +519,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
+              <option name="myItemId" value="RecycleTrackerV2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -380,7 +529,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
+              <option name="myItemId" value="RecycleTrackerV2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -406,7 +555,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
+              <option name="myItemId" value="RecycleTrackerV2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -436,7 +585,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
+              <option name="myItemId" value="RecycleTrackerV2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -458,33 +607,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecycleTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
+              <option name="myItemId" value="RecycleTrackerV2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -506,7 +629,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
+              <option name="myItemId" value="RecycleTrackerV2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -523,10 +646,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -536,7 +655,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
+              <option name="myItemId" value="RecycleTrackerV2" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -556,153 +675,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecycleTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="repo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecycleTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecycleTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RecycleTracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="recycle-tracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="UI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="options.lastSelected" value="preferences.updates" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../JacksonPull" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="options.lastSelected" value="reference.projectsettings.compiler.javacompiler" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../JacksonPull" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -825,6 +823,19 @@
         </option>
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -851,19 +862,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -988,7 +986,6 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <method>
-        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="RecycleTracker:war" />
         </option>
@@ -1029,7 +1026,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="1280" height="711" extended-state="0" />
+    <frame x="47" y="22" width="1233" height="776" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1037,27 +1034,29 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33475783" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40609136" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4054878" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3181818" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.115883306" sideWeight="0.5939086" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1179444" sideWeight="0.5945122" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32809773" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Amazon EC2" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31523502" sideWeight="0.5939086" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40609136" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31508005" sideWeight="0.5945122" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40528634" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288364" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3181818" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1126,29 +1125,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="15" selection-start="1305" selection-end="1305" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorReferencesProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleAssemblyDescriptorProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/denied.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="27" selection-start="1475" selection-end="1475" vertical-scroll-proportion="0.0">
@@ -1163,13 +1139,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/UserUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="151" selection-end="151" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/repo/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="17" selection-start="369" selection-end="369" vertical-scroll-proportion="0.0">
@@ -1177,23 +1146,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/repo/RecycleService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="17" selection-start="1058" selection-end="1058" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/services/CustomUserDetailsService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="13" selection-start="789" selection-end="789" vertical-scroll-proportion="0.0">
+        <state line="22" column="13" selection-start="1029" selection-end="1029" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/services/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="13" selection-start="2397" selection-end="2397" vertical-scroll-proportion="0.0">
+        <state line="59" column="0" selection-start="1652" selection-end="1652" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1207,7 +1169,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="43" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.0">
+        <state line="23" column="43" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1228,7 +1190,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="21" selection-start="3149" selection-end="3149" vertical-scroll-proportion="0.0">
+        <state line="87" column="21" selection-start="3314" selection-end="3314" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1242,7 +1204,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="114" column="44" selection-start="4395" selection-end="4395" vertical-scroll-proportion="0.38636363">
+        <state line="116" column="44" selection-start="5697" selection-end="5697" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bullet.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="47.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/buildingpreview_bkup.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/highchart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="14.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bullets.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

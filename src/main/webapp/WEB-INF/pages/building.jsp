@@ -105,12 +105,8 @@
         <div class="row">
 <!-- Begin Chart -->
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                <div class="royalSlider rsMinW">
                     <div id = "chartContainer">
                     </div>
-                    <div>Leaderboard
-                    </div>
-                </div>
             </div>
             <!-- End Chart -->
 <!-- End Left Content -->
@@ -145,9 +141,9 @@
 //Begin Carousel
 jQuery(document).ready(function($) {
     $(".royalSlider").royalSlider({
-        autoScaleSliderHeight: 450,
+        autoScaleSliderHeight: 350,
         controlNavigation: 'none',
-        imageHeight: 450,
+        imageHeight: 350,
         imageScaleMode: 'fit',
         imageScalePadding: 2,
         arrowsNavAutoHide: false,

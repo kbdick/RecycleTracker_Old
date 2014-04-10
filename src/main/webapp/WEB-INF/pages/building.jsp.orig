@@ -80,20 +80,30 @@
 <!-- Begin Logo -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <img id="img-responsive" class="logo" src="/images/RecycleTracker_Icon.png" height="50" width="auto" alt="RT Logo">
+            <img id="img-responsive" class="logo" src="/images/recycletrackerlogo_large.png" height="50" width="auto" alt="RT Logo">
             </div>
         </div>
 <!-- End Logo -->
 <!-- Start Date and Trend Row -->
         <div class="row">
             <div class="date col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <h4 class="datestyle fa" >July 4, 1776</h4>
+<<<<<<< HEAD
+                <h4 class="datestyle fa" >${date}</h4>
+            </div>
+            <div class="rolling col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <h1 class="recyclepercent fa" title="This is the building's rolling average recycling rate for consumable goods.">${percentage}</h1>
+            </div>
+            <div class="daily col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <h1 class="recyclechange fa" title="Nice. You increased your recycling rate from yesterday">${change}</h1>
+=======
+                <h4 class="datestyle fa" >April 9, 2014</h4>
             </div>
             <div class="rolling col-xs-1 col-sm-1 col-md-1 col-lg-1">
                 <h1 class="recyclepercent fa" title="This is the building's rolling average recycling rate for consumable goods.">32%</h1>
             </div>
             <div class="daily col-xs-1 col-sm-1 col-md-1 col-lg-1">
                 <h1 class="recyclechange fa" title="Nice. You increased your recycling rate from yesterday">1%</h1>
+>>>>>>> 1832986e13a13b7d2fad19cae181917f8593cc32
             </div>
             <div class="mood col-xs-1 col-sm-1 col-md-1 col-lg-1">
                 <h1 class="directionmeh fa fa-meh-o" title="Meh. You could still recycle better."></h1>
@@ -113,13 +123,13 @@
 <!-- Begin Right Content -->
             <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
                 <div class="royalSlider rsMinW">
-                <img class="rsImg img-responsive" src="../../images/rt1.png" height="350" width="auto" alt="Soda"/>
-                <img class="rsImg img-responsive" src="../../images/rt2.png" height="350" width="auto" alt="Coffee Cup"/>
-                <img class="rsImg img-responsive" src="../../images/rt3.png" height="350" width="auto" alt="Coffee Sleeve"/>
-                <img class="rsImg img-responsive" src="../../images/rt4.png" height="350" width="auto" alt="Tip"/>
-                <img class="rsImg img-responsive" src="../../images/rt5.png" height="350" width="auto" alt="Cup Holder"/>
-                <img class="rsImg img-responsive" src="../../images/rt6.png" height="350" width="auto" alt="Napkin"/>.
-                <img class="rsImg img-responsive" src="../../images/rt7.png" height="350" width="auto" alt="Styrofoam"/>
+                <img class="rsImg img-responsive" src="../../images/rt1.png" height="350" width="auto" alt="Soda"</ >
+                <img class="rsImg img-responsive" src="../../images/rt2.png" height="350" width="auto" alt="Coffee Cup"</ >
+                <img class="rsImg img-responsive" src="../../images/rt3.png" height="350" width="auto" alt="Coffee Sleeve"</ >
+                <img class="rsImg img-responsive" src="../../images/rt4.png" height="350" width="auto" alt="Tip"</ >
+                <img class="rsImg img-responsive" src="../../images/rt5.png" height="350" width="auto" alt="Cup Holder"</ >
+                <img class="rsImg img-responsive" src="../../images/rt6.png" height="350" width="auto" alt="Napkin"</ >
+                <img class="rsImg img-responsive" src="../../images/rt7.png" height="350" width="auto" alt="Styrofoam"</ >
                 </div>
             </div>
         </div>
@@ -127,7 +137,7 @@
 <!-- Begin Footer -->
         <div class="row">
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                <p class="marquee h3 fa">"One Man's Junk Is Another Man's Treasure."</p>
+                <p class="marquee h3 fa">Optional scrolling text for the building.</p>
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
@@ -173,7 +183,7 @@ jQuery(document).ready(function($) {
          */
     });
 
-    var data = [{"landfill":41.0,"recycling":36.0,"date":"Tue Feb 04"},{"landfill":52.0,"recycling":20.0,"date":"Tue Feb 05"},{"landfill":71.0,"recycling":13.0,"date":"Tue Feb 06"},{"landfill":55.0,"recycling":44.0,"date":"Tue Feb 07"},{"landfill":66.0,"recycling":36.0,"date":"Tue Feb 08"},{"landfill":80.0,"recycling":44.0,"date":"Tue Feb 09"},{"landfill":50.0,"recycling":22.0,"date":"Tue Feb 10"},{"landfill":77.0,"recycling":22.0,"date":"Tue Feb 11"},{"landfill":55.0,"recycling":44.0,"date":"Tue Feb 12"},{"landfill":99.0,"recycling":66.0,"date":"Tue Feb 13"},{"landfill":100.0,"recycling":66.0,"date":"Tue Feb 14"},{"landfill":55.0,"recycling":41.0,"date":"Tue Feb 15"}];;
+    var data = ${data};
     if(data != 0){
 
         var padding = {top: 30, right: 40, bottom: 40, left: 40};

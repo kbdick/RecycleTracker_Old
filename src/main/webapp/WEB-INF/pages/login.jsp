@@ -83,7 +83,6 @@
             <div class="control-group">
                 <div class="controls">
                     <button type="submit" class="btn btn-primary">Sign in</button>
-                    <button type="submit" class="btn btn-danger">Reset</button>
                 </div>
             </div>
             <div class="control-group">

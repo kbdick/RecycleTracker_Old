@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <html>
 <head>
     <title>RecycleTracker</title>
@@ -50,15 +51,27 @@
           id="addBin" method="post" prependId = "false">
         <legend>Add a Bin</legend>
         <div class="control-group string required">
-            <label class="string required control-label" for="facility"><abbr title="required">*</abbr> Facility</label>
+            <div class="control-group">
+                <label class="string required control-label" for="facility"><abbr title="required">*</abbr> Facility:</label>
             <div class="controls">
-                <input class="string required span6" id="facility" name="facility" size="50" type="text">
+                <select id="facility" name="facility">
+                    <option value="NONE">--- Select ---</option>
+                    <c:forEach var="facility" items="${facilities}">
+                        <option value="${facility.name}">${facility.name}</option>
+                    </c:forEach>
+                </select>
+            </div>
             </div>
         </div>
         <div class="control-group integer required">
             <label class="integer required control-label" for="suiteNumber"><abbr title="required">*</abbr> Suite Number</label>
             <div class="controls">
-                <input class="integer required span6" id="suiteNumber" name="suiteNumber" size="50" type="integer">
+                <select id="suiteNumber" name="suiteNumber">
+                    <option value="NONE">--- Select ---</option>
+                    <c:forEach var="suite" items="${suites}">
+                        <option value="${suite}">${suite}</option>
+                    </c:forEach>
+                </select>
             </div>
         </div>
         <div class="control-group date required">
@@ -76,7 +89,12 @@
         <div class="control-group string required">
             <label class="string required control-label" for="wasteType"><abbr title="required">*</abbr>Waste Type</label>
             <div class="controls">
-                <input class="string required span6" id="wasteType" name="wasteType" size="50" type="string">
+                <select id="wasteType" name="wasteType">
+                    <option value="NONE">--- Select ---</option>
+                    <c:forEach var="wasteType" items="${wasteTypes}">
+                        <option value="${wasteType.name}">${wasteType.name}</option>
+                    </c:forEach>
+                </select>
             </div>
         </div>
         <div class="form-actions">
@@ -92,7 +110,7 @@
             <td>${bin.date}</td>
             <td>${bin.suiteNumber}</td>
             <td>${bin.weight}</td>
-            <td><input type="button" value="delete" class = "btn btn-danger" onclick="window.location='day/delete?id=${recycleDays.id}'"/></td>
+            <td><input type="button" value="delete" class = "btn btn-danger" onclick="window.location='day/delete?id=${bin.id}'"/></td>
         </tr>
     </c:forEach>
 </table>

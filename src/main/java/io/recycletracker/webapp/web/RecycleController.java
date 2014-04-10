@@ -34,7 +34,37 @@ public class RecycleController {
 
         Calendar yesterday = Calendar.getInstance();
         Calendar today = Calendar.getInstance();
-        if(facilityService.getByName("Merchandise Mart")!=null){
+        Facility facility =  facilityService.getByName("Merchandise Mart");
+        List<Bin> bins = facility.getAllBins();
+        List<Weight>weights = new ArrayList<Weight>();
+        for(Bin bin:bins){
+            for(Weight weight:weights){
+                if(weight.getDate().toString().equals(bin.getDate().toString())){
+                      if(bin.getWasteType().getIsRecyclable()){
+                          weight.setRecycling(bin.getWeight());
+                      }else{
+                          weight.setLandfill(bin.getWeight());
+                      }
+                }else{
+                    Weight newWeight = new Weight();
+                    newWeight.setDate(bin.getDate().toString());
+                    if(bin.getWasteType().getIsRecyclable()){
+                        newWeight.setRecycling(bin.getWeight());
+                    }else{
+                        newWeight.setLandfill(bin.getWeight());
+                    }
+                    weights.add(newWeight);
+                }
+
+            }
+
+
+        }
+        Gson gson = new Gson();
+        model.addAttribute("data",gson.toJson(weights));
+
+
+        /*if(facilityService.getByName("Merchandise Mart")!=null){
 
             Facility facility =  facilityService.getByName("Merchandise Mart");
 
@@ -49,7 +79,7 @@ public class RecycleController {
             yesterday.add(Calendar.DATE, -1);
             System.out.println(yesterday.toString());
             int count = 0;
-            if(list.size() != 0){
+            /*if(list.size() != 0){
                 for(Bin bin:list){
                    if(recyclingWeights.get(bin.getDate().toString())==null&&bin.getWasteType().getIsRecyclable()){
                        System.out.println("Empty");
@@ -72,18 +102,18 @@ public class RecycleController {
                 }
             }
             List<Weight> finalList = new ArrayList<Weight>();
+            Weight weight = new Weight();
             for (Map.Entry<String, Double> entry : recyclingWeights.entrySet()){
                 System.out.println(entry.getKey() + "/" + entry.getValue());
-                Weight weight = new Weight();
-
+                //Weight weight = new Weight();
                 String [] dateSplit = entry.getKey().split(" ");
                 weight.setDate(dateSplit[0]+" "+dateSplit[1]+" "+dateSplit[2]);
                 weight.setRecycling(entry.getValue());
+
             }
             for (Map.Entry<String, Double> entry : landfillWeights.entrySet()){
                 System.out.println(entry.getKey() + "/" + entry.getValue());
-                Weight weight = new Weight();
-
+                //Weight weight = new Weight();
                 String [] dateSplit = entry.getKey().split(" ");
                 weight.setDate(dateSplit[0]+" "+dateSplit[1]+" "+dateSplit[2]);
                 weight.setLandfill(entry.getValue());
@@ -133,12 +163,24 @@ public class RecycleController {
             model.addAttribute("percentage",0);
             model.addAttribute("todayPercentage",0);
             model.addAttribute("flag","Enter Admin to Setup Facility, then add some bins! -->");
-        }
+        }*/
 
 		return "building";
 	}
     @RequestMapping(value = "/day", method = RequestMethod.GET)
     public String getPersonList(ModelMap model) {
+        List<Facility>facilities = facilityService.getAllFacilities();
+        ArrayList<String> suites= new ArrayList<String>();
+        for(Facility fac:facilities){
+            for(Floor floor:fac.getFloors()){
+                for(Unit unit:floor.getUnits()){
+                   suites.add(String.valueOf(unit.getSuiteNumber()));
+                }
+            }
+        }
+        model.addAttribute("facilities",facilities);
+        model.addAttribute("suites",suites);
+        model.addAttribute("wasteTypes",facilityService.listWasteTypes());
         model.addAttribute("recycleList", facilityService.getByName("Merchandise Mart").getAllBins());
         return "add-data";
     }
@@ -299,6 +341,16 @@ public class RecycleController {
 
     @RequestMapping(value = "/admin/add/floor", method = RequestMethod.GET)
     public String addFloor(ModelMap model) {
+        model.addAttribute("facilities",facilityService.getAllFacilities());
+        List<Facility>facilities = facilityService.getAllFacilities();
+        List<Floor>floors = new ArrayList<Floor>();
+        ArrayList<String> suites= new ArrayList<String>();
+        for(Facility fac:facilities){
+            for(Floor floor:fac.getFloors()){
+               floors.add(floor);
+            }
+        }
+        model.addAttribute("floors",floors);
         return "floor-add";
     }
 

@@ -33,7 +33,7 @@ public class WasteType {
         this.isRecyclable = isRecyclable;
     }
 
-    public String name(){
+    public String getName(){
         return name;
     }
 

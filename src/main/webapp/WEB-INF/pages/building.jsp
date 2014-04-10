@@ -173,7 +173,7 @@ jQuery(document).ready(function($) {
          */
     });
 
-    var data = ${data};
+    var data = [{"landfill":41.0,"recycling":36.0,"date":"Tue Feb 04"},{"landfill":52.0,"recycling":20.0,"date":"Tue Feb 05"},{"landfill":71.0,"recycling":13.0,"date":"Tue Feb 06"},{"landfill":55.0,"recycling":44.0,"date":"Tue Feb 07"},{"landfill":66.0,"recycling":36.0,"date":"Tue Feb 08"},{"landfill":80.0,"recycling":44.0,"date":"Tue Feb 09"},{"landfill":50.0,"recycling":22.0,"date":"Tue Feb 10"},{"landfill":77.0,"recycling":22.0,"date":"Tue Feb 11"},{"landfill":55.0,"recycling":44.0,"date":"Tue Feb 12"},{"landfill":99.0,"recycling":66.0,"date":"Tue Feb 13"},{"landfill":100.0,"recycling":66.0,"date":"Tue Feb 14"},{"landfill":55.0,"recycling":41.0,"date":"Tue Feb 15"}];;
     if(data != 0){
 
         var padding = {top: 30, right: 40, bottom: 40, left: 40};

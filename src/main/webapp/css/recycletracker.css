@@ -1,3 +1,7 @@
+.logo {
+    margin-bottom: 2%;
+}
+
 .date, .rolling, .daily {
     margin-right: 3%;
 }
@@ -70,7 +74,7 @@
     margin: 0;
     padding: 1%;
     border: solid 2px #ccc;
-    max-height: 350px;
+    max-height: 335px;
 }
 
 /* Line Chart Styles */

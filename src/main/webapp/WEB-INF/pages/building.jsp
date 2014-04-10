@@ -58,37 +58,33 @@
 <body>
 <!-- Top Navigation Bar -->
 <div class="sb-navbar sb-slide">
-
-    <!-- Right Slidebar control -->
+<!-- Right Slidebar control -->
     <div class="sb-toggle-right">
         <div class="navicon-line"></div>
         <div class="navicon-line"></div>
         <div class="navicon-line"></div>
     </div>
-
 </div>
 
 <div class="sb-slidebar sb-right">
     <ul class="sb-menu">
-
         <li><a href="login">Login</a></li>
-
-
         <li><a href="day">Add Data</a></li>
         <li><a href="admin">Admin</a></li>
     </ul>
 </div>
 
-<!-- start header includes logo -->
+<!-- Start Content -->
 <div id="sb-site">
     <div class="container">
-<!-- Logo -->
+<!-- Begin Logo -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <img id="img-responsive" class="logo" src="/images/recycletrackerlogo_large.png" height="50" width="auto" alt="RT Logo">
             </div>
         </div>
-<!-- start date and trend row -->
+<!-- End Logo -->
+<!-- Start Date and Trend Row -->
         <div class="row">
             <div class="date col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <h4 class="datestyle fa" >July 3rd, 1776</h4>
@@ -105,17 +101,16 @@
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             </div>
         </div>
+<!-- Begin Left Side Content -->
         <div class="row">
-
-            <!-- Begin Chart -->
-
+<!-- Begin Chart -->
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
                 <div id = "chartContainer">
                 </div>
             </div>
             <!-- End Chart -->
-            <!-- End Left Content -->
-            <!-- Begin Right Content -->
+<!-- End Left Content -->
+<!-- Begin Right Content -->
             <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
                 <div class="royalSlider rsMinW">
                 <img class="rsImg img-responsive" src="../../images/rt1.png" height="350" width="auto" alt="Soda"</ >
@@ -128,21 +123,19 @@
                 </div>
             </div>
         </div>
-
-        <!-- End Right Content -->
-    </div>
-    <!-- Begin Footer -->
-    <div class="row">
-        <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-            <p class="marquee h3 fa">Optional scrolling text for the building.</p>
+<!-- End Right Content -->
+<!-- Begin Footer -->
+        <div class="row">
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <p class="marquee h3 fa">Optional scrolling text for the building.</p>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <img class="img-responive" src="/images/mmpilogo.png" height="50" width="auto" alt="Building Logo">
+            </div>
         </div>
-        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
-        <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-            <img class="img-responive" src="/images/mmpilogo.png" height="50" width="auto" alt="Building Logo">
-        </div>
+<!-- End Footer -->
     </div>
-    <!-- End Footer -->
-</div>
 </div>
 <script>
 //Begin Carousel

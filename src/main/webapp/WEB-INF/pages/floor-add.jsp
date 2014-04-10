@@ -65,7 +65,12 @@ ${result}
         <div class="control-group string required">
             <label class="string required control-label" for="facilityName"><abbr title="required">*</abbr>Facility</label>
             <div class="controls">
-                <input class="string required span6" id="facilityName" name="facilityName" size="50" type="text">
+                <select id="facilityName" name="facilityName">
+                    <option value="NONE">--- Select ---</option>
+                    <c:forEach var="facility" items="${facilities}">
+                        <option value="${facility.name}">${facility.name}</option>
+                    </c:forEach>
+                </select>
             </div>
         </div>
         <div class="control-group integer required">

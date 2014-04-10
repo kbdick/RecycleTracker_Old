@@ -72,18 +72,19 @@ public class RecycleController {
                 }
             }
             List<Weight> finalList = new ArrayList<Weight>();
+            Weight weight = new Weight();
             for (Map.Entry<String, Double> entry : recyclingWeights.entrySet()){
+                System.out.println("Got som recycling!");
                 System.out.println(entry.getKey() + "/" + entry.getValue());
-                Weight weight = new Weight();
-
+                //Weight weight = new Weight();
                 String [] dateSplit = entry.getKey().split(" ");
                 weight.setDate(dateSplit[0]+" "+dateSplit[1]+" "+dateSplit[2]);
                 weight.setRecycling(entry.getValue());
+
             }
             for (Map.Entry<String, Double> entry : landfillWeights.entrySet()){
                 System.out.println(entry.getKey() + "/" + entry.getValue());
-                Weight weight = new Weight();
-
+                //Weight weight = new Weight();
                 String [] dateSplit = entry.getKey().split(" ");
                 weight.setDate(dateSplit[0]+" "+dateSplit[1]+" "+dateSplit[2]);
                 weight.setLandfill(entry.getValue());
@@ -311,6 +312,16 @@ public class RecycleController {
 
     @RequestMapping(value = "/admin/add/floor", method = RequestMethod.GET)
     public String addFloor(ModelMap model) {
+        model.addAttribute("facilities",facilityService.getAllFacilities());
+        List<Facility>facilities = facilityService.getAllFacilities();
+        List<Floor>floors = new ArrayList<Floor>();
+        ArrayList<String> suites= new ArrayList<String>();
+        for(Facility fac:facilities){
+            for(Floor floor:fac.getFloors()){
+               floors.add(floor);
+            }
+        }
+        model.addAttribute("floors",floors);
         return "floor-add";
     }
 

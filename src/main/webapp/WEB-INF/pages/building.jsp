@@ -80,7 +80,7 @@
 <!-- Begin Logo -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <img id="img-responsive" class="logo" src="/images/RecycleTracker_Icon.png" height="40px" width="auto" alt="RT Logo">
+            <img id="img-responsive" class="logo" src="/images/RecycleTracker_Icon.png" height="30px" width="auto" alt="RT Logo">
             </div>
         </div>
 <!-- End Logo -->

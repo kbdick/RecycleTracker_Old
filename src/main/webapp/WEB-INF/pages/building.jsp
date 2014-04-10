@@ -83,6 +83,10 @@
             <img id="img-responsive" class="logo" src="/images/RecycleTracker_Icon.png" height="30px" width="auto" alt="RT Logo">
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            </div>
+        </div>
 <!-- End Logo -->
 <!-- Start Date and Trend Row -->
         <div class="row">

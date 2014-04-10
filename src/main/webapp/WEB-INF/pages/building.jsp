@@ -80,14 +80,14 @@
 <!-- Begin Logo -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <img id="img-responsive" class="logo" src="/images/RecycleTracker_Icon.png" height="40" width="auto" alt="RT Logo">
+            <img id="img-responsive" class="logo" src="/images/RecycleTracker_Icon.png" height="40px" width="auto" alt="RT Logo">
             </div>
         </div>
 <!-- End Logo -->
 <!-- Start Date and Trend Row -->
         <div class="row">
             <div class="date col-xs-3 col-sm-3 col-md-3 col-lg-3">
-                <h4 class="datestyle fa" >July 4, 1776</h4>
+                <h4 class="datestyle fa" >April 10th, 2014</h4>
             </div>
             <div class="rolling col-xs-1 col-sm-1 col-md-1 col-lg-1">
                 <h1 class="recyclepercent fa" title="This is the building's rolling average recycling rate for consumable goods.">32%</h1>

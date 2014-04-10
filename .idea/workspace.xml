@@ -229,11 +229,11 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/../Rec-Tracker-GitHub/RecycleTrackerV2" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../RecycleTracker/RecycleTrackerV2" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../SchoolStuff/FacilityManagement/FacilityManagementSystem-jjh" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java" afterPath="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp" />
     </list>
     <ignored path="RecycleTracker.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1397090456256" ignored="false" />
+    <file path="/Dummy.txt" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1397096244285" ignored="false" />
     <file path="/web.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1393014872648" ignored="false" />
     <file path="/database.properties" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390178707207" ignored="false" />
     <file path="/pom.xml" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1393010525524" ignored="false" />
@@ -249,7 +249,7 @@
     <file path="/system.properties" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390540336185" ignored="false" />
     <file path="/MongoConfig.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390540711426" ignored="false" />
     <file path="/RecycleWeight.java" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1392702814614" ignored="false" />
-    <file path="/building.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1397004586669" ignored="false" />
+    <file path="/building.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1397096352958" ignored="false" />
     <file path="/bootstrap.css" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390933998916" ignored="false" />
     <file path="/home.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1390963647276" ignored="false" />
     <file path="/add-data.jsp" changelist="d5fdaba2-5b9d-49d2-99ae-9d3d9d51e7a5" time="1397008643184" ignored="false" />
@@ -332,10 +332,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="RecycleController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="RecycleController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="18" selection-start="4132" selection-end="4132" vertical-scroll-proportion="0.5062167">
+            <state line="86" column="18" selection-start="4132" selection-end="4132" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#13591#13598#0" expanded="true" />
                 <element signature="e#13649#13657#0" expanded="true" />
@@ -344,10 +344,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="admin.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="51.25">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-user.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add-user.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="88" column="59" selection-start="4019" selection-end="4019" vertical-scroll-proportion="-14.083333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="floor-add.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/floor-add.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="72" column="37" selection-start="3053" selection-end="3053" vertical-scroll-proportion="-11.25">
+            <state line="72" column="37" selection-start="3053" selection-end="3053" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -356,7 +374,7 @@
       <file leaf-file-name="fac-add.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/fac-add.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="36.25">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -365,25 +383,16 @@
       <file leaf-file-name="addUnit.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/addUnit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="84" column="83" selection-start="3651" selection-end="3651" vertical-scroll-proportion="-3.7083333">
+            <state line="84" column="83" selection-start="3651" selection-end="3651" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="highchart.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/highchart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="building.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="building.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="115" selection-start="4318" selection-end="4318" vertical-scroll-proportion="0.0">
+            <state line="117" column="124" selection-start="5160" selection-end="5160" vertical-scroll-proportion="0.3617811">
               <folding />
             </state>
           </provider>
@@ -392,7 +401,7 @@
       <file leaf-file-name="add-data.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add-data.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="52" selection-start="2903" selection-end="2903" vertical-scroll-proportion="-6.875">
+            <state line="61" column="52" selection-start="2903" selection-end="2903" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -443,13 +452,13 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add-user.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/login.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add-data.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/model/WasteType.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/floor-add.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/addUnit.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp" />
       </list>
     </option>
   </component>
@@ -502,8 +511,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -725,11 +734,11 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
+    <property name="FullScreen" value="false" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -852,6 +861,19 @@
         </option>
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -880,19 +902,6 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
@@ -915,13 +924,6 @@
       </JSRemoteDebuggerConfigurationSettings>
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
-      <JSDebuggerConfigurationSettings>
-        <option name="engineId" value="embedded" />
-        <option name="fileUrl" />
-      </JSDebuggerConfigurationSettings>
-      <method />
-    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -941,6 +943,13 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" value="embedded" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -1162,13 +1171,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/mvc-dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="4" selection-start="1821" selection-end="1821" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-security.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="43" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
@@ -1190,13 +1192,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add-user.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="59" selection-start="4019" selection-end="4019" vertical-scroll-proportion="-2.3333333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/bullets.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
@@ -1205,13 +1200,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/highchart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="115" selection-start="4318" selection-end="4318" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1232,7 +1220,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add-data.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="52" selection-start="2903" selection-end="2903" vertical-scroll-proportion="-6.875">
+        <state line="61" column="52" selection-start="2903" selection-end="2903" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1246,32 +1234,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/floor-add.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="37" selection-start="3053" selection-end="3053" vertical-scroll-proportion="-11.25">
+        <state line="72" column="37" selection-start="3053" selection-end="3053" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/fac-add.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="36.25">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/addUnit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="83" selection-start="3651" selection-end="3651" vertical-scroll-proportion="-3.7083333">
+        <state line="84" column="83" selection-start="3651" selection-end="3651" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/io/recycletracker/webapp/web/RecycleController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="18" selection-start="4132" selection-end="4132" vertical-scroll-proportion="0.5062167">
+        <state line="86" column="18" selection-start="4132" selection-end="4132" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#13591#13598#0" expanded="true" />
             <element signature="e#13649#13657#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/admin.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="51.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/add-user.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="88" column="59" selection-start="4019" selection-end="4019" vertical-scroll-proportion="-14.083333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/building.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="117" column="124" selection-start="5160" selection-end="5160" vertical-scroll-proportion="0.3617811">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -87,23 +87,13 @@
 <!-- Start Date and Trend Row -->
         <div class="row">
             <div class="date col-xs-3 col-sm-3 col-md-3 col-lg-3">
-<<<<<<< HEAD
-                <h4 class="datestyle fa" >${date}</h4>
-            </div>
-            <div class="rolling col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                <h1 class="recyclepercent fa" title="This is the building's rolling average recycling rate for consumable goods.">${percentage}</h1>
-            </div>
-            <div class="daily col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                <h1 class="recyclechange fa" title="Nice. You increased your recycling rate from yesterday">${change}</h1>
-=======
-                <h4 class="datestyle fa" >April 9, 2014</h4>
+                <h4 class="datestyle fa" >July 4, 1776</h4>
             </div>
             <div class="rolling col-xs-1 col-sm-1 col-md-1 col-lg-1">
                 <h1 class="recyclepercent fa" title="This is the building's rolling average recycling rate for consumable goods.">32%</h1>
             </div>
             <div class="daily col-xs-1 col-sm-1 col-md-1 col-lg-1">
                 <h1 class="recyclechange fa" title="Nice. You increased your recycling rate from yesterday">1%</h1>
->>>>>>> 1832986e13a13b7d2fad19cae181917f8593cc32
             </div>
             <div class="mood col-xs-1 col-sm-1 col-md-1 col-lg-1">
                 <h1 class="directionmeh fa fa-meh-o" title="Meh. You could still recycle better."></h1>
@@ -123,13 +113,13 @@
 <!-- Begin Right Content -->
             <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
                 <div class="royalSlider rsMinW">
-                <img class="rsImg img-responsive" src="../../images/rt1.png" height="350" width="auto" alt="Soda"</ >
-                <img class="rsImg img-responsive" src="../../images/rt2.png" height="350" width="auto" alt="Coffee Cup"</ >
-                <img class="rsImg img-responsive" src="../../images/rt3.png" height="350" width="auto" alt="Coffee Sleeve"</ >
-                <img class="rsImg img-responsive" src="../../images/rt4.png" height="350" width="auto" alt="Tip"</ >
-                <img class="rsImg img-responsive" src="../../images/rt5.png" height="350" width="auto" alt="Cup Holder"</ >
-                <img class="rsImg img-responsive" src="../../images/rt6.png" height="350" width="auto" alt="Napkin"</ >
-                <img class="rsImg img-responsive" src="../../images/rt7.png" height="350" width="auto" alt="Styrofoam"</ >
+                <img class="rsImg img-responsive" src="../../images/rt1.png" height="350" width="auto" alt="Soda"/>
+                <img class="rsImg img-responsive" src="../../images/rt2.png" height="350" width="auto" alt="Coffee Cup"/>
+                <img class="rsImg img-responsive" src="../../images/rt3.png" height="350" width="auto" alt="Coffee Sleeve"/>
+                <img class="rsImg img-responsive" src="../../images/rt4.png" height="350" width="auto" alt="Tip"/>
+                <img class="rsImg img-responsive" src="../../images/rt5.png" height="350" width="auto" alt="Cup Holder"/>
+                <img class="rsImg img-responsive" src="../../images/rt6.png" height="350" width="auto" alt="Napkin"/>.
+                <img class="rsImg img-responsive" src="../../images/rt7.png" height="350" width="auto" alt="Styrofoam"/>
                 </div>
             </div>
         </div>

@@ -105,7 +105,11 @@
         <div class="row">
 <!-- Begin Chart -->
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                <div id = "chartContainer">
+                <div class="royalSlider rsMinW">
+                    <div id = "chartContainer">
+                    </div>
+                    <div>Leaderboard
+                    </div>
                 </div>
             </div>
             <!-- End Chart -->
@@ -160,6 +164,7 @@ jQuery(document).ready(function($) {
     });  
 });
 //End Carousel
+
     $('#myFormSubmit').click(function(e){
         e.preventDefault();
         alert($('#myField').val());

@@ -80,7 +80,7 @@
 <!-- Begin Logo -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <img id="img-responsive" class="logo" src="/images/recycletrackerlogo_large.png" height="50" width="auto" alt="RT Logo">
+            <img id="img-responsive" class="logo" src="/images/RecycleTracker_Icon.png" height="50" width="auto" alt="RT Logo">
             </div>
         </div>
 <!-- End Logo -->
@@ -127,7 +127,7 @@
 <!-- Begin Footer -->
         <div class="row">
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                <p class="marquee h3 fa">Optional scrolling text for the building.</p>
+                <p class="marquee h3 fa">"One Man's Junk Is Another Man's Treasure."</p>
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">

@@ -110,7 +110,7 @@
 <!-- Begin Chart -->
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
                     <div class="span6" id="chartContainer">
-                    <script>
+<script>
     var padding = {top: 0, right: 0, bottom: 0, left: 0};
     var parseDate = d3.time.format("%d-%b-%y").parse;
     var sourceData, xScale, yScale, line;
@@ -310,6 +310,6 @@ jQuery(document).ready(function($) {
          });
          */
     });
-
+</script>
 </body>
 </html>

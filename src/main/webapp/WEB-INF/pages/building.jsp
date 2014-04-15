@@ -109,142 +109,72 @@
         <div class="row">
 <!-- Begin Chart -->
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-                    <div class="span6" id="chartContainer">
+                    <!--<div class="span6" id="chartContainer">-->
+<div id="graph" class="aGraph" style="position:absolute;top:0px;left:0; float:left;"></div>
+
 <script>
-    var padding = {top: 0, right: 0, bottom: 0, left: 0};
-    var parseDate = d3.time.format("%d-%b-%y").parse;
-    var sourceData, xScale, yScale, line;
-    var prevChartWidth = 0, prevChartHeight = 0;
-    var updateTransistionMS = 750;
-
-    var chartSvg = d3.select("#chartContainer").append("svg")
-            .append("g")
-            .attr("class", "chartContainer")
-            .attr("transform", "translate(" + padding.left + "," + padding.top + ")");
-
-    chartSvg.append("g")
-            .attr("class", "x axis");
-
-    chartSvg.append("g")
-            .attr("class", "y axis");
-
-    var data = [[{"landfill":41.0,"recycling":36.0,"date":"Tue Feb 04"},{"landfill":52.0,"recycling":20.0,"date":"Tue Feb 05"},{"landfill":71.0,"recycling":13.0,"date":"Tue Feb 06"},{"landfill":55.0,"recycling":44.0,"date":"Tue Feb 07"},{"landfill":66.0,"recycling":36.0,"date":"Tue Feb 08"},{"landfill":80.0,"recycling":44.0,"date":"Tue Feb 09"},{"landfill":50.0,"recycling":22.0,"date":"Tue Feb 10"},{"landfill":77.0,"recycling":22.0,"date":"Tue Feb 11"},{"landfill":55.0,"recycling":44.0,"date":"Tue Feb 12"},{"landfill":99.0,"recycling":66.0,"date":"Tue Feb 13"},{"landfill":100.0,"recycling":66.0,"date":"Tue Feb 14"},{"landfill":55.0,"recycling":41.0,"date":"Tue Feb 15"}]
-
-        data.forEach(function(d) {
-            d.date = parseDate(d.date);
-            d.weight = +d.weight;
-        });
-
-        sourceData = data;
-
-        xScale = d3.time.scale()
-                .domain(d3.extent(sourceData, function(d) { return d.date; }));
-
-        yScale = d3.scale.linear()
-                .domain([0, d3.max(sourceData, function(d) { return d.weight; })]);
-
-        xAxis = d3.svg.axis()
-                .scale(xScale)
-                .orient("bottom");
-
-        yAxis = d3.svg.axis()
-                .scale(yScale)
-                .orient("left");
-
-        // declare a new line
-        line = d3.svg.line()
-                .x(function(d) { return xScale(d.date); })
-                .y(function(d) { return yScale(d.weight); })
-                .interpolate("linear");
-
-        updateChart(true);
-    function updateChart(init)
-    {
-        var chartWidth = document.getElementById('chartContainer').getBoundingClientRect().width - padding.left - padding.right;
-        var chartHeight = document.getElementById('chartContainer').getBoundingClientRect().height - padding.top - padding.bottom;
-
-        if ((prevChartWidth != chartWidth) ||
-                (prevChartHeight != chartHeight))
-        {
-            prevChartWidth = chartWidth;
-            prevChartHeight = chartHeight;
-
-            chartSvg.attr("width", chartWidth + padding.left + padding.right)
-                    .attr("height", chartHeight + padding.top + padding.bottom);
-
-            xScale.range([0, chartWidth]);
-            yScale.range([chartHeight, 0]);
-
-            if (init)
-            {
-
-                chartSvg.select(".x")
-                        .attr("transform", "translate(0," + chartHeight + ")")
-                        .call(xAxis);
-
-                chartSvg.select(".y")
-                        .call(yAxis);
-            }
-            else
-            {
-                var t = chartSvg.transition().duration(updateTransistionMS);
-
-                t.select(".x")
-                        .attr("transform", "translate(0," + chartHeight + ")")
-                        .call(xAxis);
-
-                t.select(".y")
-                        .call(yAxis);
-            }
-
-            var circle = chartSvg.selectAll("circle")
-                    .data(sourceData);
-
-            circle.transition()
-                    .duration(updateTransistionMS)
-                    .attr("cx", function(d) { return xScale(d.date); })
-                    .attr("cy", function(d) { return yScale(d.weight); });
-
-            circle.enter().append("circle")
-                    .attr("cx", function(d) { return xScale(d.date); })
-                    .attr("cy", function(d) { return yScale(d.weight); })
-                    .attr("r", 3)
-                    .attr("class", "circle");
-
-            var lines = chartSvg.selectAll(".line")
-                    .data([sourceData]);
-
-            lines.transition()
-                    .duration(updateTransistionMS)
-                    .attr("d", line);
-
-            lines.enter().append("path")
-                    .attr("class", "line")
-                    .attr("d", line);
-        }
-    }
-
-    var resizeTimer;
-    window.onresize = function(event) {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function()
-        {
-            updateChart(false);
-        }, 100);
-    }
-
-    function mousemove() {
-        var x0 = x.invert(d3.mouse(this)[0]),
-                i = bisectDate(data, x0, 1),
-                d0 = data[i - 1],
-                d1 = data[i],
-                d = x0 - d0.date > d1.date - x0 ? d1 : d0;
-        focus.attr("transform", "translate(" + x(d.date) + "," + y(d.weight) + ")");
-        focus.select("text").text(formatCurrency(d.weight));
-    }
-
+/* implementation heavily influenced by http://bl.ocks.org/1166403 */
+		
+		// define dimensions of graph
+		var m = [80, 80, 80, 80]; // margins
+		var w = 1000 - m[1] - m[3]; // width
+		var h = 400 - m[0] - m[2]; // height
+		
+		// create a simple data array that we'll plot with a line (this array represents only the Y values, X will just be the index location)
+		var data = ["landfill":41.0,"recycling":36.0,"date":"Tue Feb 04"},{"landfill":52.0,"recycling":20.0,"date":"Tue Feb 05"},{"landfill":71.0,"recycling":13.0,"date":"Tue Feb 06"},{"landfill":55.0,"recycling":44.0,"date":"Tue Feb 07"},{"landfill":66.0,"recycling":36.0,"date":"Tue Feb 08"},{"landfill":80.0,"recycling":44.0,"date":"Tue Feb 09"},{"landfill":50.0,"recycling":22.0,"date":"Tue Feb 10"},{"landfill":77.0,"recycling":22.0,"date":"Tue Feb 11"},{"landfill":55.0,"recycling":44.0,"date":"Tue Feb 12"},{"landfill":99.0,"recycling":66.0,"date":"Tue Feb 13"},{"landfill":100.0,"recycling":66.0,"date":"Tue Feb 14"},{"landfill":55.0,"recycling":41.0,"date":"Tue Feb 15"}];
+ 
+		// X scale will fit all values from data[] within pixels 0-w
+		var x = d3.scale.linear().domain([0, data.length]).range([0, w]);
+		// Y scale will fit values from 0-10 within pixels h-0 (Note the inverted domain for the y-scale: bigger is up!)
+		var y = d3.scale.linear().domain([0, 10]).range([h, 0]);
+			// automatically determining max range can work something like this
+			// var y = d3.scale.linear().domain([0, d3.max(data)]).range([h, 0]);
+ 
+		// create a line function that can convert data[] into x and y points
+		var line = d3.svg.line()
+			// assign the X function to plot our line as we wish
+			.x(function(d,i) { 
+				// verbose logging to show what's actually being done
+				console.log('Plotting X value for data point: ' + d + ' using index: ' + i + ' to be at: ' + x(i) + ' using our xScale.');
+				// return the X coordinate where we want to plot this datapoint
+				return x(i); 
+			})
+			.y(function(d) { 
+				// verbose logging to show what's actually being done
+				console.log('Plotting Y value for data point: ' + d + ' to be at: ' + y(d) + " using our yScale.");
+				// return the Y coordinate where we want to plot this datapoint
+				return y(d); 
+			})
+ 
+			// Add an SVG element with the desired dimensions and margin.
+			var graph = d3.select("#graph").append("svg:svg")
+			      .attr("width", w + m[1] + m[3])
+			      .attr("height", h + m[0] + m[2])
+			    .append("svg:g")
+			      .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
+ 
+			// create yAxis
+			var xAxis = d3.svg.axis().scale(x).tickSize(-h).tickSubdivide(true);
+			// Add the x-axis.
+			graph.append("svg:g")
+			      .attr("class", "x axis")
+			      .attr("transform", "translate(0," + h + ")")
+			      .call(xAxis);
+ 
+ 
+			// create left yAxis
+			var yAxisLeft = d3.svg.axis().scale(y).ticks(4).orient("left");
+			// Add the y-axis to the left
+			graph.append("svg:g")
+			      .attr("class", "y axis")
+			      .attr("transform", "translate(-25,0)")
+			      .call(yAxisLeft);
+			
+  			// Add the line by appending an svg:path element with the data line we created above
+			// do this AFTER the axes above so that the line is above the tick-lines
+  			graph.append("svg:path").attr("d", line(data));
+			
 </script>
-                    </div>
             </div>
 <!-- End Chart -->
 <!-- End Left Content -->

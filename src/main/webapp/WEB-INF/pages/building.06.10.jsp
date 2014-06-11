@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html>
 <head>
     <title>RecycleTracker</title>
@@ -30,12 +32,18 @@
     <!-- jquery d3js datejs-->
     <script src="https://labratrevenge.com/d3-tip/javascripts/d3.tip.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+
     <!-- basic royalslider stylesheet -->
     <link rel="stylesheet" href="../../js/royalslider/royalslider.css">
 
     <!-- skin stylesheet (change it if you use another) -->
     <link rel="stylesheet" href="../../js/royalslider/skins/minimal-white/rs-minimal-white.css">
+
+    <link rel="stylesheet" href="../../js/slidebars/0.9/slidebars.min.css">
+    <link rel="stylesheet" href="../../js/slidebars/0.9/slidebars-theme.css">
+
+    <script src="../../js/slidebars/0.9/slidebars.min.js"></script>
 
     <script type="text/javascript" src="../../js/jquery.tipsy.js"></script>
     
@@ -51,8 +59,26 @@
 
 </head>
 <body>
+<!-- Top Navigation Bar -->
+<div class="sb-navbar sb-slide">
+<!-- Right Slidebar control -->
+    <div class="sb-toggle-right">
+        <div class="navicon-line"></div>
+        <div class="navicon-line"></div>
+        <div class="navicon-line"></div>
+    </div>
+</div>
+
+<div class="sb-slidebar sb-right">
+    <ul class="sb-menu">
+        <li><a href="login">Login</a></li>
+        <li><a href="day">Add Data</a></li>
+        <li><a href="admin">Admin</a></li>
+    </ul>
+</div>
 
 <!-- Start Content -->
+<div id="sb-site">
     <div class="container">
 <!-- Begin Logo -->
         <div class="row">
@@ -86,9 +112,7 @@
         <div class="row">
 <!-- Begin Chart -->
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-            <div id="chart">
-                <iframe height=371 width=377 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=1676362229" seamless frameborder=0 scrolling=no></iframe>
-            </div>
+            <div id="chart"></div>
             </div>
 <!-- End Chart -->
 <!-- End Left Content -->
@@ -118,7 +142,7 @@
         </div>
 <!-- End Footer -->
     </div>
-    
+</div>
 <script>
 //Begin Carousel
 jQuery(document).ready(function($) {

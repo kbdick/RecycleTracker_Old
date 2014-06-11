@@ -15,10 +15,10 @@
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 
     <!-- FontAwesome CSS -->
-    <link href="<c:url value="/css/font-awesome.css" />" rel="stylesheet">
+    <link rel="stylesheet" href="/css/font-awesome.css">
 
     <!-- RecycleTracker CSS -->
-    <link rel="stylesheet" href="<c:url value="/css/recycletracker.css" />">
+    <link rel="stylesheet" href="/css/recycletracker.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -86,8 +86,12 @@
         <div class="row">
 <!-- Begin Chart -->
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
-            <div id="chart">
-                <iframe height=371 width=377 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=1676362229" seamless frameborder=0 scrolling=no></iframe>
+            <div id="chart" class="royalSlider rsMinW">
+                <iframe height=350 width=350 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=1676362229" seamless frameborder=0 scrolling=no></iframe>
+                <iframe height=350 width=350 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=1815633658" seamless frameborder=0 scrolling=no></iframe>
+                <iframe height=350 width=350 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=1987059007" seamless frameborder=0 scrolling=no></iframe>
+                <iframe height=350 width=350 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=301490171" seamless frameborder=0 scrolling=no></iframe>
+                <iframe height=350 width=350 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=646744335" seamless frameborder=0 scrolling=no></iframe>
             </div>
             </div>
 <!-- End Chart -->

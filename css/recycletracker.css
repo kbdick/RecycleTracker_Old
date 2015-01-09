@@ -1,0 +1,170 @@
+.logo {
+    margin-bottom: 2%;
+}
+
+.date, .rolling, .daily {
+    margin-right: 3%;
+}
+ 
+.datestyle, .recyclepercent, .recyclechange, .directiondown, .directionup {
+    color: #aaa;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+}
+
+.recyclepercent {
+    color: #aaa;
+}
+
+.recyclechange {
+    color: #5cb85c;
+}
+
+.directionhappy {
+    color: #5cb85c;
+}
+
+.directionsad {
+    color: #d9534f;
+}
+
+.directionmeh {
+    color: #aaa;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+ }
+
+.minibar, .miniline {
+    color: #aaa;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+}
+
+.marquee{
+    -webkit-animation-name: marquee;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration:10s;
+    -webkit-animation-iteration-count: infinite;
+    margin: 0;
+    padding: 5%;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    color: #aaa;
+}
+ 
+ 
+@-webkit-keyframes marquee{
+    0%{
+        text-indent: 95%;
+}
+    100%{
+        text-indent: -20%;  
+    }
+}
+
+#chartContainer
+{
+    overflow: hidden;
+    margin: 0;
+    padding: 1%;
+    border: solid 2px #ccc;
+    max-height: 335px;
+}
+
+/* Line Chart Styles */
+/*
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.circle {
+    fill: #666;
+}
+
+.line
+{
+    stroke: #aaa;
+    fill: none;
+}
+
+Trying a new line graph */
+
+/* Alternative line graph styles */
+
+.data-line {
+	stroke: steelblue;
+	stroke-width: 2;
+	fill: none;
+	stroke-dasharray: 0;
+}
+
+path {
+	stroke: #eee;
+	stroke-width: 2;
+	stroke-dasharray: 0;
+	fill: none;
+}
+
+.area {
+  	fill: lightsteelblue;
+}
+
+text {
+	font-family: Arial;
+	font-size: 8pt;
+	fill: #787878;
+}
+
+line {
+	stroke: #CDCDCD;
+	stroke-width: 0.5;
+	/* stroke-dasharray: 3 3; */
+	fill: none;
+}
+
+.data-point {
+	stroke: steelblue;
+	stroke-width: 2;
+	fill: #FFF;
+}
+
+#chart {
+        margin: 0;
+}
+
+
+/*Tipsy Styles */
+.tipsy { font-size: 10px; position: absolute; padding: 5px; z-index: 100000; }
+  .tipsy-inner { background-color: #bfbfbf; color: #000; font-family: Verdana,Arial; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }
+
+  /* Rounded corners */
+  .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+  
+  /* Uncomment for shadow */
+  /*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+  
+  .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+  
+  /* Rules to colour arrows */
+  .tipsy-arrow-n { border-bottom-color: #bfbfbf; }
+  .tipsy-arrow-s { border-top-color: #bfbfbf; }
+  .tipsy-arrow-e { border-left-color: #bfbfbf; }
+  .tipsy-arrow-w { border-right-color: #bfbfbf; }
+  
+	.tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
+    .tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
+  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-se .tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+  .tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
+  .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }

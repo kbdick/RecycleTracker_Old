@@ -129,7 +129,7 @@ jQuery(document).ready(function($) {
   		Tabletop.init( { 
   		    key: URL, 
   		    callback: showInfo, 
-  		    simpleSheet: true } );
+  		    simpleSheet: false } );
   	});
 
     function showInfo(data) {
@@ -145,7 +145,6 @@ jQuery(document).ready(function($) {
                           hiColor: "#E4EB29"
                         };
       Sheetsee.d3LineChart(mmartData, lineOptions);
-      
     }
   </script>
 </script>

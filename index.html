@@ -129,9 +129,9 @@ jQuery(document).ready(function($) {
   		Tabletop.init( { 
   		    key: URL, 
   		    callback: showInfo, 
-  		    simpleSheet: false } );
-  	});
-
+  		    simpleSheet: true } );
+   });
+   
     function showInfo(data) {
       var mmart = Sheetsee.getOccurance(data, "Weight");
       var colors = ['#ff00ff', '#acacac'];
@@ -147,6 +147,5 @@ jQuery(document).ready(function($) {
       Sheetsee.d3LineChart(mmartData, lineOptions);
     }
   </script>
-</script>
 </body>
 </html>

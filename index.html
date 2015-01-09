@@ -126,11 +126,14 @@ jQuery(document).ready(function($) {
 
    document.addEventListener('DOMContentLoaded', function() {
    	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ"
-  		Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
+  		Tabletop.init( { 
+  		    key: URL, 
+  		    callback: showInfo, 
+  		    simpleSheet: false } )
   	})
 
     function showInfo(data) {
-      var cali = Sheetsee.getOccurance(data, "state")
+      var cali = Sheetsee.getOccurance(data, "Weight")
       var colors = ['#ff00ff', '#acacac']
       var caliData = Sheetsee.makeColorArrayOfObject(cali, colors)
       var lineOptions = { units: "units",

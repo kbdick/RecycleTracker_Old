@@ -7,24 +7,16 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     
 <!-- FontAwesome CSS -->
-<link rel="stylesheet" href="/css/font-awesome.css">
+<link rel="stylesheet" href="css/font-awesome.css">
 
 <!-- RecycleTracker CSS -->
-<link rel="stylesheet" href="/css/recycletracker.css">    
+<link rel="stylesheet" href="css/recycletracker.css">    
     
 <!-- basic stylesheet -->
 <link rel="stylesheet" href="royalslider/royalslider.css">
 
 <!-- skin stylesheet (change it if you use another) -->
 <link rel="stylesheet" href="royalslider/skins/minimal-white/rs-minimal-white.css"> 
-
-<!-- Plugin requires jQuery 1.7+  -->
-<!-- If you already have jQuery on your page, you shouldn't include it second time. -->
-<script src='royalslider/jquery-1.8.3.min.js'></script>
-
-<!-- Main slider JS script file --> 
-<!-- Create it with slider online build tool for better performance. -->
-<script src="royalslider/jquery.royalslider.min.js"></script>
 
 <!-- full screen mode for android devices with site launched from home screen -->
     <meta name="mobile-web-app-capable" content="yes">
@@ -38,7 +30,7 @@
 <!-- Begin Logo -->
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <img id="img-responsive" class="logo" src="/images/RecycleTracker_Icon.png" height="30px" width="auto" alt="RT Logo">
+            <img id="img-responsive" class="logo" src="images/RecycleTracker_Icon.png" height="30px" width="auto" alt="RT Logo">
             </div>
         </div>
         <div class="row">
@@ -65,7 +57,7 @@
         </div>
 <!-- Begin Left Side Content -->
         <div class="row">
-<!-- Begin Chart -->
+<!-- Begin Carousel -->
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
             <div id="chart" class="royalSlider rsMinW">
                 <iframe height=350 width=350 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=1676362229" seamless frameborder=0 scrolling=no></iframe>
@@ -73,24 +65,17 @@
                 <iframe height=350 width=350 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=1987059007" seamless frameborder=0 scrolling=no></iframe>
                 <iframe height=350 width=350 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=301490171" seamless frameborder=0 scrolling=no></iframe>
                 <iframe height=350 width=350 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=646744335" seamless frameborder=0 scrolling=no></iframe>
+                <img class="rsImg img-responsive" src="images/rt1.png" height="350" width="auto" alt="Soda"/>
+                <img class="rsImg img-responsive" src="images/rt2.png" height="350" width="auto" alt="Coffee Cup"/>
+                <img class="rsImg img-responsive" src="images/rt3.png" height="350" width="auto" alt="Coffee Sleeve"/>
+                <img class="rsImg img-responsive" src="images/rt4.png" height="350" width="auto" alt="Tip"/>
+                <img class="rsImg img-responsive" src="images/rt5.png" height="350" width="auto" alt="Cup Holder"/>
+                <img class="rsImg img-responsive" src="images/rt6.png" height="350" width="auto" alt="Napkin"/>.
+                <img class="rsImg img-responsive" src="images/rt7.png" height="350" width="auto" alt="Styrofoam"/>
             </div>
-            </div>
-<!-- End Chart -->
-<!-- End Left Content -->
-<!-- Begin Right Content -->
-            <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-                <div class="royalSlider rsMinW">
-                <img class="rsImg img-responsive" src="../../images/rt1.png" height="350" width="auto" alt="Soda"/>
-                <img class="rsImg img-responsive" src="../../images/rt2.png" height="350" width="auto" alt="Coffee Cup"/>
-                <img class="rsImg img-responsive" src="../../images/rt3.png" height="350" width="auto" alt="Coffee Sleeve"/>
-                <img class="rsImg img-responsive" src="../../images/rt4.png" height="350" width="auto" alt="Tip"/>
-                <img class="rsImg img-responsive" src="../../images/rt5.png" height="350" width="auto" alt="Cup Holder"/>
-                <img class="rsImg img-responsive" src="../../images/rt6.png" height="350" width="auto" alt="Napkin"/>.
-                <img class="rsImg img-responsive" src="../../images/rt7.png" height="350" width="auto" alt="Styrofoam"/>
-                </div>
             </div>
         </div>
-<!-- End Right Content -->
+<!-- End Carousel -->
 <!-- Begin Footer -->
         <div class="row">
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
@@ -98,12 +83,24 @@
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                <img class="img-responive" src="/images/mmpilogo.png" height="50" width="auto" alt="Building Logo">
+                <img class="img-responive" src="images/mmpilogo.png" height="50" width="auto" alt="Building Logo">
             </div>
         </div>
 <!-- End Footer -->
     </div>
 </div>
+
+<!-- jQuery  -->
+<script src="royalslider/jquery-1.8.3.min.js"></script>
+
+<!-- Main slider JS script file --> 
+<!-- Create it with slider online build tool for better performance. -->
+<script src="royalslider/jquery.royalslider.min.js"></script>
+
+<!--Sheetsee and Tabletop for integration with Google Sheets-->
+<script src="js/tabletop1.3.4.js"></script>
+<script src="js/sheetsee.js"></script>
+
 <script>
 jQuery(document).ready(function($) {
     $(".royalSlider").royalSlider({

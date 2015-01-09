@@ -65,6 +65,7 @@
                 <iframe height=350 width=350 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=1987059007" seamless frameborder=0 scrolling=no></iframe>
                 <iframe height=350 width=350 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=301490171" seamless frameborder=0 scrolling=no></iframe>
                 <iframe height=350 width=350 src="//docs.google.com/spreadsheets/d/1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ/gviz/chartiframe?oid=646744335" seamless frameborder=0 scrolling=no></iframe>
+                <div id="barChart"></div>
                 <img class="rsImg img-responsive" src="images/rt1.png" height="350" width="auto" alt="Soda"/>
                 <img class="rsImg img-responsive" src="images/rt2.png" height="350" width="auto" alt="Coffee Cup"/>
                 <img class="rsImg img-responsive" src="images/rt3.png" height="350" width="auto" alt="Coffee Sleeve"/>
@@ -127,6 +128,27 @@ jQuery(document).ready(function($) {
     	    prefix: 'portfolio-'}
     });  
 });
+
+   document.addEventListener('DOMContentLoaded', function() {
+   	var URL = "0Ao5u1U6KYND7dGN5QngweVJUWE16bTRob0d2a3dCbnc"
+  		Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
+  	})
+
+    function showInfo(data) {
+      var cali = Sheetsee.getOccurance(data, "state")
+      var colors = ['#ff00ff', '#acacac']
+      var caliData = Sheetsee.makeColorArrayOfObject(cali, colors)
+      var lineOptions = { units: "units",
+                          labels: "undefined",
+                          m: [80, 100, 120, 100],
+                          w: 800, h: 400,
+                          div: "#barChart",
+                          yaxis: "pennies",
+                          hiColor: "#E4EB29"
+                        }
+      Sheetsee.d3LineChart(caliData, lineOptions)
+    }
+  </script>
 </script>
 </body>
 </html>

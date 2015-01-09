@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'LiberationSans-Regular';
+    src: url('./webfonts/LiberationSans-Regular.ttf');
+}
+
 .logo {
     margin-bottom: 2%;
 }
@@ -12,6 +17,7 @@
     float: none;
     display: inline;
     padding: 1%;
+    font-family: 'LiberationSans-Regular';
 }
 
 .recyclepercent {
@@ -76,6 +82,22 @@
     border: solid 2px #ccc;
     max-height: 335px;
 }
+
+/* Sheetsee Bar Chart Styles */
+#barChart {
+    height: 400px;
+    max-width: 300px;
+    background: #ffffff;
+}
+
+.labels text {text-align: right;}
+.bar .labels text {fill: #333;}
+.bar rect {fill: #e6e6e6;}
+.axis {shape-rendering: crispEdges;}
+.x.axis line {stroke: #fff; fill: none;}
+.x.axis path {fill: none;}
+.x.axis text {fill: #333;}
+.xLabel {font-family: sans-serif; font-size: 9px;}
 
 /* Line Chart Styles */
 /*

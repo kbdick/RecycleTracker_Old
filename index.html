@@ -136,7 +136,7 @@ jQuery(document).ready(function($) {
       var mmart = Sheetsee.getOccurance(data, "Weight");
       var colors = ['#ff00ff', '#acacac'];
       var mmartData = Sheetsee.makeColorArrayOfObject(mmart, colors);
-      var lineOptions = { units: "Weight",
+      var barOptions = { units: "Weight",
                           labels: "Weight",
                           m: [10, 10, 10, 10],
                           w: 400, h: 350,
@@ -144,7 +144,7 @@ jQuery(document).ready(function($) {
                           yaxis: "Recycling Rate",
                           hiColor: "#E4EB29"
                         };
-      Sheetsee.d3LineChart(data, lineOptions);
+      Sheetsee.d3BarChart(data, barOptions);
     }
   </script>
 </body>

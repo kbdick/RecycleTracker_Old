@@ -135,16 +135,17 @@ jQuery(document).ready(function($) {
     function showInfo(data) {
       var mmart = Sheetsee.getOccurance(data, "Weight");
       var colors = ['#ff00ff', '#acacac'];
-      var caliData = Sheetsee.makeColorArrayOfObject(mmart, colors);
-      var lineOptions = { units: "units",
-                          labels: "undefined",
+      var mmartData = Sheetsee.makeColorArrayOfObject(mmart, Hexcolor);
+      var lineOptions = { units: "lbs",
+                          labels: "Weight",
                           m: [80, 100, 120, 100],
                           w: 800, h: 400,
                           div: "#barChart",
                           yaxis: "Recycling Rate",
                           hiColor: "#E4EB29"
                         };
-      Sheetsee.d3LineChart(caliData, lineOptions);
+      Sheetsee.d3LineChart(mmartData, lineOptions);
+      
     }
   </script>
 </script>

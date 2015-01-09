@@ -125,26 +125,26 @@ jQuery(document).ready(function($) {
 });
 
    document.addEventListener('DOMContentLoaded', function() {
-   	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ"
+   	var URL = ("1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ");
   		Tabletop.init( { 
   		    key: URL, 
   		    callback: showInfo, 
-  		    simpleSheet: false } )
-  	})
+  		    simpleSheet: true } );
+  	});
 
     function showInfo(data) {
-      var cali = Sheetsee.getOccurance(data, "Weight")
-      var colors = ['#ff00ff', '#acacac']
-      var caliData = Sheetsee.makeColorArrayOfObject(cali, colors)
+      var mmart = Sheetsee.getOccurance(data, "Weight");
+      var colors = ['#ff00ff', '#acacac'];
+      var caliData = Sheetsee.makeColorArrayOfObject(mmart, colors);
       var lineOptions = { units: "units",
                           labels: "undefined",
                           m: [80, 100, 120, 100],
                           w: 800, h: 400,
                           div: "#barChart",
-                          yaxis: "pennies",
+                          yaxis: "Recycling Rate",
                           hiColor: "#E4EB29"
-                        }
-      Sheetsee.d3LineChart(caliData, lineOptions)
+                        };
+      Sheetsee.d3LineChart(caliData, lineOptions);
     }
   </script>
 </script>

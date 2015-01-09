@@ -135,7 +135,7 @@ jQuery(document).ready(function($) {
     function showInfo(data) {
       var mmart = Sheetsee.getOccurance(data, "Weight");
       var colors = ['#ff00ff', '#acacac'];
-      var mmartData = Sheetsee.makeColorArrayOfObject(mmart, Hexcolor);
+      var mmartData = Sheetsee.makeColorArrayOfObject(mmart, colors);
       var lineOptions = { units: "lbs",
                           labels: "Weight",
                           m: [80, 100, 120, 100],

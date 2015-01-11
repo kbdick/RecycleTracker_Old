@@ -99,70 +99,13 @@
 .x.axis text {fill: #333;}
 .xLabel {font-family: sans-serif; font-size: 9px;}
 
-/* Line Chart Styles */
-/*
-.axis path,
-.axis line {
-    fill: none;
-    stroke: #000;
-    shape-rendering: crispEdges;
+/* Sheetsee Line Chart Styles */
+
+#lineChart {
+    height: 350px; 
+    max-width: 400px; 
+    background: #ffffff;
 }
-
-.circle {
-    fill: #666;
-}
-
-.line
-{
-    stroke: #aaa;
-    fill: none;
-}
-
-Trying a new line graph */
-
-/* Alternative line graph styles */
-
-.data-line {
-	stroke: steelblue;
-	stroke-width: 2;
-	fill: none;
-	stroke-dasharray: 0;
-}
-
-path {
-	stroke: #eee;
-	stroke-width: 2;
-	stroke-dasharray: 0;
-	fill: none;
-}
-
-.area {
-  	fill: lightsteelblue;
-}
-
-text {
-	font-family: Arial;
-	font-size: 8pt;
-	fill: #787878;
-}
-
-line {
-	stroke: #CDCDCD;
-	stroke-width: 0.5;
-	/* stroke-dasharray: 3 3; */
-	fill: none;
-}
-
-.data-point {
-	stroke: steelblue;
-	stroke-width: 2;
-	fill: #FFF;
-}
-
-#chart {
-        margin: 0;
-}
-
 
 /*Tipsy Styles */
 .tipsy { font-size: 10px; position: absolute; padding: 5px; z-index: 100000; }

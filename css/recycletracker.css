@@ -107,6 +107,15 @@
     background: #ffffff;
 }
 
+.axis {shape-rendering: crispEdges;}
+.x.axis .minor, .y.axis .minor {stroke-opacity: .5;}
+.x.axis {stroke-opacity: 1;}
+.y.axis line, .y.axis path {fill: none; stroke: #acacac; stroke-width: 1;}
+.bigg {-webkit-transition: all .2s ease-in-out; -webkit-transform: scale(2);}
+path.chartLine {stroke: #333; stroke-width: 3; fill: none;}
+div.tooltip {position: absolute; text-align: left; padding: 4px 8px; width: auto; font-size: 10px; height: auto; background: #fff; border: 0px; pointer-events: none;}
+circle {fill: #e6e6e6;}
+
 /*Tipsy Styles */
 .tipsy { font-size: 10px; position: absolute; padding: 5px; z-index: 100000; }
   .tipsy-inner { background-color: #bfbfbf; color: #000; font-family: Verdana,Arial; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }

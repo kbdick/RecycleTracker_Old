@@ -44,7 +44,7 @@ jQuery(document).ready(function($) {
                           labels: "undefined",
                           m: [80, 100, 120, 100],
                           w: 800, h: 400,
-                          div: "#dailytrend",
+                          div: "#pennies",
                           yaxis: "Lbs Recycled",
                           hiColor: "#E4EB29"
                         }

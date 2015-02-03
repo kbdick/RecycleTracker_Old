@@ -37,9 +37,9 @@ jQuery(document).ready(function($) {
   	})
 
     function showInfo(data) {
-      var cali = Sheetsee.getOccurance(data, "weight")
+      var building = Sheetsee.getOccurance(data, "weight")
       var colors = ['#ff00ff', '#acacac']
-      var caliData = Sheetsee.makeColorArrayOfObject(cali, colors)
+      var buildingData = Sheetsee.makeColorArrayOfObject(building, colors)
       var lineOptions = { units: "units",
                           labels: "undefined",
                           m: [80, 100, 120, 100],
@@ -48,6 +48,13 @@ jQuery(document).ready(function($) {
                           yaxis: "Lbs Recycled",
                           hiColor: "#E4EB29"
                         }
-      Sheetsee.d3LineChart(caliData, lineOptions)
+      Sheetsee.d3LineChart(buildingData, lineOptions)
     }
 // End Tabletop and Sheetsee
+
+// Today's Recycling Rate
+
+function todayRate(data) {
+  var martDate = Sheetsee.getOccurance(data, "date")
+  var currentDate = $( ".selector" ).datepicker( "getDate" );
+}

@@ -32,22 +32,22 @@ jQuery(document).ready(function($) {
    
 // Tabletop and Sheetsee
   document.addEventListener('DOMContentLoaded', function() {
-   	var URL = "0Ao5u1U6KYND7dGN5QngweVJUWE16bTRob0d2a3dCbnc"
+   	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ"
   		Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
   	})
 
     function showInfo(data) {
-      var cali = Sheetsee.getOccurance(data, "state")
+      var dailytrend = Sheetsee.getOccurance(data, "weight")
       var colors = ['#ff00ff', '#acacac']
-      var caliData = Sheetsee.makeColorArrayOfObject(cali, colors)
-      var lineOptions = { units: "units",
-                          labels: "undefined",
+      var buildingData = Sheetsee.makeColorArrayOfObject(dailytrend, colors)
+      var lineOptions = { units: "weight",
+                          labels: "weight",
                           m: [80, 100, 120, 100],
                           w: 800, h: 400,
-                          div: "#pennies",
-                          yaxis: "pennies",
+                          div: "#dailytrend",
+                          yaxis: "Lbs Recycled",
                           hiColor: "#E4EB29"
                         }
-      Sheetsee.d3LineChart(caliData, lineOptions)
+      Sheetsee.d3LineChart(buildingData, lineOptions)
     }
 // End Tabletop and Sheetsee

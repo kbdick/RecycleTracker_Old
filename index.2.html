@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RecycleTracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="css/font-awesome.css">
+
+<!-- RecycleTracker CSS -->
+<link rel="stylesheet" href="css/recycletracker.css">    
+    
+<!-- basic stylesheet -->
+<link rel="stylesheet" href="royalslider/royalslider.css">
+
+<!-- skin stylesheet (change it if you use another) -->
+<link rel="stylesheet" href="royalslider/skins/minimal-white/rs-minimal-white.css"> 
+
+<!-- full screen mode for android devices with site launched from home screen -->
+    <meta name="mobile-web-app-capable" content="yes">
+</head>
+
+<body>
+<!-- Start Content -->
+<div>
+<!-- Start Content -->
+    <div class="container">
+<!-- Begin Logo -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <img id="img-responsive" class="logo" src="images/RecycleTracker_Icon.png" height="30px" width="auto" alt="RT Logo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            </div>
+        </div>
+<!-- End Logo -->
+<!-- Start Date and Trend Row -->
+        <div class="row">
+            <div class="date col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <h4 class="datestyle fa" >April 10th, 2014</h4>
+            </div>
+            <div class="rolling col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <h1 class="recyclepercent fa" title="This is the building's rolling average recycling rate for consumable goods.">32%</h1>
+            </div>
+            <div class="daily col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <h1 class="recyclechange fa" title="Nice. You increased your recycling rate from yesterday">1%</h1>
+            </div>
+            <div class="mood col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <h1 class="directionmeh fa fa-meh-o" title="Meh. You could still recycle better."></h1>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            </div>
+        </div>
+<!-- Begin Left Side Content -->
+        <div class="row">
+<!-- Begin Carousel -->
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <div id="lineChart"></div>
+            </div>
+            </div>
+        </div>
+<!-- End Carousel -->
+<!-- Begin Footer -->
+        <div class="row">
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <p class="marquee h3 fa">"One Man's Junk Is Another Man's Treasure."</p>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <img class="img-responive" src="images/mmpilogo.png" height="50" width="auto" alt="Building Logo">
+            </div>
+        </div>
+<!-- End Footer -->
+    </div>
+</div>
+
+<!-- jQuery  -->
+<script src="royalslider/jquery-1.8.3.min.js"></script>
+
+<!-- Main slider JS script file --> 
+<!-- Create it with slider online build tool for better performance. -->
+<script src="royalslider/jquery.royalslider.min.js"></script>
+
+<!--Sheetsee and Tabletop for integration with Google Sheets-->
+<script src="js/tabletop.js"></script>
+<script src="js/sheetsee.js"></script>
+
+<script>
+jQuery(document).ready(function($) {
+    $(".royalSlider").royalSlider({
+        autoScaleSlider: 'true',
+        autoScaleSliderHeight: 450,
+        imgScaleMode: 'fit',
+        imageAlignCenter: 'false',
+        controlNavigation: 'bullets',
+        numImagesToPreload: 25,
+        arrowsNav: 'true',
+        arrowsNavAutoHide: 'true',
+        arrowsNavHideOnTouch: 'true',
+    	transitionType: 'fade',
+    	sliderDrag: 'true',
+    	sliderTouch: 'true',
+    	loop: 'true',
+    	allowCSS3: 'true',
+    	usePreloader: 'true',
+    	keyboardNavEnabled: 'true',
+    	controlsInside: 'true',
+    	deeplinking: { 
+    	    enabled: 'true',
+    	    change: 'true',
+    	    prefix: 'portfolio-'}
+    });  
+});
+
+   document.addEventListener('DOMContentLoaded', function() {
+   	var URL = "0Ao5u1U6KYND7dGN5QngweVJUWE16bTRob0d2a3dCbnc"
+  		Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
+  	})
+
+    function showInfo(data) {
+      var cali = Sheetsee.getOccurance(data, "state")
+      var colors = ['#ff00ff', '#acacac']
+      var caliData = Sheetsee.makeColorArrayOfObject(cali, colors)
+      var lineOptions = { units: "units",
+                          labels: "undefined",
+                          m: [80, 100, 120, 100],
+                          w: 800, h: 400,
+                          div: "#pennies",
+                          yaxis: "pennies",
+                          hiColor: "#E4EB29"
+                        }
+      Sheetsee.d3LineChart(caliData, lineOptions)
+    }
+  </script>
+</body>
+</html>

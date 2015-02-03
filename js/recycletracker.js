@@ -37,17 +37,17 @@ jQuery(document).ready(function($) {
   	})
 
     function showInfo(data) {
-      var dailytrend = Sheetsee.getOccurance(data, "weight")
+      var cali = Sheetsee.getOccurance(data, "state")
       var colors = ['#ff00ff', '#acacac']
-      var buildingData = Sheetsee.makeColorArrayOfObject(dailytrend, colors)
-      var lineOptions = { units: "weight",
-                          labels: "weight",
+      var caliData = Sheetsee.makeColorArrayOfObject(cali, colors)
+      var lineOptions = { units: "units",
+                          labels: "undefined",
                           m: [80, 100, 120, 100],
                           w: 800, h: 400,
                           div: "#dailytrend",
                           yaxis: "Lbs Recycled",
                           hiColor: "#E4EB29"
                         }
-      Sheetsee.d3LineChart(buildingData, lineOptions)
+      Sheetsee.d3LineChart(caliData, lineOptions)
     }
 // End Tabletop and Sheetsee

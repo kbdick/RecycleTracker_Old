@@ -26,6 +26,19 @@
 
 </head>
 
+<style>
+    #pennies.axis {shape-rendering: crispEdges;}
+    #pennies.x.axis .minor, #pennies.y.axis .minor {stroke-opacity: .5;}
+    #pennies.x.axis {stroke-opacity: 1;}
+    #pennies.y.axis line, #pennies.y.axis path, #pennies.x.axis path {fill: none; stroke: #acacac; stroke-width: 1;}
+    #pennies .x.axis line {stroke: #acacac; stroke-opacity: .75;}
+    .bigg {-webkit-transition: all .2s ease-in-out; -webkit-transform: scale(2);}
+    path.chartLine {stroke: #14ECC8; stroke-width: 3; fill: none;}
+    #pennies div.tooltip {position: absolute; text-align: left; padding: 4px 8px; width: auto; font-size: 10px; height: auto; background: #fff; border: 0px; pointer-events: none; font-family: Helvetica, Arial, sans-serif;}
+    circle {fill: #fff; cursor: pointer;}
+    path.domain {fill: #CCF4FF;}
+  </style>
+  
 <body>
 <!-- Start Content -->
 <div>
@@ -65,14 +78,6 @@
             <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
             <div id="chart" class="royalSlider rsMinW">
                 <div id="pennies"></div>
-                <img class="rsImg img-responsive" src="images/rt1.png" height="350" width="auto" alt="Soda"/>
-                <img class="rsImg img-responsive" src="images/rt2.png" height="350" width="auto" alt="Coffee Cup"/>
-                <img class="rsImg img-responsive" src="images/rt3.png" height="350" width="auto" alt="Coffee Sleeve"/>
-                <img class="rsImg img-responsive" src="images/rt4.png" height="350" width="auto" alt="Tip"/>
-                <img class="rsImg img-responsive" src="images/rt5.png" height="350" width="auto" alt="Cup Holder"/>
-                <img class="rsImg img-responsive" src="images/rt6.png" height="350" width="auto" alt="Napkin"/>.
-                <img class="rsImg img-responsive" src="images/rt7.png" height="350" width="auto" alt="Styrofoam"/>
-            </div>
             </div>
         </div>
 <!-- End Carousel -->
@@ -95,20 +100,20 @@
 <!-- Begin javascript -->
 
 <!-- jQuery  -->
-<script src="js/jquery-2.1.3.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
 <script src="js/jquery-ui-1.11.2/external/jquery/jquery.js"></script>
 <script src="js/jquery-ui-1.11.2/jquery-ui.min.js"></script>
-
-<!--Sheetsee and Tabletop for integration with Google Sheets-->
-<script src="js/tabletop.js"></script>
-<script src="js/sheetsee.js"></script>
 
 <!-- Main slider JS script file --> 
 <!-- Create it with slider online build tool for better performance. -->
 <script src="royalslider/jquery.royalslider.min.js"></script>
 
+<!--Sheetsee and Tabletop for integration with Google Sheets-->
+<script src="js/tabletop.js"></script>
+<script src="js/sheetsee.js"></script>
+
 <!--RecycleTracker Functions -->
-<script src="js/recycletracker.js"></script>
+<script type="text/javascript" src="js/recycletracker.js"></script>
 
 </body>
 </html>

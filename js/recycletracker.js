@@ -52,6 +52,11 @@ jQuery(document).ready(function($) {
     }
 // End Tabletop and Sheetsee
 
+// Handlebar Template Compiler
+var source   = $("#percent.handlebars").html();
+  var template = Handlebars.compile(source);
+  $("#content-placeholder").html(template(building));
+
 // Today's Recycling Rate
 
 function todayRate(data) {

@@ -65,6 +65,6 @@ function showInfo(data, tabletop) {
         var template = Handlebars.compile(source);
         $.each( tabletop.sheets("Sheet1").all(), function(i, floor) {
           var html = template(floor);
-          $("#container").append(html);
+          $("#tickerrow").append(html);
         });
       }

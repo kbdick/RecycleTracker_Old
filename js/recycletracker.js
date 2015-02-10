@@ -52,11 +52,6 @@ jQuery(document).ready(function($) {
     }
 // End Tabletop and Sheetsee
 
-// Handlebar Template Compiler
-var source   = $("#percent.handlebars").html();
-  var template = Handlebars.compile(source);
-  $("#content-placeholder").html(template(building));
-
 // Today's Recycling Rate
 
 function todayRate(data) {
@@ -64,8 +59,9 @@ function todayRate(data) {
   var currentDate = $( ".selector" ).datepicker( "getDate" );
 }
 
+// Handlebars
 function showInfo(data, tabletop) {
-        var source   = $("#ticker-template").html();
+        var source   = $("#ticker").html();
         var template = Handlebars.compile(source);
         $.each( tabletop.sheets("Sheet1").all(), function(i, floor) {
           var html = template(floor);

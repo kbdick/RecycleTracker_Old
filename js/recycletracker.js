@@ -55,7 +55,7 @@ jQuery(document).ready(function($) {
 // Today's Recycling Rate
 
 var currentDate = $( ".selector" ).datepicker( "getDate" );
-var todayDate = Sheetsee.getMatches(data, "currentDate", "retrievalDate")
+var todayDate = Sheetsee.getMatches(data, "1/31/2014", "retrievalDate");
 
 // Handlebars
 function showInfo(data, tabletop) {

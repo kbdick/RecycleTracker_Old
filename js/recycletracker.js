@@ -61,7 +61,6 @@ var todayDate = Sheetsee.getMatches(data, "currentDate", "retrievalDate")
 function showInfo(data, tabletop) {
         var source   = $("#ticker").html();
         var template = Handlebars.compile(source);
-        var html = todayDate;
-          $("#tickerrow").append(html);
-        });
-      }
+        var html = template(todayDate);
+        $("#tickerrow").append(html);
+        }

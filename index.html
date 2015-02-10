@@ -44,15 +44,16 @@
         </div>
 <!-- End Logo -->
 <!-- Start Date and Trend Row -->
+<script id="ticker-template" type="text/x-handlebars-template">
         <div class="row">
             <div class="date col-xs-3 col-sm-3 col-md-3 col-lg-3">
                 <h4 class="datestyle fa"><input type="text" name="date" id="date"></h4>
             </div>
             <div class="rolling col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                <h1 class="recyclepercent fa" title="This is the building's rolling average recycling rate for consumable goods.">{{weight.rate}}</h1>
+                <h1 class="recyclepercent fa" title="This is the building's rolling average recycling rate for consumable goods.">{{average}}</h1>
             </div>
             <div class="daily col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                <h1 class="recyclechange fa" title="Nice. You increased your recycling rate from yesterday">1%</h1>
+                <h1 class="recyclechange fa" title="Nice. You increased your recycling rate from yesterday">{{todaychange}}</h1>
             </div>
             <div class="mood col-xs-1 col-sm-1 col-md-1 col-lg-1">
                 <h1 class="directionmeh fa fa-meh-o" title="Meh. You could still recycle better."></h1>
@@ -60,6 +61,7 @@
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
             </div>
         </div>
+</script>
 <!-- Begin Left Side Content -->
         <div class="row">
 <!-- Begin Carousel -->
@@ -110,7 +112,6 @@
 
 <!--Handlebars for clean UI templating-->
 <script src="js/handlebars-v2.0.0.js"></script>
-<script src="js/templates/template.js" type="text/x-handlebars-template"></script>
 
 <!--RecycleTracker Functions -->
 <script src="js/recycletracker.js"></script>

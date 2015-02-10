@@ -63,3 +63,12 @@ function todayRate(data) {
   var martDate = Sheetsee.getOccurance(data, "date")
   var currentDate = $( ".selector" ).datepicker( "getDate" );
 }
+
+function showInfo(data, tabletop) {
+        var source   = $("#ticker-template").html();
+        var template = Handlebars.compile(source);
+        $.each( tabletop.sheets("Sheet1").all(), function(i, floor) {
+          var html = template(floor);
+          $("#container").append(html);
+        });
+      }

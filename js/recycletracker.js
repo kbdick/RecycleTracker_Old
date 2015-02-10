@@ -54,17 +54,14 @@ jQuery(document).ready(function($) {
 
 // Today's Recycling Rate
 
-function todayRate(data) {
-  var martDate = Sheetsee.getOccurance(data, "date")
-  var currentDate = $( ".selector" ).datepicker( "getDate" );
-}
+var currentDate = $( ".selector" ).datepicker( "getDate" );
+var todayDate = Sheetsee.getMatches(data, "currentDate", "retrievalDate")
 
 // Handlebars
 function showInfo(data, tabletop) {
         var source   = $("#ticker").html();
         var template = Handlebars.compile(source);
-        $.each( tabletop.sheets("Sheet1").all(), function(i, floor) {
-          var html = template(floor);
+        var html = todayDate;
           $("#tickerrow").append(html);
         });
       }

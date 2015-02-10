@@ -18,5 +18,5 @@
       Sheetsee.d3LineChart(caliData, lineOptions);
     }
     
-    <!--Handlebars for clean UI templating-->
-<script src="js/handlebars-v2.0.0.js"></script>
+$.each( tabletop.sheets("Sheet1").all(), function(i, floor) {
+          var html = template(floor);

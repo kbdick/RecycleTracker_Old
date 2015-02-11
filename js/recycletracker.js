@@ -61,6 +61,8 @@ var todayDate = Sheetsee.getMatches(data, "1/31/2014", "retrievalDate");
 function showInfo(data, tabletop) {
         var source   = $("#ticker").html();
         var template = Handlebars.compile(source);
-        var html = template(todayDate);
+        $.each( tabletop.sheets("Sheet1").all(), function(i, row) {
+          var html = template(row);
         $("#tickerrow").append(html);
-        }
+        });
+}

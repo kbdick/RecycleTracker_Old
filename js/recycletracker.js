@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
    	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ"
   		Tabletop.init( { key: URL, callback: showInfo, parseNumbers: true, simpleSheet: true } )
-  	})
+  	
 
     function showInfo(data) {
     recycleData = data;
@@ -16,13 +16,15 @@ document.addEventListener('DOMContentLoaded', function() {
         var lineOptions = { units: "units",
                           labels: "undefined",
                           m: [80, 100, 120, 100],
-                          w: 400, h: 300,
+                          w: 600, h: 450,
                           div: "#martTest",
                           yaxis: "Lbs Recycled",
                           hiColor: "#E4EB29"
                         }
         Sheetsee.d3LineChart(buildingData, lineOptions)
-}
+    $("#recyclePercent").text("33%");
+    $("#recycleChange").text("3%");
+    }
 
     $(".royalSlider").royalSlider({
         autoScaleSlider: 'true',
@@ -48,5 +50,4 @@ document.addEventListener('DOMContentLoaded', function() {
     	    prefix: 'recycle-'}
     });
     
-    $("#recyclePercent").text("33%");
-    $("#recycleChange").text("3%");
+})

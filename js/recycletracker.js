@@ -1,9 +1,29 @@
-// Display Date
-$( "#date" ).datepicker();
-// End Display Date
+// Tabletop Handlebars and Sheetsee
+document.addEventListener('DOMContentLoaded', function() {
+   	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ"
+  		Tabletop.init( { key: URL, callback: showInfo, parseNumbers: true, simpleSheet: true } )
+  	})
 
-// Royal Slider
-jQuery(document).ready(function($) {
+    function showInfo(data) {
+    recycleData = data;
+    console.log( "Here is your data", recycleData);
+    $( "#date" ).datepicker();
+        
+        var currentDate = $( ".selector" ).datepicker( "getDate" );
+        var building = Sheetsee.getOccurance(recycleData, "weight")
+        var colors = ['#ff00ff', '#acacac']
+        var buildingData = Sheetsee.makeColorArrayOfObject(building, colors)
+        var lineOptions = { units: "units",
+                          labels: "undefined",
+                          m: [80, 100, 120, 100],
+                          w: 400, h: 300,
+                          div: "#martTest",
+                          yaxis: "Lbs Recycled",
+                          hiColor: "#E4EB29"
+                        }
+        Sheetsee.d3LineChart(buildingData, lineOptions)
+}
+
     $(".royalSlider").royalSlider({
         autoScaleSlider: 'true',
         autoScaleSliderHeight: 450,
@@ -26,43 +46,7 @@ jQuery(document).ready(function($) {
     	    enabled: 'true',
     	    change: 'true',
     	    prefix: 'recycle-'}
-    });  
-});
-// End Royal Slider
-   
-// Tabletop and Sheetsee
-  document.addEventListener('DOMContentLoaded', function() {
-   	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ"
-  		Tabletop.init( { key: URL, callback: showInfo, simpleSheet: true } )
-  	})
-
-    function showInfo(data) {
-      var building = Sheetsee.getOccurance(data, "weight")
-      var colors = ['#ff00ff', '#acacac']
-      var buildingData = Sheetsee.makeColorArrayOfObject(building, colors)
-      var lineOptions = { units: "units",
-                          labels: "undefined",
-                          m: [80, 100, 120, 100],
-                          w: 800, h: 400,
-                          div: "#martTest",
-                          yaxis: "Lbs Recycled",
-                          hiColor: "#E4EB29"
-                        }
-      Sheetsee.d3LineChart(buildingData, lineOptions)
-    }
-// End Tabletop and Sheetsee
-
-// Today's Recycling Rate
-
-var currentDate = $( ".selector" ).datepicker( "getDate" );
-var todayDate = Sheetsee.getMatches(data, "1/31/2014", "retrievalDate");
-
-// Handlebars
-function showInfo(data, tabletop) {
-        var source   = $("#ticker").html();
-        var template = Handlebars.compile(source);
-        $.each( tabletop.sheets("Sheet1").all(), function(i, row) {
-          var html = template(row);
-        $("#tickerrow").append(html);
-        });
-}
+    });
+    
+    $("#recyclePercent").text("33%");
+    $("#recycleChange").text("3%");

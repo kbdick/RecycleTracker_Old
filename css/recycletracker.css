@@ -9,6 +9,7 @@
 
 .date, .rolling, .daily {
     margin-right: 3%;
+    display: inline;
 }
  
 .datestyle, .recyclepercent, .recyclechange, .directiondown, .directionup {
@@ -22,18 +23,22 @@
 
 .recyclepercent {
     color: #aaa;
+    display: inline;
 }
 
 .recyclechange {
     color: #5cb85c;
+    display: inline;
 }
 
 .directionhappy {
     color: #5cb85c;
+    display: inline;
 }
 
 .directionsad {
     color: #d9534f;
+    display: inline;
 }
 
 .directionmeh {

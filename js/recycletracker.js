@@ -6,15 +6,15 @@ document.addEventListener('DOMContentLoaded', function() {
     function showInfo(data) {
     recycleData = data
     console.log( "Here is your data", recycleData)
-        var building = Sheetsee.getOccurance(recycleData, "weight")
+        var building = Sheetsee.getOccurance(recycleData, "recyclePercent")
         var colors = ['#ff00ff', '#acacac']
         var lineData = Sheetsee.makeColorArrayOfObject(building, colors)
-        var lineOptions = { units: "recyclePercent",
-                          labels: "undefined",
+        var lineOptions = { units: "%",
+                          labels: "Percent Recycled",
                           m: [80, 100, 120, 100],
                           w: 600, h: 450,
                           div: "#lineChart",
-                          yaxis: "Percent Recycled",
+                          yaxis: "% Recycled",
                           hiColor: "#E4EB29"
                         }
     Sheetsee.d3LineChart(lineData, lineOptions)

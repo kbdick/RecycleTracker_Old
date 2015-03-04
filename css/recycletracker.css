@@ -24,21 +24,31 @@
 .recyclepercent {
     color: #aaa;
     display: inline;
+    font-size: 2em;
 }
 
 .recyclechange {
     color: #5cb85c;
     display: inline;
+    font-size: 2em;
 }
 
 .directionhappy {
     color: #5cb85c;
+    vertical-align: bottom;
+    float: none;
     display: inline;
+    padding: 1%;
+    font-size: 2em;
 }
 
 .directionsad {
     color: #d9534f;
+    vertical-align: bottom;
+    float: none;
     display: inline;
+    padding: 1%;
+    font-size: 2em;
 }
 
 .directionmeh {
@@ -47,6 +57,7 @@
     float: none;
     display: inline;
     padding: 1%;
+    font-size: 2em;
  }
 
 .minibar, .miniline {

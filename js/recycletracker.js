@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showInfo(data) {
     recycleData = data
     console.log( "Here is your data", recycleData)
-        var building = Sheetsee.getOccurance(recycleData, "recyclePercent")
+        var building = Sheetsee.getOccurance(recycleData, "recyclepercent")
         var colors = ['#ff00ff', '#acacac']
         var lineData = Sheetsee.makeColorArrayOfObject(building, colors)
         var lineOptions = { units: "%",
@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
     $( "#date" ).datepicker();
     var currentDate = $( ".selector" ).datepicker( "getDate" );
 
-    $("#recyclePercent").text(recycleData[1].recyclePercent);
-    $("#recycleChange").text(recycleData[1].recycleChange);
+    $("#recyclePercent").text(recycleData[1].recyclepercent);
+    $("#recycleChange").text(recycleData[1].recyclechange);
     }
 
     $(".royalSlider").royalSlider({

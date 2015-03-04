@@ -4,15 +4,13 @@
 }
 
 #rightcontent {
-    display:inline;
-    max-height: 400px;
-    overflow: hidden;
+    max-height: 450px;
+    overflow: auto;
 }
 
 #leftcontent {
-    display:inline;
-    max-height: 400px;
-    overflow: hidden;
+    max-height: 450px;
+    overflow: auto;
 }
 .logo {
     margin-bottom: 2%;

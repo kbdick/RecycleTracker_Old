@@ -4,12 +4,12 @@
 }
 
 #rightcontent {
-    max-height: 450px;
+    max-height: 500px;
     overflow: auto;
 }
 
 #leftcontent {
-    max-height: 450px;
+    max-height: 500px;
     overflow: auto;
 }
 .logo {

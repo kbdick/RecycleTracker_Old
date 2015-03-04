@@ -6,8 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function showInfo(data) {
     recycleData = data
     console.log( "Here is your data", recycleData)
+        var building = (recycleData.recyclepercent)
         var colors = ['#ff00ff', '#acacac']
-        var lineData = Sheetsee.makeColorArrayOfObject(recycleData.recyclepercent, colors)
+        var lineData = Sheetsee.makeColorArrayOfObject(building, colors)
         var lineOptions = { units: "units",
                           labels: "undefined",
                           m: [80, 100, 120, 100],

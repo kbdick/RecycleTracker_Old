@@ -1,14 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
-   	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ"
-  		Tabletop.init( { key: URL, callback: showInfo, parseNumbers: true, simpleSheet: true } )
+   	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ";
+  		Tabletop.init( { key: URL, callback: showInfo, parseNumbers: true, simpleSheet: true } );
   	
 
     function showInfo(data) {
-    recycleData = data
-    console.log( "Here is your data", recycleData)
-        var building = Sheetsee.getOccurance(recycleData, "recyclepercent")
-        var colors = ['#ff00ff', '#acacac']
-        var lineData = Sheetsee.makeColorArrayOfObject(building, colors)
+    recycleData = data;
+    console.log( "Here is your data", recycleData);
+        var building = Sheetsee.getOccurance(recycleData, "recyclepercent");
+        var colors = ['#ff00ff', '#acacac'];
+        var lineData = Sheetsee.makeColorArrayOfObject(building, colors);
         var lineOptions = { units: "units",
                           labels: "undefined",
                           m: [80, 100, 120, 100],
@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
                           div: "#lineChart",
                           yaxis: "% Recycled",
                           hiColor: "#E4EB29"
-                        }
-    Sheetsee.d3LineChart(lineData, lineOptions)
+                        };
+    Sheetsee.d3LineChart(lineData, lineOptions);
     
     $( "#date" ).datepicker();
     var currentDate = $( ".selector" ).datepicker( "getDate" );

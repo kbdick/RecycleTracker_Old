@@ -138,7 +138,31 @@ document.addEventListener('DOMContentLoaded', function() {
   });
     }
 
-    $(".royalSlider").royalSlider({
+    $('#leftcontent').royalSlider({
+        autoScaleSlider: 'true',
+        autoScaleSliderHeight: 450,
+        imgScaleMode: 'fit',
+        imageAlignCenter: 'false',
+        controlNavigation: 'bullets',
+        numImagesToPreload: 8,
+        arrowsNav: 'true',
+        arrowsNavAutoHide: 'true',
+        arrowsNavHideOnTouch: 'true',
+    	transitionType: 'fade',
+    	sliderDrag: 'true',
+    	sliderTouch: 'true',
+    	loop: 'true',
+    	allowCSS3: 'true',
+    	usePreloader: 'true',
+    	keyboardNavEnabled: 'true',
+    	controlsInside: 'true',
+    	deeplinking: { 
+    	    enabled: 'true',
+    	    change: 'true',
+    	    prefix: 'recycle-'}
+    });
+    
+        $('#rightcontent').royalSlider({
         autoScaleSlider: 'true',
         autoScaleSliderHeight: 450,
         imgScaleMode: 'fit',

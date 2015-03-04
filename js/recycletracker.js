@@ -7,10 +7,8 @@ document.addEventListener('DOMContentLoaded', function() {
     recycleData = data;
     console.log( "Here is your data", recycleData);
         var percent = Sheetsee.getOccurance(recycleData, "recyclePercent")
-        var change = Sheetsee.getOccurance(recycleData, "recycleChange")
         var colors = ['#ff00ff', '#acacac'];
         var lineData = Sheetsee.makeColorArrayOfObject(percent, colors)
-        var barData = Sheetsee.makeColorArrayOfObject(change, colors)
         var lineOptions = { units: "recyclePercent",
                           labels: "Recycling Rate",
                           m: [80, 100, 120, 100],
@@ -19,17 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           yaxis: "Percent",
                           hiColor: "#E4EB29"
                         };
-        var barOptions = { units: "recycleChange",
-                          labels: "Recycling Change",
-                          m: [80, 100, 120, 100],
-                          w: 600, h: 450,
-                          div: "#barChart",
-                          xaxis: "Change from Last Month",
-                          hiColor: "#E4EB29"
-                        };
-    
     Sheetsee.d3LineChart(lineData, lineOptions)
-    Sheetsee.d3BarChart(barData, barOptions)
     
     $( "#date" ).datepicker();
     var currentDate = $( ".selector" ).datepicker( "getDate" );

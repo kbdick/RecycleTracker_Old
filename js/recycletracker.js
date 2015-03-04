@@ -10,20 +10,34 @@ document.addEventListener('DOMContentLoaded', function() {
     $( "#date" ).datepicker();
         
         var currentDate = $( ".selector" ).datepicker( "getDate" );
-        var building = Sheetsee.getOccurance(recycleData, "weight")
+        var percent = Sheetsee.getOccurance(recycleData, "recyclePercent")
+        var change = Sheetsee.getOccurance(recycleData, "recycleChange")
         var colors = ['#ff00ff', '#acacac']
-        var buildingData = Sheetsee.makeColorArrayOfObject(building, colors)
-        var lineOptions = { units: "units",
-                          labels: "undefined",
+        var lineData = Sheetsee.makeColorArrayOfObject(percent, colors)
+        var barData = Sheetsee.makeColorArrayOfObject(change, colors)
+        var lineOptions = { units: "recyclePercent",
+                          labels: "recyclePercent",
                           m: [80, 100, 120, 100],
                           w: 600, h: 450,
-                          div: "#martTest",
-                          yaxis: "Lbs Recycled",
+                          div: "#lineChart",
+                          yaxis: "Percent",
                           hiColor: "#E4EB29"
                         }
-        Sheetsee.d3LineChart(buildingData, lineOptions)
-    $("#recyclePercent").text(recycleData[1].recyclepercent);
-    $("#recycleChange").text(recycleData[1].recyclepercent);
+        var barOptions = { units: "recycleChange",
+                          labels: "recycleChange",
+                          m: [80, 100, 120, 100],
+                          w: 600, h: 450,
+                          div: "#barChart",
+                          xaxis: "Change from Last Month",
+                          hiColor: "#E4EB29"
+                        }
+        Sheetsee.d3LineChart(lineData, lineOptions)
+        Sheetsee.d3BarChart(barData, barOptions)
+        
+        
+
+    $("#recyclePercent").text(recycleData[1].recyclePercent);
+    $("#recycleChange").text(recycleData[1].recycleChange);
     }
 
     $(".royalSlider").royalSlider({

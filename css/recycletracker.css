@@ -107,8 +107,46 @@
 }
 
 #goals {
-    
+    height: 350px;
+    width: 400px;
+    display: inline;
+    padding: 5%;
+    overflow: hidden;
 }
+
+.tableheading {
+    color: #aaa;
+    padding: 1%;
+    font-size: 1.5em;
+}
+
+.tddirectionhappy {
+    color: #5cb85c;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+    font-size: 1em;
+}
+
+.tddirectionsad {
+    color: #d9534f;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+    font-size: 1em;
+}
+
+.tddirectionmeh {
+    color: #aaa;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+    font-size: 1em;
+ }
+
 .marquee{
     -webkit-animation-name: marquee;
     -webkit-animation-timing-function: linear;

@@ -106,10 +106,13 @@
     font-size: 1em;
 }
 
+#goals {
+    
+}
 .marquee{
     -webkit-animation-name: marquee;
     -webkit-animation-timing-function: linear;
-    -webkit-animation-duration:10s;
+    -webkit-animation-duration:15s;
     -webkit-animation-iteration-count: infinite;
     margin: 0;
     padding: 5%;

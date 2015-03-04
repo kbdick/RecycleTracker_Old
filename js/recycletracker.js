@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function showInfo(data) {
     recycleData = data
     console.log( "Here is your data", recycleData)
-        var building = Sheetsee.addUnitsLabels(recycleData, "recyclepercent", undefined)
+        var building = Sheetsee.getOccurance(recycleData, "recyclepercent")
         var colors = ['#ff00ff', '#acacac']
         var lineData = Sheetsee.makeColorArrayOfObject(building, colors)
         var lineOptions = { units: "units",

@@ -9,12 +9,12 @@ document.addEventListener('DOMContentLoaded', function() {
         var building = Sheetsee.getOccurance(recycleData, "weight")
         var colors = ['#ff00ff', '#acacac']
         var lineData = Sheetsee.makeColorArrayOfObject(building, colors)
-        var lineOptions = { units: "units",
+        var lineOptions = { units: "recyclePercent",
                           labels: "undefined",
                           m: [80, 100, 120, 100],
                           w: 600, h: 450,
                           div: "#lineChart",
-                          yaxis: "Lbs Recycled",
+                          yaxis: "Percent Recycled",
                           hiColor: "#E4EB29"
                         }
     Sheetsee.d3LineChart(lineData, lineOptions)

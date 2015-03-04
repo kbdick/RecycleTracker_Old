@@ -133,7 +133,7 @@
     padding: .2em .4em;
     margin: .8em 0 .2em;
     line-height: 1.5;
-    max-height: 50%;
+    max-height: 200px;
     overflow-y: auto;
     /* prevent horizontal scrollbar */
     overflow-x: hidden;
@@ -142,7 +142,7 @@
    * we use height instead, but this forces the menu to always be this tall
    */
   * html .ui-autocomplete {
-    height: 50%;
+    height: 200px;
   }
 
 

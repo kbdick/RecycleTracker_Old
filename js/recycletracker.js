@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         imageAlignCenter: 'false',
         controlNavigation: 'bullets',
         numImagesToPreload: 8,
-        arrowsNav: 'false',
+        arrowsNav: 'true',
         arrowsNavAutoHide: 'true',
         arrowsNavHideOnTouch: 'true',
     	transitionType: 'fade',

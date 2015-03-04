@@ -88,6 +88,12 @@
     display: inline;
 }
 
+.locationtag {
+    color: #aaa;
+    display: inline;
+    font-size: 1em;
+}
+
 .marquee{
     -webkit-animation-name: marquee;
     -webkit-animation-timing-function: linear;

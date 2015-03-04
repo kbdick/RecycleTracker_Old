@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     $("#recyclePercent").text(recycleData[1].recyclepercent);
     $("#recycleChange").text(recycleData[1].recyclechange);
     
-      $(function() {
+    $(function() {
     var availableTags = [
       "Suite 470",
       "Razorfish",
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
       "Yelp",
       "1871",
       "Chicago School of Professional Psychology",
-      "1st Floor"
+      "1st Floor",
       "2nd Floor"
     ];
     $( "#tags" ).autocomplete({

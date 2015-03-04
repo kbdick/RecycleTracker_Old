@@ -1,22 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
-   	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ";
+   	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ"
   		Tabletop.init( { key: URL, callback: showInfo, parseNumbers: true, simpleSheet: true } )
   	
 
     function showInfo(data) {
-    recycleData = data;
-    console.log( "Here is your data", recycleData);
-        var percent = Sheetsee.getOccurance(recycleData, "recyclePercent")
-        var colors = ['#ff00ff', '#acacac'];
+    recycleData = data
+    console.log( "Here is your data", recycleData)
+        var percent = Sheetsee.getOccurance(recycleData, "weight")
+        var colors = ['#ff00ff', '#acacac']
         var lineData = Sheetsee.makeColorArrayOfObject(percent, colors)
         var lineOptions = { units: "undefined",
-                          labels: "recyclePercent",
+                          labels: "weight",
                           m: [80, 100, 120, 100],
                           w: 600, h: 450,
                           div: "#lineChart",
                           yaxis: "Percent",
                           hiColor: "#E4EB29"
-                        };
+                        }
     Sheetsee.d3LineChart(lineData, lineOptions)
     
     $( "#date" ).datepicker();

@@ -27,10 +27,28 @@
     font-size: 2em;
 }
 
+.recyclepercentlabel {
+    color: #aaa;
+    display: inline;
+    font-size: .5em;
+}
+
 .recyclechange {
     color: #5cb85c;
     display: inline;
     font-size: 2em;
+}
+
+.recyclechangelabel {
+    color: #aaa;
+    display: inline;
+    font-size: .5em;
+}
+
+.directionlabel {
+    color: #aaa;
+    display: inline;
+    font-size: .5em;
 }
 
 .directionhappy {

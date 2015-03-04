@@ -24,6 +24,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
     $("#recyclePercent").text(recycleData[1].recyclepercent);
     $("#recycleChange").text(recycleData[1].recyclechange);
+    
+      $(function() {
+    var availableTags = [
+      "Suite 470",
+      "Razorfish",
+      "Motorola",
+      "Yelp",
+      "1871",
+      "Chicago School of Professional Psychology",
+      "1st Floor"
+      "2nd Floor"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  });
     }
 
     $(".royalSlider").royalSlider({

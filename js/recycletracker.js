@@ -1,15 +1,11 @@
-// Tabletop Handlebars and Sheetsee
 document.addEventListener('DOMContentLoaded', function() {
-   	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ"
+   	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ";
   		Tabletop.init( { key: URL, callback: showInfo, parseNumbers: true, simpleSheet: true } )
   	
 
     function showInfo(data) {
     recycleData = data;
     console.log( "Here is your data", recycleData);
-    $( "#date" ).datepicker();
-        
-        var currentDate = $( ".selector" ).datepicker( "getDate" );
         var percent = Sheetsee.getOccurance(recycleData, "recyclePercent")
         var change = Sheetsee.getOccurance(recycleData, "recycleChange")
         var colors = ['#ff00ff', '#acacac'];
@@ -31,8 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
                           xaxis: "Change from Last Month",
                           hiColor: "#E4EB29"
                         };
-        Sheetsee.d3LineChart(lineData, lineOptions)
-        Sheetsee.d3BarChart(barData, barOptions)
+    
+    Sheetsee.d3LineChart(lineData, lineOptions)
+    Sheetsee.d3BarChart(barData, barOptions)
+    
+    $( "#date" ).datepicker();
+    var currentDate = $( ".selector" ).datepicker( "getDate" );
 
     $("#recyclePercent").text(recycleData[1].recyclePercent);
     $("#recycleChange").text(recycleData[1].recycleChange);

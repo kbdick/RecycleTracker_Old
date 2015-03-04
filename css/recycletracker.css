@@ -54,6 +54,18 @@
     margin-left: 5%;
 }
 
+.datelabel {
+    color: #aaa;
+    display: inline;
+    font-size: .8em;
+}
+
+.locationlabel {
+    color: #aaa;
+    display: inline;
+    font-size: .8em;
+}
+
 .directionhappy {
     color: #5cb85c;
     vertical-align: bottom;

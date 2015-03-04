@@ -22,8 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
                           hiColor: "#E4EB29"
                         }
         Sheetsee.d3LineChart(buildingData, lineOptions)
-    $("#recyclePercent").text("36");
-    $("#recycleChange").text("2");
+    $("#recyclePercent").text("recycleData[0].recyclepercent");
+    $("#recycleChange").text("recycleData[0].recyclepercent");
     }
 
     $(".royalSlider").royalSlider({

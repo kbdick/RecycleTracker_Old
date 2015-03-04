@@ -30,7 +30,8 @@
 .recyclepercentlabel {
     color: #aaa;
     display: inline;
-    font-size: .5em;
+    font-size: .8em;
+    margin-left: 5%;
 }
 
 .recyclechange {
@@ -42,13 +43,15 @@
 .recyclechangelabel {
     color: #aaa;
     display: inline;
-    font-size: .5em;
+    font-size: .8em;
+    margin-left: 5%;
 }
 
 .directionlabel {
     color: #aaa;
     display: inline;
-    font-size: .5em;
+    font-size: .8em;
+    margin-left: 5%;
 }
 
 .directionhappy {

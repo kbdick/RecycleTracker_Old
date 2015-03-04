@@ -3,6 +3,17 @@
     src: url('./webfonts/LiberationSans-Regular.ttf');
 }
 
+#rightcontent {
+    display:inline;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+#leftcontent {
+    display:inline;
+    max-height: 400px;
+    overflow: hidden;
+}
 .logo {
     margin-bottom: 2%;
 }

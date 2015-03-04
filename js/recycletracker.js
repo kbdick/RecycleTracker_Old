@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     $("#recyclePercent").text(recycleData[1].recyclepercent);
     $("#recycleChange").text(recycleData[1].recyclechange);
-    
+
+// Autocomplete with categories    
       $.widget( "custom.catcomplete", $.ui.autocomplete, {
     _create: function() {
       this._super();
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
-    
+  
     $(function() {
     var availableTags = [
       { label: "Office of the Building", category: "Tenants" },
@@ -144,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         imageAlignCenter: 'false',
         controlNavigation: 'bullets',
         numImagesToPreload: 8,
-        arrowsNav: 'true',
+        arrowsNav: 'false',
         arrowsNavAutoHide: 'true',
         arrowsNavHideOnTouch: 'true',
     	transitionType: 'fade',

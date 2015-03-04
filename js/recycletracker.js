@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var building = Sheetsee.getOccurance(recycleData, "recyclepercent")
         var colors = ['#ff00ff', '#acacac']
         var lineData = Sheetsee.makeColorArrayOfObject(building, colors)
-        var lineOptions = { units: "%",
-                          labels: "Percent Recycled",
+        var lineOptions = { units: "recyclepercent",
+                          labels: "% Recycled",
                           m: [80, 100, 120, 100],
                           w: 600, h: 450,
                           div: "#lineChart",

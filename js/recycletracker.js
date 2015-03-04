@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
       { label: "22nd Floor", category: "Floor" },
       { label: "23rd Floor", category: "Floor" },
       { label: "24th Floor", category: "Floor" },
-      { label: "The Merchandise Mart" category: "Building" }
+      { label: "The Merchandise Mart", category: "Building" }
     ];
     $( "#tags" ).catcomplete({
       delay: 0,

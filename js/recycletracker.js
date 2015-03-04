@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var colors = ['#ff00ff', '#acacac']
         var lineData = Sheetsee.makeColorArrayOfObject(building, colors)
         var lineOptions = { units: "recyclepercent",
-                          labels: "% Recycled",
+                          labels: "recycledpercent",
                           m: [80, 100, 120, 100],
                           w: 600, h: 450,
                           div: "#lineChart",

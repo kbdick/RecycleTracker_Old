@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var lineData = Sheetsee.makeColorArrayOfObject(percent, colors)
         var barData = Sheetsee.makeColorArrayOfObject(change, colors)
         var lineOptions = { units: "recyclePercent",
-                          labels: "recyclePercent",
+                          labels: "Recycling Rate",
                           m: [80, 100, 120, 100],
                           w: 600, h: 450,
                           div: "#lineChart",
@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
                           hiColor: "#E4EB29"
                         };
         var barOptions = { units: "recycleChange",
-                          labels: "recycleChange",
+                          labels: "Recycling Change",
                           m: [80, 100, 120, 100],
                           w: 600, h: 450,
                           div: "#barChart",

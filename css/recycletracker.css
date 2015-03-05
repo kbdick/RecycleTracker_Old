@@ -5,10 +5,12 @@
 
 #rightcontent {
     height: 500px;
+    background-color: green;
 }
 
 #leftcontent {
     height: 500px;
+    background-color: red;
 }
 .logo {
     margin-bottom: 2%;

@@ -6,19 +6,14 @@ document.addEventListener('DOMContentLoaded', function() {
     function showInfo(data) {
     recycleData = data;
     console.log( "Here is your data", recycleData);
-        var building = Sheetsee.getOccurance(recycleData, "recyclepercent");
-        var colors = ['#ff00ff', '#acacac'];
-        var lineData = Sheetsee.makeColorArrayOfObject(building, colors);
-        var lineOptions = { units: "units",
-                          labels: "undefined",
-                          m: [80, 100, 120, 100],
-                          w: 600, h: 450,
-                          div: "#lineChart",
-                          yaxis: "% Recycled",
-                          hiColor: "#E4EB29"
-                        };
-    Sheetsee.d3LineChart(lineData, lineOptions);
     
+// D3 Line Chart
+var lineChart = c3.generate({
+    bindto: '#lineChart',
+    data: 'recycleData'
+});
+
+// Date functions    
     $( "#date" ).datepicker();
     var currentDate = $( ".selector" ).datepicker( "getDate" );
 
@@ -51,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
     $(function() {
     var availableTags = [
       { label: "Office of the Building", category: "Tenants" },
-      { label: "the Mart", category: "Tenants" },
       { label: "Carlisle Wide Floor", category: "Tenants" },
       { label: "Exquisit Surfaces", category: "Tenants" },
       { label: "Porcelanosa", category: "Tenants" },

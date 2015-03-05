@@ -2,10 +2,24 @@ document.addEventListener('DOMContentLoaded', function() {
    	var URL = "1o2CslDz13ipgg7U3txgvRNMek38ul4S8UWJL_lravMQ";
   		Tabletop.init( { key: URL, callback: showInfo, parseNumbers: true, simpleSheet: true } );
   	
-
+// Tabletop Callback
     function showInfo(data) {
     recycleData = data;
     console.log( "Here is your data", recycleData);
+
+
+    var building = Sheetsee.getOccurance(recycleData, "recyclepercent");
+        var colors = ['#ff00ff', '#acacac'];
+        var lineData = Sheetsee.makeColorArrayOfObject(building, colors);
+        var lineOptions = { units: "units",
+                          labels: "undefined",
+                          m: [80, 100, 120, 100],
+                          w: 600, h: 450,
+                          div: "#lineChart",
+                          yaxis: "% Recycled",
+                          hiColor: "#E4EB29"
+                        };
+    Sheetsee.d3LineChart(lineData, lineOptions);
 
 // Date functions    
     $( "#date" ).datepicker();
@@ -13,12 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     $("#recyclePercent").text(recycleData[1].recyclepercent);
     $("#recycleChange").text(recycleData[1].recyclechange);
-
-// D3 Line Chart
-var lineChart = c3.generate({
-    bindto: '#lineChart',
-    data: 'recycleData[1]'
-});
 
 // Autocomplete with categories    
       $.widget( "custom.catcomplete", $.ui.autocomplete, {

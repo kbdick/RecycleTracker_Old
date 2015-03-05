@@ -22,6 +22,13 @@
                         };
     Sheetsee.d3LineChart(lineData, lineOptions);
     
+    // D3 Line Chart
+var lineChart = c3.generate({
+    bindto: '#lineChart',
+    data: 'recycleData[1]'
+});
+
+    
 $.each( tabletop.sheets("Sheet1").all(), function(i, floor) {
       var html = template(floor);
           

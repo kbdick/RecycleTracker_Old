@@ -6,12 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function showInfo(data) {
     recycleData = data;
     console.log( "Here is your data", recycleData);
-    
-// D3 Line Chart
-var lineChart = c3.generate({
-    bindto: '#lineChart',
-    data: 'recycleData'
-});
 
 // Date functions    
     $( "#date" ).datepicker();
@@ -19,6 +13,12 @@ var lineChart = c3.generate({
 
     $("#recyclePercent").text(recycleData[1].recyclepercent);
     $("#recycleChange").text(recycleData[1].recyclechange);
+
+// D3 Line Chart
+var lineChart = c3.generate({
+    bindto: '#lineChart',
+    data: 'recycleData[1]'
+});
 
 // Autocomplete with categories    
       $.widget( "custom.catcomplete", $.ui.autocomplete, {

@@ -7,6 +7,11 @@ import gdata.spreadsheet.service
 
 email = 'kbdick@recycletracker.io'
 password = '5chw@rtzg3r@t'
+space = 'testSuite'
+suitenum = '102'
+floor = '1'
+spacetype = 'Retail'
+wastetype = 'RecConsSSMix'
 weight = '180'
 # Find this value in the url with 'key=XXX' and copy XXX below
 spreadsheet_key = '1LnQsIM5kSHl4g1aYNoT7-3bvB0yp2EWE1p20r56XEc8'
@@ -17,13 +22,18 @@ worksheet_id = 'od6'
 spr_client = gdata.spreadsheet.service.SpreadsheetsService()
 spr_client.email = email
 spr_client.password = password
-spr_client.source = 'Example Spreadsheet Writing Application'
+spr_client.source = 'RecycleTracker'
 spr_client.ProgrammaticLogin()
 
 # Prepare the dictionary to write
 dict = {}
 dict['date'] = time.strftime('%m/%d/%Y')
 dict['time'] = time.strftime('%H:%M:%S')
+dict['space'] = space
+dict['suitenum'] = suitenum
+dict['floor'] = floor
+dict['spacetype'] = spacetype
+dict['wastetype'] = wastetype
 dict['weight'] = weight
 print dict
 

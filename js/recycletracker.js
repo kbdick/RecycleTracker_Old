@@ -1,12 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
    	var URL = "1LnQsIM5kSHl4g1aYNoT7-3bvB0yp2EWE1p20r56XEc8";
-  		Tabletop.init( { key: URL, callback: showInfo, parseNumbers: true, simpleSheet: true } );
+  		Tabletop.init( { 
+  		key: URL, 
+  		callback: showInfo, 
+  		parseNumbers: true,
+  		wanted: [ "Data", "percentToday" ],
+  		simpleSheet: true 
+  		} );
   	
 // Tabletop Callback
     function showInfo(data) {
     recycleData = data;
     console.log( "Here is your data", recycleData);
-
 
     var building = Sheetsee.getOccurance(recycleData, "recyclepercent");
         var colors = ['#ff00ff', '#acacac'];
@@ -21,9 +26,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         };
     Sheetsee.d3LineChart(lineData, lineOptions);
 
-// Date functions    
+// Date functions  
     $( "#date" ).datepicker();
     var currentDate = $( ".selector" ).datepicker( "getDate" );
+
+// Top Row functions
 
     $("#recyclePercent").text(recycleData[1].recyclepercent);
     $("#recycleChange").text(recycleData[1].recyclechange);

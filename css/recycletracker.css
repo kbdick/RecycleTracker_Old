@@ -13,12 +13,8 @@
     padding: 5% 0 0 0;
 }
 
-.toprow {
-    margin-top: 10%;
-}
-
 .logo {
-    margin-bottom: 2%;
+    margin: 10% 0 5% 0;
 }
 
 .date, .rolling, .daily {

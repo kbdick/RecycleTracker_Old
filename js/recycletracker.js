@@ -35,8 +35,8 @@ var chart = c3.generate({
     bindto: '#piechart',
     data: {
       columns: [
-        ['data1', recycleData[1].recyclePercent],
-        ['data2', 50, 20, 10, 40, 15, 25]
+        ['data1', recycleData[0].recyclePercent],
+        ['data2', recycleData[1].recyclePercent]
       ]
     }
 });

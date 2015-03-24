@@ -30,6 +30,12 @@ document.addEventListener('DOMContentLoaded', function() {
     $( "#date" ).datepicker();
     var currentDate = $( ".selector" ).datepicker( "getDate" );
 
+// Chart functions
+var chart = c3.generate({
+    bindto: '#piechart',
+    data: data
+});
+
 // Top Row functions
 
     $("#recyclePercent").text(recycleData[1].recyclepercent);

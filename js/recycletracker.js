@@ -13,19 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
     recycleData = data;
     console.log( "Here is your data", recycleData);
 
-    var building = Sheetsee.getOccurance(recycleData, "recyclepercent");
-        var colors = ['#ff00ff', '#acacac'];
-        var lineData = Sheetsee.makeColorArrayOfObject(building, colors);
-        var lineOptions = { units: "units",
-                          labels: "undefined",
-                          m: [80, 100, 120, 100],
-                          w: 600, h: 450,
-                          div: "#lineChart",
-                          yaxis: "% Recycled",
-                          hiColor: "#E4EB29"
-                        };
-    Sheetsee.d3LineChart(lineData, lineOptions);
-
 // Date functions  
     $( "#date" ).datepicker();
     var currentDate = $( ".selector" ).datepicker( "getDate" );
@@ -33,17 +20,68 @@ document.addEventListener('DOMContentLoaded', function() {
 // Chart functions
 
 var chart = c3.generate({
-    bindto: '#piechart',
+    bindto: '#donutchart',
     data: {
         // recyclePercent data
         columns: [
-            ['data1', recycleData[0].recyclepercent],
-            ['data2', recycleData[1].recyclepercent],
+            ['Recycling', recycleData[0].recyclepercent],
+            ['Landfill', recycleData[1].recyclepercent],
         ],
-        type : 'pie',
+        type : 'donut',
         onclick: function (d, i) { console.log("onclick", d, i); },
         onmouseover: function (d, i) { console.log("onmouseover", d, i); },
         onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+    }
+});
+
+var chart = c3.generate({
+    bindto: '#areachart',
+    data: {
+        columns: [
+            ['Recycling', 300, 350, 300, 0, 0, 0],
+            ['Landfill', 130, 100, 140, 200, 150, 50]
+        ],
+        types: {
+            data1: 'area',
+            data2: 'area-spline'
+        }
+    }
+});
+
+
+var chart = c3.generate({
+    bindto: '#gaugechart',
+    data: {
+        columns: [
+            ['Recycling Rate', recycleData[0].recyclepercent],
+        ],
+        type: 'gauge',
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+    },
+    gauge: {
+//        label: {
+//            format: function(value, ratio) {
+//                return value;
+//            },
+//            show: false // to turn off the min/max labels.
+//        },
+//    min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
+//    max: 100, // 100 is default
+//    units: ' %',
+//    width: 39 // for adjusting arc thickness
+    },
+    color: {
+        pattern: ['#FF0000', '#F97600', '#F6C600', '#60B044'], // the three color levels for the percentage values.
+        threshold: {
+//            unit: 'value', // percentage is default
+//            max: 200, // 100 is default
+            values: [30, 60, 90, 100]
+        }
+    },
+    size: {
+        height: 180
     }
 });
 

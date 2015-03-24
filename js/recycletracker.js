@@ -48,8 +48,8 @@ var chart = c3.generate({
 
 // Top Row functions
 
-    $("#recyclePercent").text(recycleData[1].recyclepercent);
-    $("#recycleChange").text(recycleData[2].recyclepercent);
+    $("#recyclePercent").text(recycleData[0].recyclepercent);
+    $("#recycleChange").text(recycleData[1].recyclepercent);
 
 // Autocomplete with categories    
       $.widget( "custom.catcomplete", $.ui.autocomplete, {

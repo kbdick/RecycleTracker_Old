@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Chart functions
 
 var chart = c3.generate({
+    bindto: '#piechart',
     data: {
         // recyclePercent data
         columns: [

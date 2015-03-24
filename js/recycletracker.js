@@ -31,13 +31,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var currentDate = $( ".selector" ).datepicker( "getDate" );
 
 // Chart functions
+
 var chart = c3.generate({
-    bindto: '#piechart',
     data: {
-      columns: [
-        ['data1', recycleData[0].recyclePercent],
-        ['data2', recycleData[1].recyclePercent]
-      ]
+        // recyclePercent data
+        columns: [
+            ['data1', recycleData[0].recyclepercent],
+            ['data2', recycleData[1].recyclepercent],
+        ],
+        type : 'pie',
+        onclick: function (d, i) { console.log("onclick", d, i); },
+        onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+        onmouseout: function (d, i) { console.log("onmouseout", d, i); }
     }
 });
 

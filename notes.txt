@@ -1,0 +1,1 @@
+setup python serial: from terminal, sudo apt-get install python-serial

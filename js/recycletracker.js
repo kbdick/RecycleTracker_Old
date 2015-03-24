@@ -33,13 +33,18 @@ document.addEventListener('DOMContentLoaded', function() {
 // Chart functions
 var chart = c3.generate({
     bindto: '#piechart',
-    data: data
+    data: {
+      columns: [
+        ['data1', recycleData[1].recyclePercent],
+        ['data2', 50, 20, 10, 40, 15, 25]
+      ]
+    }
 });
 
 // Top Row functions
 
     $("#recyclePercent").text(recycleData[1].recyclepercent);
-    $("#recycleChange").text(recycleData[1].recyclechange);
+    $("#recycleChange").text(recycleData[2].recyclepercent);
 
 // Autocomplete with categories    
       $.widget( "custom.catcomplete", $.ui.autocomplete, {

@@ -53,7 +53,7 @@ var chart = c3.generate({
     bindto: '#gaugechart',
     data: {
         columns: [
-            ['Recycling Rate', recycleData[0].recyclepercent],
+            ['Recycling Rate', recycleData[0].weight],
         ],
         type: 'gauge',
         onclick: function (d, i) { console.log("onclick", d, i); },

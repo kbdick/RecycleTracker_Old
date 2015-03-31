@@ -3,16 +3,33 @@
 # https://www.mattcutts.com/blog/write-google-spreadsheet-from-python/
 
 import time
+import serial
 import gdata.spreadsheet.service
 
 email = 'kbdick@recycletracker.io'
 password = '5chw@rtzg3r@t'
-space = 'testSuite'
-suitenum = '102'
-floor = '1'
-spacetype = 'Retail'
-wastetype = 'RecConsSSMix'
-weight = '180'
+space = raw_input()
+suitenum = raw_input()
+floor = raw_input()
+spacetype = raw_input()
+wastetype = raw_input()
+
+## Select and configure the port
+myPort = serial.Serial('/dev/ttyS1', 115200, timeout = 10)
+
+## Dump some data out of the port
+myPort.write("ENQ")
+
+## Wait for data to come in- one byte, only
+x = myPort.read()
+
+## Echo the data to the command prompt
+print "You entered " + x
+
+## Close the port so other applications can use it.
+myPort.close()
+
+
 # Find this value in the url with 'key=XXX' and copy XXX below
 spreadsheet_key = '1LnQsIM5kSHl4g1aYNoT7-3bvB0yp2EWE1p20r56XEc8'
 # All spreadsheets have worksheets. I think worksheet #1 by default always

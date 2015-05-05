@@ -24,8 +24,8 @@ var chart = c3.generate({
     data: {
         // recyclePercent data
         columns: [
-            ['Recycling', recycleData[0].recyclepercent],
-            ['Landfill', recycleData[1].recyclepercent],
+            ['Recycling', recycleData[0].dashboardRecyclePercent],
+            ['Landfill', recycleData[1].dashboardRecyclePercent],
         ],
         type : 'donut',
         onclick: function (d, i) { console.log("onclick", d, i); },
@@ -53,7 +53,7 @@ var chart = c3.generate({
     bindto: '#gaugechart',
     data: {
         columns: [
-            ['Recycling Rate', recycleData[0].weight],
+            ['Recycling Rate', recycleData[0].dashboardWeight],
         ],
         type: 'gauge',
         onclick: function (d, i) { console.log("onclick", d, i); },
@@ -87,8 +87,8 @@ var chart = c3.generate({
 
 // Top Row functions
 
-    $("#recyclePercent").text(recycleData[0].recyclepercent);
-    $("#recycleChange").text(recycleData[1].recyclepercent);
+    $("#recyclePercent").text(recycleData[0].dashboardRecyclePercent);
+    $("#recycleChange").text(recycleData[1].dashboardRecyclePercent);
 
 // Autocomplete with categories    
       $.widget( "custom.catcomplete", $.ui.autocomplete, {

@@ -8,11 +8,11 @@ import gdata.spreadsheet.service
 
 email = 'kbdick@recycletracker.io'
 password = '5chw@rtzg3r@t'
-space = raw_input()
-suitenum = raw_input()
-floor = raw_input()
-spacetype = raw_input()
-wastetype = raw_input()
+dataName = raw_input()
+dataSuite = raw_input()
+dataFloor = raw_input()
+dataSpaceType = raw_input()
+dataWasteType = raw_input()
 
 ## Select and configure the port
 myPort = serial.Serial('/dev/ttyS1', 115200, timeout = 10)
@@ -21,14 +21,13 @@ myPort = serial.Serial('/dev/ttyS1', 115200, timeout = 10)
 myPort.write("ENQ")
 
 ## Wait for data to come in- one byte, only
-x = myPort.read()
+dataWeight = myPort.read()
 
 ## Echo the data to the command prompt
-print "You entered " + x
+print "You entered " + dataWeight
 
 ## Close the port so other applications can use it.
 myPort.close()
-
 
 # Find this value in the url with 'key=XXX' and copy XXX below
 spreadsheet_key = '1LnQsIM5kSHl4g1aYNoT7-3bvB0yp2EWE1p20r56XEc8'
@@ -46,12 +45,12 @@ spr_client.ProgrammaticLogin()
 dict = {}
 dict['date'] = time.strftime('%m/%d/%Y')
 dict['time'] = time.strftime('%H:%M:%S')
-dict['space'] = space
-dict['suitenum'] = suitenum
-dict['floor'] = floor
-dict['spacetype'] = spacetype
-dict['wastetype'] = wastetype
-dict['weight'] = weight
+dict['dataName'] = dataName
+dict['dataSuite'] = dataSuite
+dict['dashboardFloor'] = dataFloor
+dict['dashboardType'] = dataSpaceType
+dict['dashboardWastetype'] = dataWasteType
+dict['dashboardWeight'] = dataWeight
 print dict
 
 entry = spr_client.InsertRow(dict, spreadsheet_key, worksheet_id)

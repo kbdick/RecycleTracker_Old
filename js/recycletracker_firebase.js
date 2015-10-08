@@ -2,7 +2,7 @@
 
 // Angular bindings
 
-var app = angular.module("recycletracker", ["firebase"]);
+var app = angular.module("recycletracker_firebase", ["firebase"]);
 
 app.controller("recycletrackerctrl", function($scope, $firebaseObject) {
   var ref = new Firebase("https://recycletracker.firebaseio.com");
@@ -28,8 +28,8 @@ var chart = c3.generate({
     data: {
         // recyclePercent data
         columns: [
-            ['Recycling', recycleData[0].dashboardRecyclePercent],
-            ['Landfill', recycleData[1].dashboardRecyclePercent],
+            ['Recycling', dataweight[0].dashboardRecyclePercent],
+            ['Landfill', dataweight[1].dashboardRecyclePercent],
         ],
         type : 'donut',
         onclick: function (d, i) { console.log("onclick", d, i); },

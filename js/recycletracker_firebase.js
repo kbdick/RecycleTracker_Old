@@ -2,9 +2,9 @@
 
 // Angular bindings
 
-var app = angular.module("recycletracker_firebase", ["firebase"]);
+var recycletracker = angular.module("recycletracker", ["firebase"]);
 
-app.controller("recycletrackerctrl", function($scope, $firebaseObject) {
+recycletracker.controller("recycletrackerctrl", function($scope, $firebaseObject) {
   var ref = new Firebase("https://recycletracker.firebaseio.com");
 
   // download the data into a local object

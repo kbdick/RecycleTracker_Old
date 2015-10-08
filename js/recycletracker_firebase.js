@@ -14,7 +14,8 @@ recycletracker.controller("recycletrackerctrl", function($scope, $firebaseObject
   
   // synchronize the object with a three-way data binding
   syncObject.$bindTo($scope, "data");
-});
+}
+]);
 
 
 // Date functions  

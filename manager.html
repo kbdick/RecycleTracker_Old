@@ -30,7 +30,22 @@
 </head>
 
 <body ng-controller="recycletrackerctrl">
+    
+<script>
+var recycletracker = angular.module("recycletracker", ["firebase"]);
 
+recycletracker.controller("recycletrackerctrl", function($scope, $firebaseObject) {
+  var ref = new Firebase("https://recycletracker.firebaseio.com");
+
+  // download the data into a local object
+  $scope.data = $firebaseObject(ref);
+
+  // putting a console.log here won't work because the data ain't here yet, so don't
+  
+  // synchronize the object with a three-way data binding
+  syncObject.$bindTo($scope, "data");
+}
+]);</script>
 <!-- Start Content -->
 <div>
 <!-- Start Content -->
@@ -120,8 +135,8 @@
 <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
 <script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
 
-<!--RecycleTracker Functions -->
-<script src="js/recycletracker_firebase.js"></script>
+<!--RecycleTracker Functions
+<script src="js/recycletracker_firebase.js"></script>-->
 
 <!-- Main slider JS script file --> 
 <!-- Create it with slider online build tool for better performance. -->

@@ -1,0 +1,171 @@
+/**
+* @license
+* MyFonts Webfont Build ID 2848619, 2014-07-19T23:04:08-0400
+* 
+* The fonts listed in this notice are subject to the End User License
+* Agreement(s) entered into by the website owner. All other parties are 
+* explicitly restricted from using the Licensed Webfonts(s).
+* 
+* You may obtain a valid license at the URLs below.
+* 
+* Webfont: Chikita Pro by Canada Type
+* URL: http://www.myfonts.com/fonts/canadatype/chikita/pro/
+* Copyright: Copyright &#x00A9; 2008 Canada Type. All rights reserved.
+* Licensed pageviews: 10,000
+* 
+* 
+* License: http://www.myfonts.com/viewlicense?type=web&buildid=2848619
+* 
+* © 2014 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2b776b");
+
+@font-face {
+    font-family: 'ChikitaPro';
+    src: url('webfonts/2B776B_0_0.eot');
+    src: url('webfonts/2B776B_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2B776B_0_0.woff') format('woff'),url('webfonts/2B776B_0_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'LiberationSans-Regular';
+    src: url('./webfonts/LiberationSans-Regular.ttf');
+}
+
+.imgportfolio {
+  padding: 0;
+  border: 1px solid gray;
+  margin-bottom: 1%;
+}
+
+body {
+  font-size: 100%;
+  line-height: 1.4;
+  font-family: 'LiberationSans-Regular';
+  background: #ffffff url('../images/stripe.png') repeat fixed center;
+}
+
+h1 { 
+  font-size: 125%;
+  line-height: .8;
+} 
+
+#kddheader {
+    font-family: 'ChikitaPro';
+    font-size: 350%;
+    background: #ffffff;
+    min-height: 15%;
+    height: auto;
+    margin-top: 1%;
+}
+
+#kddmenu {
+    background-color: black;
+    height: auto;
+}
+
+#kddgap {
+    background-color: transparent;
+    height: auto;
+}
+
+#kddportfolio {
+    background-color: #ffc241;
+    height: auto;
+}
+
+#cover {
+   font-size: 225%;
+}
+
+#woolf {
+   font-size: 120%
+}
+
+.kddmenuborder {
+    margin: 1% 0 1% 0;
+    border-right: 1px solid white;
+    display: table-cell;
+}
+
+.kddmenuend {
+    margin: 1% 0 1% 0;
+    display: table-cell;
+}
+
+.portfoliothumbs {
+    margin: 10% 0 0 0;
+}
+
+.portfolio {
+    background-color: #ffc241;
+    margin: 0;
+    padding: 0;
+}
+
+.portfolioheading {
+    padding: 1% 0 0 3%;
+}
+
+.portfoliodetail {
+    padding: 0 0 2% 3%;
+}
+
+.portfoliocaption {
+    margin-right: 10%;
+}
+
+.card {
+    background-color: transparent;
+    margin: 5%;
+    padding: 5%;
+    font-family: 'LiberationSans-Regular';
+}
+
+.contactcard {
+    margin: 3% 15% 20% 15%;
+    padding: 15% 10% 15% 40%;
+    background: white;
+    float: right;
+}
+    
+.resumecard {
+    margin: 1% 15% 20% 15%;
+    background: white;
+}
+
+.aboutcard {
+    margin: 1% 15% 20% 15%;
+    padding: 5% 10% 5% 10%;
+    background: white;
+    float: right;
+}
+
+a:link {
+    color: #ffc241;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffc241;
+    text-decoration: overline;
+}
+
+a:hover,
+  color: #ffc241;
+  text-decoration: none;
+}
+
+a:active {
+    color: white;
+    text-decoration: none;
+    top: 1px;
+}
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}

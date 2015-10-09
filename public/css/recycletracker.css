@@ -1,0 +1,292 @@
+@font-face {
+    font-family: 'LiberationSans-Regular';
+    src: url('./webfonts/LiberationSans-Regular.ttf');
+}
+
+#rightcontent {
+    height: 500px;
+    padding: 5% 0 0 0;
+}
+
+#leftcontent {
+    height: 500px;
+    padding: 5% 0 0 0;
+}
+
+.logo {
+    margin: 10% 0 5% 0;
+}
+
+.date, .rolling, .daily {
+    margin-right: 3%;
+    display: inline;
+}
+ 
+.datestyle, .recyclepercent, .recyclechange, .directiondown, .directionup {
+    color: #aaa;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+    font-family: 'LiberationSans-Regular';
+}
+
+.recyclepercent {
+    color: #aaa;
+    display: inline;
+    font-size: 2em;
+}
+
+.recyclepercentlabel {
+    color: #aaa;
+    display: inline;
+    font-size: .8em;
+    margin-left: 5%;
+}
+
+.recyclechange {
+    color: #5cb85c;
+    display: inline;
+    font-size: 2em;
+}
+
+.recyclechangelabel {
+    color: #aaa;
+    display: inline;
+    font-size: .8em;
+    margin-left: 5%;
+}
+
+.directionlabel {
+    color: #aaa;
+    display: inline;
+    font-size: .8em;
+    margin-left: 5%;
+}
+
+.datelabel {
+    color: #aaa;
+    display: inline;
+    font-size: .8em;
+}
+
+.locationlabel {
+    color: #aaa;
+    display: inline;
+    font-size: .8em;
+}
+
+.directionhappy {
+    color: #5cb85c;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+    font-size: 2em;
+}
+
+.directionsad {
+    color: #d9534f;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+    font-size: 2em;
+}
+
+.directionmeh {
+    color: #aaa;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+    font-size: 2em;
+ }
+
+.minibar, .miniline {
+    color: #aaa;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+}
+
+.locationtag {
+    color: #aaa;
+    display: inline;
+    font-size: 1em;
+}
+
+#goals {
+    height: 350px;
+    width: 400px;
+    display: inline;
+    padding: 5%;
+    overflow: hidden;
+}
+
+.tableheading {
+    color: #aaa;
+    padding: 1%;
+    font-size: 1.5em;
+}
+
+.tddirectionhappy {
+    color: #5cb85c;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+    font-size: 1em;
+}
+
+.tddirectionsad {
+    color: #d9534f;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+    font-size: 1em;
+}
+
+.tddirectionmeh {
+    color: #aaa;
+    vertical-align: bottom;
+    float: none;
+    display: inline;
+    padding: 1%;
+    font-size: 1em;
+ }
+
+.marquee{
+    -webkit-animation-name: marquee;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-duration:15s;
+    -webkit-animation-iteration-count: infinite;
+    margin: 0;
+    padding: 5%;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    color: #aaa;
+}
+ 
+ 
+@-webkit-keyframes marquee{
+    0%{
+        text-indent: 95%;
+}
+    100%{
+        text-indent: -20%;  
+    }
+}
+
+#chartContainer
+{
+    overflow: hidden;
+    margin: 0;
+    padding: 1%;
+    border: solid 2px #ccc;
+    max-height: 335px;
+}
+
+/* jQuery UI Styles */
+.ui-autocomplete-category {
+    font-weight: bold;
+    color: #aaa;
+    padding: .2em .4em;
+    margin: .8em 0 .2em;
+    line-height: 1.5;
+    max-height: 200px;
+    overflow-y: scroll;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+  /* IE 6 doesn't support max-height
+   * we use height instead, but this forces the menu to always be this tall
+   */
+  * html .ui-autocomplete {
+    height: 200px;
+  }
+
+
+/*    
+.custom-combobox {    
+    position: relative;
+    display: inline-block;
+}
+
+.custom-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+}
+  
+.custom-combobox-input {
+    margin: 0;
+    padding: 5px 10px;
+}
+*/
+
+/* C3 D3 Simple Line Chart */
+
+/* Sheetsee Bar Chart Styles */
+#barChart {
+    height: 350px;
+    max-width: 250px;
+    background: #ffffff;
+}
+
+.labels text {text-align: right;}
+.bar .labels text {fill: #333;}
+.bar rect {fill: #e6e6e6;}
+.axis {shape-rendering: crispEdges;}
+.x.axis line {stroke: #fff; fill: none;}
+.x.axis path {fill: none;}
+.x.axis text {fill: #333;}
+.xLabel {font-family: sans-serif; font-size: 9px;}
+
+/* Sheetsee Line Chart Styles */
+
+#lineChart {
+    height: 350px; 
+    max-width: 400px; 
+    background: #ffffff;
+}
+
+.axis {shape-rendering: crispEdges;}
+.x.axis .minor, .y.axis .minor {stroke-opacity: .5;}
+.x.axis {stroke-opacity: 1;}
+.y.axis line, .y.axis path {fill: none; stroke: #acacac; stroke-width: 1;}
+.bigg {-webkit-transition: all .2s ease-in-out; -webkit-transform: scale(2);}
+path.chartLine {stroke: #333; stroke-width: 3; fill: none;}
+div.tooltip {position: absolute; text-align: left; padding: 4px 8px; width: auto; font-size: 10px; height: auto; background: #fff; border: 0px; pointer-events: none;}
+circle {fill: #e6e6e6;}
+
+/*Tipsy Styles */
+.tipsy { font-size: 10px; position: absolute; padding: 5px; z-index: 100000; }
+  .tipsy-inner { background-color: #bfbfbf; color: #000; font-family: Verdana,Arial; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }
+
+  /* Rounded corners */
+  .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+  
+  /* Uncomment for shadow */
+  /*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+  
+  .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+  
+  /* Rules to colour arrows */
+  .tipsy-arrow-n { border-bottom-color: #bfbfbf; }
+  .tipsy-arrow-s { border-top-color: #bfbfbf; }
+  .tipsy-arrow-e { border-left-color: #bfbfbf; }
+  .tipsy-arrow-w { border-right-color: #bfbfbf; }
+  
+	.tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
+    .tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
+  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-se .tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+  .tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
+  .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }

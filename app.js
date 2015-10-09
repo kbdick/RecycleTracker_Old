@@ -6,8 +6,8 @@ var app = express();
 var server = require("http").createServer(app);
 // Attach Socket.io server 
 var io = require("socket.io")(server);
-// Indicate port 3000 as host
-var port = process.env.PORT || 3000;
+// Indicate port 8080 as host
+var port = process.env.PORT || 8080;
 
 // Create a new firebase reference
 var firebaseRef = new Firebase(
@@ -32,8 +32,7 @@ io.on("connection", function(socket) {
     var recycleChange = snapshot.val();
     
     // Print the data object's values
-    console.log("snapshot 1: " + 0.dataweight);
-    console.log("snapshot 2: " + 0.datadate);
-    console.log("snapshot 3: " + 0.datawastetype);
+    console.log("snapshot 1: " + 'firebaseRef.[0].dataweight');
+    
   });
 });

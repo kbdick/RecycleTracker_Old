@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" xmlns:ng="http://angularjs.org">
+<head>
+<title>RecycleTracker</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<!-- Bootstrap CSS -->    
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    
+<!-- FontAwesome CSS -->
+<link rel="stylesheet" href="css/font-awesome.css">
+
+<!-- C3 CSS -->
+<link rel="stylesheet" href="js/c3/c3-0.4.9/c3.min.css">
+
+<!-- RecycleTracker CSS -->
+<link rel="stylesheet" href="css/recycletracker.css">    
+    
+<!-- slider basic stylesheet -->
+<link rel="stylesheet" href="royalslider/royalslider.css">
+
+<!-- slider skin stylesheet (change it if you use another) -->
+<link rel="stylesheet" href="royalslider/skins/minimal-white/rs-minimal-white.css"> 
+
+<link rel="stylesheet" href="js/jquery-ui-1.11.2/jquery-ui.css">
+
+<!-- full screen mode for android devices with site launched from home screen -->
+<meta name="mobile-web-app-capable" content="yes">
+
+</head>
+<!-- Controller -->
+<body ng-controller="Ctrl">
+<!-- Start Content -->
+<div>
+    <div class="container">
+<!-- Begin Logo -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <img id="img-responsive" class="logo" src="images/RecycleTracker_Icon.png" height="30px" width="auto" alt="RT Logo">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            </div>
+        </div>
+<!-- End Logo -->
+<!-- Start Date and Trend Row -->
+        <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                <div class="ui-widget">
+                  <label class="locationtag" for="tags"><span class="locationlabel">Location:</span></label>
+                  <input id="tags">
+                </div>
+            </div>
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            </div>
+            <div class="rolling col-xs-1 col-sm-1 col-md-1 col-lg-1"><span id="recyclePercent" class="recyclepercent fa"></span><span class="recyclepercentlabel">{{ data.0.dataweight }} building average</span>
+            </div>
+            <div class="daily col-xs-1 col-sm-1 col-md-1 col-lg-1"><span id="recycleChange" class="recyclechange fa"></span><span class="recyclechangelabel">since yesterday</span></span>
+            </div>
+            <div class="mood col-xs-2 col-sm-2 col-md-2 col-lg-2"><span id="direction" class="directionmeh fa fa-meh-o"></span><span class="directionlabel">could be better</span>
+            </div>
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            </div>
+            <div class="date col-xs-1 col-sm-1 col-md-1 col-lg-1"><span class="datestyle fa"><span class="datelabel">Date:</span></span><input type="text" name="date" id="date"></span>
+            </div>
+        </div>
+<!-- Begin Left Side Content -->
+        <div class="row">
+<!-- Begin Carousel -->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div id="leftcontent" class="royalSlider rsMinW">
+                    <div id="goals">
+                        <table>
+                            <tr class="tableheading"><th>Recycling Goals</th></tr>
+                            <tr class="tddirectionhappy fa fa-smile-o"><td><i class="fa fa-angle-right"></i> greater than 50&#37; recycling rate</td></tr>
+                            <tr class="tddirectionmeh fa fa-meh-o"><td>30&#37; - 49&#37; recycling rate</td></tr>
+                            <tr class="tddirectionsad fa fa-frown-o"><td><i class="fa fa-angle-left"></i> 30&#37; recycling rate</td></tr>
+                        </table>
+                    </div>
+                    <div id="donutchart"></div>
+                    <div id="areachart"></div>
+                    <div id="gaugechart"></div>
+                    <div>Content to be added</div>
+                    <div>Content to be added</div>
+                </div>
+            </div>
+        </div>
+<!-- End Carousel -->
+<!-- Begin Footer -->
+        <div class="row">
+            <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                <!-- <p class="marquee h3 fa">"One Man's Junk Is Another Man's Treasure."</p> -->
+            </div>
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                <img class="img-responive" src="images/martlogo_new.png" height="50" width="auto" alt="Building Logo">
+            </div>
+        </div>
+<!-- End Footer -->
+    </div>
+</div>
+
+<!-- End Container -->
+
+<!-- Begin javascript -->
+
+<!-- AngularJS for front-end  -->
+<script src="../node_modules/angular/angular.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+
+<!-- jQuery for front-end -->
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/jquery-ui-1.11.2/jquery-ui.min.js"></script>
+
+<!-- Firebase and AngularFire for back-end -->
+<script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+
+<!--RecycleTracker Functions
+<script src="js/recycletracker_firebase.js"></script>-->
+<script src="index.js"></script>
+
+<!-- Main slider JS script file --> 
+<!-- Create it with slider online build tool for better performance. -->
+<script src="royalslider/jquery.royalslider.min.js"></script>
+
+<!--Tabletop for integration with Google Sheets if Used, D3 for visualization, Moment for time functions, underscore for math functions -->
+<script src="js/moment.js"></script>
+<!--
+<script src="js/tabletop.js"></script>
+-->
+<script src="js/d3.min.js"></script>
+<script src="js/c3/c3-0.4.9/c3.min.js"></script>
+
+
+</body>
+</html>

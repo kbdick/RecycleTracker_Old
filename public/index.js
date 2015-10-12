@@ -14,4 +14,25 @@ app.controller("Ctrl", function($scope, $firebase) {
 
     // sync the object with three-way data binding                                                                  
     syncObject.$bindTo($scope, "data");
+
+});
+
+  // run some queries to get the data you want
+    
+    // Recycling Rate Queries
+    var reyclingquery = ref.orderByChild("wastetype").equalTo("Recycling").on("child_added", function(snapshot) {
+  console.log(snapshot.key() + " was " + snapshot.val().dataweight + " lbs");
+
+    var landfillquery = ref.orderByChild("wastetype").equalTo("Landfill").on("child_added", function(snapshot) {
+  console.log(snapshot.key() + " was " + snapshot.val().dataweight + " lbs");
+  
+    // Recycling Functions
+    function sum (landfillquery) {
+      return 
+    }
+    function recyclingRate(landfillquery, recyclingquery) {
+      angular.forEach(landfillquery, )
+    }
+    
+  
 });

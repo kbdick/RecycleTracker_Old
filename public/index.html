@@ -24,6 +24,15 @@
 
 <link rel="stylesheet" href="js/jquery-ui-1.11.2/jquery-ui.css">
 
+<!-- jQuery for front-end -->
+<script src="js/jquery-2.1.3.js"></script>
+<script src="js/jquery-ui-1.11.2/jquery-ui.min.js"></script>
+
+<!-- AngularJS for front-end  -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
+
 <!-- full screen mode for android devices with site launched from home screen -->
 <meta name="mobile-web-app-capable" content="yes">
 
@@ -54,7 +63,7 @@
             </div>
             <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
             </div>
-            <div class="rolling col-xs-1 col-sm-1 col-md-1 col-lg-1"><span id="recyclePercent" class="recyclepercent fa"></span><span class="recyclepercentlabel">{{ sum(recyclingquery) / sum(landfillquery) }} building average</span>
+            <div class="rolling col-xs-1 col-sm-1 col-md-1 col-lg-1"><span id="recyclePercent" class="recyclepercent fa"></span><span class="recyclepercentlabel">{{ todayRecycling() }} building average</span>
             </div>
             <div class="daily col-xs-1 col-sm-1 col-md-1 col-lg-1"><span id="recycleChange" class="recyclechange fa"></span><span class="recyclechangelabel">since yesterday</span></span>
             </div>
@@ -104,15 +113,6 @@
 <!-- End Container -->
 
 <!-- Begin javascript -->
-
-<!-- AngularJS for front-end  -->
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.min.js"></script>
-
-<!-- jQuery for front-end -->
-<script src="js/jquery-2.1.3.js"></script>
-<script src="js/jquery-ui-1.11.2/jquery-ui.min.js"></script>
 
 <!-- Firebase and AngularFire for back-end -->
 <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>

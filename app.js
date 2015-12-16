@@ -28,11 +28,11 @@ io.on("connection", function(socket) {
   
   // firebase reference listens on value change, 
   // and return the data snapshot as an object
-  firebaseRef.on("value", function(snapshot) {
-    var recycleChange = snapshot.val();
+firebaseRef.on("value", function(snapshot) {
+var recycleChange = snapshot.val();
     
-    // Print the data object's values
-    console.log("snapshot 1: " + 'firebaseRef.[0].dataweight');
+//Print the data object's values
+console.log("snapshot 1: " + 'firebaseRef.[0].dataweight');
     
   });
 });

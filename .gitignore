@@ -3,3 +3,5 @@ target/
 .c9/
 .git/
 .idea/
+.node_modules/
+.deprecated/

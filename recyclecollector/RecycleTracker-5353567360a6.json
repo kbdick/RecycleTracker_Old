@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "recycletracker-1013",
+  "private_key_id": "5353567360a6db6cca12bdfa33793243324f7193",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCQwABWGseYc/tK\nERx737+GO7FJAz99TJjFj3rOeRIWCf/6u1Lvo6PTF+3C/gTSSckmbOJxB/mwgFCu\nObY/MGLmtnsLffgAuUVa6+OWBJmR3vBfLBUiOjxdswuLeP6y8fU2j2rqp90C97IC\nkmbAAlUD/r0lOrx2V7toDwetuCARJaLFTlyKekKtJ0wILdFi0vP4FwjXipdsRob3\nVsc+siKcmA16AKo+eGA4qswK5B2ekBjf0q0sWRh9Q/1IdK7Bjx2g9n0Jk3LiZzKr\n2CN28JQ7/uBLg1hiK485LIuPG/Ls4ju5UAw73yJAzSNofRFd7L9H1IRF0R8B3gLd\nFvkQYEyBAgMBAAECggEASxGIGx+gS8w6klr1brjHVxI2CyuIDa9fu3WBtvrLCmr9\nOkdT57vyBlPulqWuUnC5xRfLB9ue/o5NSU3c2kB5yjTw8zDNIXL0KQcU7IROMHxy\nJKlz/GA/Vki4wAhr7tnU1gri4/dSg2t6AiNy7jlHZd8CsQAZJTaylnDVBp7q4nja\nyMirmreZJOMqVhgGE8bhJMSA9W9XkhA4VY3HFDJNYpEi7Srq6WcPbIFqq2zEe6FP\nOB9hUpCNO6Ng83vqR0LQmn1E9unlkbnrUAnHAzg//LWBnjqy5bCPJHW57+cxMn2s\nhZRSD8AHJGvp9Vw1VPLXqO/HTpQeoBmUB8yY9vWwAQKBgQDqBZFgCcvhPqZ6E8lj\ny36uXy26w1Jv0d013H8hT64iRtfArNEwnm0DgTZs5+T/sDEx8P4M6AlW3sO4P7YO\npe/9zDBpNWjqKNRir5Rn/egQy+Zp08cpTTVV/bQOzw0YIdkOJUm1RuR7C9T++SKi\nUDtmrC0FtIhyxnSm6PNo1DVOoQKBgQCeWCGU7R5twB5OdyGaLrdyfbklodmifGAE\n7Vzmmq0ZdJVi1oqc0AYdFsYtFljPO6qXziblPvb4RTnyITPH8ZWa1ciz5iGVFJCT\nO2e+JY2oAaJP74XS8lk4BP3/bzcgvQEr3dUsS3Yv/GU/wHE4e4JPsRRoA4jd+OME\nJkSEm92R4QKBgQCZA4j5VY50OYWafoOId87d7qe03O9y47KS/Bg3zKScDtwVRCoH\ncx7uUrcmYD2wHSEdeWhzQeiRX1hziVzdmQwhUzg4Ik72BDpSSGFt2Wu6R8fhXDJ1\nw+Di1966bBEwvTjx8dmO6MqN1b+v82/81x7v1BYgC9nHyhEN7XTyDwbH4QKBgBmJ\nKvlCeDrI1dpfmfqseActwVMRU/DBUBbbVLUX0rydMY47/SSm46WDS7hvtyjMfYl3\nxIwJ6HhHab3jnt8q1a6ftXtVrKrHIz2rQeLHWZ3zjYKIpTNMxBilrXSpMeHEuVCi\nuMMo9Elu0cFDPr8WJADIFPtlPohVn/7GURx1qnjhAoGBAJaH8Qs7iHn0x3AC/VoM\nD/zme+3MLtlgLXRaS711zNY1a+YzJF7OiqButs2V2tILx0vc6oRfkRs0jwYvtAUX\ns76grxWVtC74dZn/LYzUemgMA06o7Qhg5pMHmoF1cNXPkBE/x83lWs/fUnI/agRk\nJmgbUTs0MgyAsaLz7trOUwnD\n-----END PRIVATE KEY-----\n",
+  "client_email": "recycletracker@recycletracker-1013.iam.gserviceaccount.com",
+  "client_id": "110871158669664705892",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/recycletracker%40recycletracker-1013.iam.gserviceaccount.com"
+}

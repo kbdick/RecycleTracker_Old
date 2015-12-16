@@ -22,3 +22,33 @@ https://medium.com/code-zen/intro-to-iot-with-arduino-firebase-and-angular-js-ea
     <script src="/index.js"></script>
   </body>
 </html>
+
+
+data[34].dataweight
+
+
+// run some queries to get the data you want
+    
+    // Recycling Rate Queries
+    var reyclingquery = ref.orderByChild("wastetype").equalTo("Recycling").on("child_added", function(snapshot) {
+  console.log(snapshot.key() + " was " + snapshot.val().dataweight + " lbs");
+    })
+
+    var landfillquery = ref.orderByChild("wastetype").equalTo("Landfill").on("child_added", function(snapshot) {
+  console.log(snapshot.key() + " was " + snapshot.val().dataweight + " lbs");
+    })
+    
+    $scope.recyclingrate = function todayrate(landfillquery, recyclingquery){
+      
+      return landfill;
+    };
+    
+    
+    $scope.todayRecycling = function(){
+    var total = 0;
+    for(var i = 0; i < $scope.data.length; i++){
+        var  = $scope.data.dataweight[i];
+        total += (dataweight);
+    }
+    return total;
+}

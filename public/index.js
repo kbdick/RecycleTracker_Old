@@ -14,14 +14,22 @@ app.controller("Ctrl", function($scope, $firebase) {
 
     // sync the object with three-way data binding                                                                  
     syncObject.$bindTo($scope, "data");
+    
+   // Recycling Rate Queries
+    var reyclingquery = $scope.orderByChild("wastetype").equalTo("Recycling").on("child_added", function(snapshot) {
+  console.log(snapshot.key() + " was " + snapshot.val().dataweight + " lbs");
+    })
 
-$scope.todayRecycling = function(){
+    var landfillquery = $scope.orderByChild("wastetype").equalTo("Landfill").on("child_added", function(snapshot) {
+  console.log(snapshot.key() + " was " + snapshot.val().dataweight + " lbs");
+    })  
+    
+        $scope.todayRecycling = function(){
     var total = 0;
     for(var i = 0; i < $scope.data.length; i++){
-        var product = $scope.data.dataweight[i];
+        var todayRecycling= $scope.data.dataweight[i];
         total += (dataweight);
     }
     return total;
-}
-
+  
 });

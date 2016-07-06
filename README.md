@@ -1,7 +1,7 @@
 RecycleTracker
 ================
 
-Copyright 2013, 2014, 2015 Kevin Dick. Release under GPL (Please retain the license and share improvements)
+Copyright 2013, 2014, 2015, 2016 Kevin Dick.
 
 RecycleTracker 
 

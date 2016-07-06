@@ -3,4 +3,4 @@ target/
 .c9/
 .git/
 .idea/
-.node_modules/
+.node_modules/node_modules

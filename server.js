@@ -3,7 +3,6 @@ var http = require('http');
 var https = require('https');
 var path = require('path');
 var fs = require('fs');
-var async = require('async');
 var socketio = require('socket.io');
 
 // Create HTTP Server
@@ -28,3 +27,24 @@ app.use(express.static(__dirname + "/public"));
 io.on("connection", function(socket) {
   console.log("Connected and ready!");
     });
+
+
+// Get data from Google Sheets
+var Spreadsheet = require('edit-google-spreadsheet');
+ 
+Spreadsheet.load({
+  debug: true,
+  spreadsheetName: 'RecycleTracker_mmart',
+  worksheetName: 'RawData',
+  oauth2: 'recyclecollector/RecycleTracker-5353567360a6.json'
+  });
+    
+  function sheetReady(err, spreadsheet) {
+  if(err) throw err;
+ 
+  spreadsheet.receive(function(err, rows, info) {
+    if(err) throw err;
+    console.log("Found rows:", rows);
+    // Found rows: { '3': { '5': 'hello!' } } 
+  });
+}

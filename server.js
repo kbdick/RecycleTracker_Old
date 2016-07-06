@@ -29,7 +29,7 @@ io.on("connection", function(socket) {
     });
 
 
-// Get data from Google Sheets
+/* Get data from Google Sheets
 var Spreadsheet = require('edit-google-spreadsheet');
  
 Spreadsheet.load({
@@ -48,3 +48,4 @@ Spreadsheet.load({
     // Found rows: { '3': { '5': 'hello!' } } 
   });
 }
+*/

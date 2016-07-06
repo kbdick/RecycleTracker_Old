@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="RecycleTracker:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="webapp.war">
-      <element id="artifact" artifact-name="RecycleTracker:war exploded" />
-    </root>
-  </artifact>
-</component>

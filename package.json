@@ -6,8 +6,8 @@
   "repository": "https://github.com/kbdick/RecycleTracker.git",
   "author": "Kevin Dick (kbdick@gmail.com)",
   "engines": {
-    "node": "0.10.35",
-    "npm": "1.4.28"
+    "node": "0.10.30",
+    "npm": "3.10.3"
   },
   "dependencies": {
     "angular": "^1.4.8",

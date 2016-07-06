@@ -3,27 +3,40 @@
 
 import time
 import serial
+import readline
 from time import sleep
 import json
 import gspread
-from oauth2client.client import SignedJwtAssertionCredentials
+from oauth2client.service_account import ServiceAccountCredentials
+print 'Ready to receive data...'
+## Prepare the dictionary to write - this works, but puts the array string in instead of the data
+dict = {}
 
-json_key = json.load(open('RecycleTracker-5353567360a6.json'))
-scope = ['https://spreadsheets.google.com/feeds']
+date = time.strftime('%m/%d/%y')
+dict['date'] = date
 
-credentials = SignedJwtAssertionCredentials(json_key['client_email'], json_key['private_key'], scope)
+time = time.asctime( time.localtime(time.time()) )
+dict['time'] = time
 
-gc = gspread.authorize(credentials)
+name = raw_input('Scan the name of the tenant: ')
+dict['name'] = name
+print "Received %s." % name
 
-userSheetKey = '1LnQsIM5kSHl4g1aYNoT7-3bvB0yp2EWE1p20r56XEc8'
-dataSheet = gc.open_by_key(userSheetKey)
+suite = raw_input('Scan the suite of the tenant: ')
+dict['suite'] = suite
+print "Received %s." % suite
 
-   
-dataname = raw_input()
-datasuite = raw_input()
-datafloor = raw_input()
-dataspacetype = raw_input()
-datawastetype = raw_input()
+floor = raw_input('Scan the floor of the tenant: ')
+dict['floor'] = floor
+print "Received %s." % floor
+
+spacetype = raw_input('Scan the space type: ')
+dict['spacetype'] = spacetype
+print "Received %s." % spacetype
+
+wastetype = raw_input('Scan the waste type: ')
+dict['wastetype'] = wastetype
+print "Received %s." % wastetype
 
 """
 ## Select and configure the port
@@ -41,26 +54,29 @@ ser = serial.Serial(
 )
 
 while True:
-   dataweight = ser.read(ser.inWaiting())
-   if len(dataweight) > 0:
-      print "You entered " + dataweight
+   weight = ser.read(ser.inWaiting())
+   if len(weight) > 0:
+      dict[weight] = weight
+      print "Received " + weight
    sleep(1)
 ser.close()
 
 """
 
-## Prepare the dictionary to write - this works, but puts the array string in instead of the data
-dict = {}
-dict['datadate'] = time.strftime('%m/%d/%Y')
-dict['datatime'] = time.strftime('%H:%M:%S')
-dict['dataname'] = dataname
-dict['datasuite'] = datasuite
-dict['datafloor'] = datafloor
-dict['dataspacetype'] = dataspacetype
-dict['datawastetype'] = datawastetype
-## dict['dataweight'] = dataweight
+data = [date, time, name, suite, floor, spacetype, wastetype]
 
-worksheet = dataSheet.get_worksheet(0)
-worksheet.append_row(dict)
+print 'Pushing data to server...'
 
+json_key = json.load(open('RecycleTracker-5353567360a6.json'))
+scope = ['https://spreadsheets.google.com/feeds']
+
+credentials = ServiceAccountCredentials.from_json_keyfile_name('RecycleTracker-5353567360a6.json', scope)
+
+gc = gspread.authorize(credentials)
+
+dataSheet = gc.open('RecycleTracker_mmart').worksheet('RawData')
+
+dataSheet.append_row(data)
+
+print "Success"
 print dict

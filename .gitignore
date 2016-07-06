@@ -1,6 +1,3 @@
-target/
-.idea/
-.c9/
-.git/
-.idea/
-.node_modules/
+.c9
+.git
+node_modules

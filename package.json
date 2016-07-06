@@ -1,6 +1,7 @@
 {
   "name": "recycletracker",
   "version": "0.0.4",
+  "license": "UNLICENSED",
   "description": "A web app that grabs weight data of waste in a building and displays it in on a front end web app.",
   "main": "server.js",
   "repository": "https://github.com/kbdick/RecycleTracker.git",
@@ -10,14 +11,10 @@
     "npm": "3.10.3"
   },
   "dependencies": {
-    "angular": "^1.4.8",
-    "async": "^0.2.10",
-    "clock": "^0.1.6",
-    "edit-google-spreadsheet": "^0.2.21",
-    "express": "^3.2.6",
-    "request": "^2.65.0",
-    "socket.io": "~0.9.14",
-    "squel": "^5.3.2",
-    "time": "^0.11.0"
+    "angular": "1.5.7",
+    "edit-google-spreadsheet": "0.2.21",
+    "express": "3.21.2",
+    "socket.io": "0.9.17",
+    "squel": "5.3.2"
   }
 }

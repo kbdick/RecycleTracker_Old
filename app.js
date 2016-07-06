@@ -1,4 +1,3 @@
-var Firebase = require("firebase");
 var express = require("express");
 
 // Create HTTP Server
@@ -8,11 +7,6 @@ var server = require("http").createServer(app);
 var io = require("socket.io")(server);
 // Indicate port 8080 as host
 var port = process.env.PORT || 8080;
-
-// Create a new firebase reference
-var firebaseRef = new Firebase(
-  "https://recycletracker.firebaseio.com"
-);
 
 // Make the server listens on port 3000
 server.listen(port, function() {
@@ -25,14 +19,28 @@ app.use(express.static(__dirname + "/public"));
 // Socket server listens on connection event
 io.on("connection", function(socket) {
   console.log("Connected and ready!");
-  
-  // firebase reference listens on value change, 
-  // and return the data snapshot as an object
-firebaseRef.on("value", function(snapshot) {
-var recycleChange = snapshot.val();
+
+
+// Get data from Google Sheets
+var Spreadsheet = require('edit-google-spreadsheet');
+ 
+  Spreadsheet.load({
+    debug: true,
+    spreadsheetName: 'RecycleTracker_mmart',
+    worksheetName: 'RawData',
+    oauth2: 'recyclecollector/RecycleTracker-5353567360a6.json'
+  });
     
-//Print the data object's values
-console.log("snapshot 1: " + 'firebaseRef.[0].dataweight');
+    function sheetReady(err, spreadsheet) {
+    if(err) throw err;
+ 
+    spreadsheet.receive(function(err, rows, info) {
+      if(err) throw err;
+      console.log("Found rows:", rows);
+      // Found rows: { '3': { '5': 'hello!' } } 
+    });
+ 
+  }
     
   });
 });

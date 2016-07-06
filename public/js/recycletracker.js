@@ -1,31 +1,31 @@
 document.addEventListener('DOMContentLoaded', function() {
-   	var URL = "1LnQsIM5kSHl4g1aYNoT7-3bvB0yp2EWE1p20r56XEc8";
-  		Tabletop.init( { 
-  		key: URL, 
-  		callback: showInfo, 
-  		parseNumbers: true,
-  		wanted: [ "Data", "percentToday" ],
-  		simpleSheet: true 
+   var URL = "1LnQsIM5kSHl4g1aYNoT7-3bvB0yp2EWE1p20r56XEc8";
+      Tabletop.init( { 
+         key: URL, 
+         callback: showInfo, 
+         parseNumbers: true,
+         simpleSheet: true 
   		} );
   	
 // Tabletop Callback
-    function showInfo(data) {
-    recycleData = data;
-    console.log( "Here is your data", recycleData);
+   function showInfo(data) {
+   console.log( "Here is your data", data);
 
 // Date functions  
-    $( "#date" ).datepicker();
-    var currentDate = $( ".selector" ).datepicker( "getDate" );
+   $( "#date" ).datepicker();
+   var currentDate = $( ".selector" ).datepicker( "getDate" );
+
+console.log(array);
 
 // Chart functions
 
-var chart = c3.generate({
-    bindto: '#donutchart',
-    data: {
-        // recyclePercent data
-        columns: [
-            ['Recycling', recycleData[0].dashboardRecyclePercent],
-            ['Landfill', recycleData[1].dashboardRecyclePercent],
+   var chart = c3.generate({
+   bindto: '#donutchart',
+   data: {
+// recyclePercent data
+      columns: [
+      ['Recycling', recycleData[0].dashboardRecyclePercent],
+      ['Landfill', recycleData[1].dashboardRecyclePercent],
         ],
         type : 'donut',
         onclick: function (d, i) { console.log("onclick", d, i); },

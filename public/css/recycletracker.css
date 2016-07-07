@@ -3,6 +3,12 @@
     src: url('./webfonts/LiberationSans-Regular.ttf');
 }
 
+
+#carousel {
+    height: 500px;
+    padding: 5% 0 0 0;
+}
+
 #rightcontent {
     height: 500px;
     padding: 5% 0 0 0;

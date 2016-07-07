@@ -7,6 +7,7 @@
 #carousel {
     height: 500px;
     padding: 5% 0 0 0;
+    margin: 0 auto;
 }
 
 #rightcontent {

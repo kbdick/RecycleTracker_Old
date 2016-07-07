@@ -201,7 +201,7 @@ var chart = c3.generate({
     });
   });
     }
-
+/*
     $('#leftcontent').royalSlider({
         autoScaleSlider: 'true',
         autoScaleSliderHeight: 450,
@@ -249,5 +249,5 @@ var chart = c3.generate({
     	    change: 'true',
     	    prefix: 'recycle-'}
     });
-    
+*/    
 })

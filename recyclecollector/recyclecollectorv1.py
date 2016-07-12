@@ -12,11 +12,14 @@ print 'Ready to receive data...'
 ## Prepare the dictionary to write - this works, but puts the array string in instead of the data
 dict = {}
 
-date = time.strftime('%m/%d/%y')
-dict['date'] = date
+recycledate = time.strftime('%m/%d/%y')
+dict['recycledate'] = recycledate
 
-time = time.asctime( time.localtime(time.time()) )
-dict['time'] = time
+recycletime = time.asctime( time.localtime(time.time()) )
+dict['recycletime'] = recycletime
+
+recycletimestamp = time.time()
+dict['recycletimestamp'] = recycletimestamp
 
 name = raw_input('Scan the name of the tenant: ')
 dict['name'] = name
@@ -63,14 +66,14 @@ ser.close()
 
 """
 
-data = [date, time, name, suite, floor, spacetype, wastetype]
+data = [recycledate, recycletime, recycletimestamp, name, suite, floor, spacetype, wastetype]
 
 print 'Pushing data to server...'
 
 json_key = json.load(open('RecycleTracker-5353567360a6.json'))
 scope = ['https://spreadsheets.google.com/feeds']
 
-credentials = ServiceAccountCredentials.from_json_keyfile_name('RecycleTracker-5353567360a6.json', scope)
+credentials = ServiceAccountCredentials.from_json_keyfile_name('client_secret.json', scope)
 
 gc = gspread.authorize(credentials)
 

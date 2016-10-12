@@ -41,7 +41,10 @@ wastetype = raw_input('Scan the waste type: ')
 dict['wastetype'] = wastetype
 print "Received %s." % wastetype
 
-"""
+custodian = raw_input('Scan the custodian entering the data: ')
+dict['custodian'] = custodian
+print "Received %s." % custodian
+
 ## Select and configure the port
 ser = serial.Serial(
    port='/dev/ttyUSB0', 
@@ -64,9 +67,8 @@ while True:
    sleep(1)
 ser.close()
 
-"""
 
-data = [recycledate, recycletime, recycletimestamp, name, suite, floor, spacetype, wastetype]
+data = [recycledate, recycletime, recycletimestamp, name, suite, floor, spacetype, wastetype, custodian, weight]
 
 print 'Pushing data to server...'
 
